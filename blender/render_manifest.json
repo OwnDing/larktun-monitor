@@ -1,0 +1,65 @@
+[
+  {
+    "file": "renders/01_整户等距.png",
+    "width": 2200,
+    "height": 1650,
+    "bytes": 3497614,
+    "png_crc": "PASS"
+  },
+  {
+    "file": "renders/02_俯视平面.png",
+    "width": 2200,
+    "height": 1650,
+    "bytes": 3575945,
+    "png_crc": "PASS"
+  },
+  {
+    "file": "renders/03_客厅.png",
+    "width": 2200,
+    "height": 1467,
+    "bytes": 3416426,
+    "png_crc": "PASS"
+  },
+  {
+    "file": "renders/04_厨房.png",
+    "width": 2200,
+    "height": 1467,
+    "bytes": 3084266,
+    "png_crc": "PASS"
+  },
+  {
+    "file": "renders/05_主卧.png",
+    "width": 2200,
+    "height": 1467,
+    "bytes": 3169914,
+    "png_crc": "PASS"
+  },
+  {
+    "file": "renders/06_儿童房.png",
+    "width": 2200,
+    "height": 1467,
+    "bytes": 3309613,
+    "png_crc": "PASS"
+  },
+  {
+    "file": "renders/07_茶几细节.png",
+    "width": 2200,
+    "height": 1467,
+    "bytes": 3272665,
+    "png_crc": "PASS"
+  },
+  {
+    "file": "renders/08_书房与网络设备.png",
+    "width": 2200,
+    "height": 1467,
+    "bytes": 3310748,
+    "png_crc": "PASS"
+  },
+  {
+    "file": "renders/09_主卫.png",
+    "width": 2200,
+    "height": 1467,
+    "bytes": 3009654,
+    "png_crc": "PASS"
+  }
+]

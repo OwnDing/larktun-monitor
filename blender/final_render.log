@@ -1,0 +1,73 @@
+00:00.228  blend            | Read blend: "/Users/ownding/Documents/develop/vision/Larktun_Home.blend"
+Traceback (most recent call last):
+  File "/Users/ownding/Documents/develop/vision/blender/validate_home.py", line 36, in <module>
+    if issues: raise RuntimeError('; '.join(issues))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Full wall height mismatch
+{
+  "status": "FAIL",
+  "blender_version": "5.2.1 LTS",
+  "saved_file": "/Users/ownding/Documents/develop/vision/Larktun_Home.blend",
+  "objects": 4198,
+  "materials": 40,
+  "security_cameras": [
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "network_devices": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5"
+  ],
+  "missing_external_assets": [],
+  "view_layers": [
+    "01 · CUTAWAY",
+    "02 · FULL INTERIOR"
+  ],
+  "full_wall_height_m": 1.4,
+  "units": "METRIC",
+  "cloth_applied": [
+    {
+      "name": "R09 · 双人床 1.8m soft duvet",
+      "construction": "22-frame Blender Cloth relaxation against mattress, applied to static mesh"
+    },
+    {
+      "name": "R12 · 儿童床 1.2m soft duvet",
+      "construction": "22-frame Blender Cloth relaxation against mattress, applied to static mesh"
+    }
+  ],
+  "timeline": [
+    1,
+    1
+  ],
+  "review_cameras": 9,
+  "issues": [
+    "Full wall height mismatch"
+  ],
+  "scope": "Saved-file integrity and asset checks; composition checked separately in rendered PNGs"
+}
+RENDERING 01 /Users/ownding/Documents/develop/vision/renders/01_整户等距.png
+00:21.078  render           | Saved: '/Users/ownding/Documents/develop/vision/renders/01_整户等距.png'
+RENDERING 02 /Users/ownding/Documents/develop/vision/renders/02_俯视平面.png
+00:48.348  render           | Saved: '/Users/ownding/Documents/develop/vision/renders/02_俯视平面.png'
+RENDERING 03 /Users/ownding/Documents/develop/vision/renders/03_客厅.png
+01:38.075  render           | Saved: '/Users/ownding/Documents/develop/vision/renders/03_客厅.png'
+RENDERING 04 /Users/ownding/Documents/develop/vision/renders/04_厨房.png
+02:27.726  render           | Saved: '/Users/ownding/Documents/develop/vision/renders/04_厨房.png'
+RENDERING 05 /Users/ownding/Documents/develop/vision/renders/05_主卧.png
+03:19.016  render           | Saved: '/Users/ownding/Documents/develop/vision/renders/05_主卧.png'
+RENDERING 06 /Users/ownding/Documents/develop/vision/renders/06_儿童房.png
+04:14.433  render           | Saved: '/Users/ownding/Documents/develop/vision/renders/06_儿童房.png'
+RENDERING 07 /Users/ownding/Documents/develop/vision/renders/07_茶几细节.png
+04:58.694  render           | Saved: '/Users/ownding/Documents/develop/vision/renders/07_茶几细节.png'
+RENDERING 08 /Users/ownding/Documents/develop/vision/renders/08_书房与网络设备.png
+05:50.491  render           | Saved: '/Users/ownding/Documents/develop/vision/renders/08_书房与网络设备.png'
+RENDERING 09 /Users/ownding/Documents/develop/vision/renders/09_主卫.png
+06:46.707  render           | Saved: '/Users/ownding/Documents/develop/vision/renders/09_主卫.png'
+REVIEW RENDERS COMPLETE
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

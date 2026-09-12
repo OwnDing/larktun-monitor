@@ -1,0 +1,47 @@
+00:00.252  blend            | Read blend: "/Users/ownding/Documents/develop/vision/Larktun_Home.blend"
+{
+  "status": "PASS",
+  "blender_version": "5.2.1 LTS",
+  "saved_file": "/Users/ownding/Documents/develop/vision/Larktun_Home.blend",
+  "objects": 4197,
+  "materials": 40,
+  "security_cameras": [
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "network_devices": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5"
+  ],
+  "missing_external_assets": [],
+  "view_layers": [
+    "01 · CUTAWAY",
+    "02 · FULL INTERIOR"
+  ],
+  "full_wall_height_m": 2.8,
+  "units": "METRIC",
+  "cloth_applied": [
+    {
+      "name": "R09 · 双人床 1.8m soft duvet",
+      "construction": "22-frame Blender Cloth relaxation against mattress, applied to static mesh"
+    },
+    {
+      "name": "R12 · 儿童床 1.2m soft duvet",
+      "construction": "22-frame Blender Cloth relaxation against mattress, applied to static mesh"
+    }
+  ],
+  "timeline": [
+    1,
+    1
+  ],
+  "review_cameras": 9,
+  "issues": [],
+  "scope": "Saved-file integrity and asset checks; composition checked separately in rendered PNGs"
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

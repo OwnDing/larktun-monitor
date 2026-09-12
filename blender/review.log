@@ -1,0 +1,15 @@
+00:00.275  blend            | Read blend: "/Users/ownding/Documents/develop/vision/Larktun_Home.blend"
+RENDERING 03 /Users/ownding/Documents/develop/vision/renders/03_客厅.png
+00:10.999  render           | Saved: '/Users/ownding/Documents/develop/vision/renders/03_客厅.png'
+RENDERING 04 /Users/ownding/Documents/develop/vision/renders/04_厨房.png
+00:20.993  render           | Saved: '/Users/ownding/Documents/develop/vision/renders/04_厨房.png'
+RENDERING 05 /Users/ownding/Documents/develop/vision/renders/05_主卧.png
+00:31.125  render           | Saved: '/Users/ownding/Documents/develop/vision/renders/05_主卧.png'
+RENDERING 06 /Users/ownding/Documents/develop/vision/renders/06_儿童房.png
+00:41.996  render           | Saved: '/Users/ownding/Documents/develop/vision/renders/06_儿童房.png'
+RENDERING 02 /Users/ownding/Documents/develop/vision/renders/02_俯视平面.png
+00:48.736  render           | Saved: '/Users/ownding/Documents/develop/vision/renders/02_俯视平面.png'
+REVIEW RENDERS COMPLETE
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

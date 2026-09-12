@@ -1,0 +1,17 @@
+{
+  "objects": 4197,
+  "meshes": 3367,
+  "materials": 40,
+  "rooms": 13,
+  "doors": 13,
+  "windows": 10,
+  "cameras": 15,
+  "renderable_character_proxies": 0,
+  "wall_height_m": 2.8,
+  "cutaway_height_m": 1.15,
+  "source_dimensions_m": [
+    13.2,
+    8.6
+  ],
+  "local_circulation_repairs": true
+}
