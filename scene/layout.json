@@ -16,9 +16,18 @@
     "iso_rotation_euler_deg": [
       54.7356,
       0,
-      45
+      225
     ],
-    "interior_area_m2": 113.5
+    "interior_area_m2": 113.5,
+    "film_resolution": [
+      1080,
+      1920
+    ],
+    "film_fps": 30,
+    "film_frame_range": [
+      1,
+      1200
+    ]
   },
   "rooms": [
     {
@@ -1216,74 +1225,104 @@
   ],
   "cables": [
     {
-      "src": "D4",
-      "dst": "D3",
-      "path": [
-        [
-          8.34,
-          0.62
-        ],
-        [
-          9.1,
-          0.35
-        ],
-        [
-          12.6,
-          0.35
-        ],
-        [
-          12.82,
-          2.05
-        ]
-      ]
-    },
-    {
       "src": "C1",
       "dst": "D1",
       "path": [
         [
-          8.34,
-          3.52
+          8.315,
+          3.54
         ],
         [
-          8.95,
-          3.52
+          8.375,
+          3.62
         ],
         [
-          8.95,
-          0.45
+          8.375,
+          4.39
         ],
         [
-          12.6,
-          0.45
+          8.372,
+          4.62
         ],
         [
-          12.82,
-          1.05
+          8.37,
+          4.66
+        ],
+        [
+          8.365,
+          4.68
+        ],
+        [
+          8.31,
+          4.82
+        ],
+        [
+          8.12,
+          5.09
+        ],
+        [
+          8.1,
+          5.27
         ]
-      ]
+      ],
+      "physical_cable_id": "C1_D1",
+      "note": "Plan-view projection of the film cable. Full 3D Bezier control points are in physical_cables."
     },
     {
       "src": "C2",
       "dst": "D1",
       "path": [
         [
-          8.34,
-          0.52
+          8.315,
+          0.54
         ],
         [
-          9.0,
-          0.3
+          8.375,
+          0.69
         ],
         [
-          12.6,
-          0.3
+          8.375,
+          1.8
         ],
         [
-          12.82,
-          1.05
+          8.375,
+          3.14
+        ],
+        [
+          8.375,
+          3.49
+        ],
+        [
+          8.375,
+          4.39
+        ],
+        [
+          8.37,
+          4.71
+        ],
+        [
+          8.368,
+          4.74
+        ],
+        [
+          8.365,
+          4.76
+        ],
+        [
+          8.3,
+          4.87
+        ],
+        [
+          8.08,
+          5.17
+        ],
+        [
+          8.03,
+          5.28
         ]
-      ]
+      ],
+      "physical_cable_id": "C2_D1",
+      "note": "Plan-view projection of the film cable. Full 3D Bezier control points are in physical_cables."
     },
     {
       "src": "C3",
@@ -1291,25 +1330,127 @@
       "path": [
         [
           10.62,
-          4.88
+          4.957
         ],
         [
-          10.62,
-          4.55
+          10.32,
+          4.98
         ],
         [
-          12.7,
-          4.55
+          9.76,
+          4.98
         ],
         [
-          12.9,
-          3.4
+          9.48,
+          4.96
         ],
         [
-          12.82,
-          1.05
+          8.51,
+          4.93
+        ],
+        [
+          8.372,
+          4.91
+        ],
+        [
+          8.369,
+          4.89
+        ],
+        [
+          8.365,
+          4.87
+        ],
+        [
+          8.29,
+          4.95
+        ],
+        [
+          7.99,
+          5.14
+        ],
+        [
+          7.97,
+          5.27
         ]
-      ]
+      ],
+      "physical_cable_id": "C3_D1",
+      "note": "Plan-view projection of the film cable. Full 3D Bezier control points are in physical_cables."
+    },
+    {
+      "src": "D1",
+      "dst": "D3",
+      "path": [
+        [
+          8.1,
+          5.58
+        ],
+        [
+          7.985,
+          5.63
+        ],
+        [
+          7.976,
+          5.79
+        ],
+        [
+          7.99,
+          5.93
+        ],
+        [
+          8.02,
+          6.01
+        ]
+      ],
+      "physical_cable_id": "D1_D3",
+      "note": "Plan-view projection of the film cable. Full 3D Bezier control points are in physical_cables."
+    },
+    {
+      "src": "D3",
+      "dst": "D4",
+      "path": [
+        [
+          8.13,
+          6.17
+        ],
+        [
+          8.27,
+          6.23
+        ],
+        [
+          8.29,
+          6.08
+        ],
+        [
+          8.29,
+          4.45
+        ],
+        [
+          8.3,
+          3.6
+        ],
+        [
+          8.3,
+          3.35
+        ],
+        [
+          8.3,
+          3.11
+        ],
+        [
+          8.3,
+          1.0
+        ],
+        [
+          8.32,
+          0.71
+        ],
+        [
+          8.35,
+          0.61
+        ]
+      ],
+      "physical_cable_id": "D3_D4",
+      "note": "Plan-view projection of the film cable. Full 3D Bezier control points are in physical_cables."
     }
   ],
   "film_cameras": [
@@ -1343,16 +1484,35 @@
         16.0,
         3.0
       ],
-      "azimuth": "东南上空",
+      "azimuth": "西北上空",
       "rot_z_deg": 225,
       "scale": 42,
       "type": "ISO",
       "shots": [
         "S03",
-        "S04"
+        "S04",
+        "S07"
       ],
       "rot_x_deg": 54.7356,
-      "ortho_scale": 42
+      "ortho_scale": 42,
+      "scale_keyframes": [
+        {
+          "frame": 181,
+          "value": 42
+        },
+        {
+          "frame": 271,
+          "value": 42
+        },
+        {
+          "frame": 360,
+          "value": 12
+        },
+        {
+          "frame": 541,
+          "value": 42
+        }
+      ]
     },
     {
       "id": "V3",
@@ -1362,7 +1522,7 @@
         1.6,
         0.78
       ],
-      "azimuth": "东南上空",
+      "azimuth": "西北上空",
       "rot_z_deg": 225,
       "scale": 3.8,
       "type": "ISO",
@@ -1380,7 +1540,7 @@
         6.317728042602539,
         0.4778498113155365
       ],
-      "azimuth": "东南上空",
+      "azimuth": "西北上空",
       "rot_z_deg": 225,
       "scale": 0.18,
       "type": "ISO",
@@ -1417,7 +1577,7 @@
         8.3,
         1.15
       ],
-      "azimuth": "屋内朝南",
+      "azimuth": "西北上空",
       "rot_z_deg": 225,
       "scale": 15,
       "type": "ISO",
@@ -1442,6 +1602,18 @@
       "scale_end": 18,
       "shots": [
         "S01"
+      ],
+      "azimuth": "西北上空",
+      "ortho_scale": 1.6,
+      "scale_keyframes": [
+        {
+          "frame": 1,
+          "value": 1.6
+        },
+        {
+          "frame": 90,
+          "value": 18
+        }
       ]
     }
   ],
@@ -1450,25 +1622,33 @@
       "id": "P1",
       "name": "男主人",
       "height": 1.76,
-      "note": "35 岁上下。家居服 / 通勤衬衫两套。S02 坐餐桌，S09/S10 是在外面看手机的那个人"
+      "note": "本片穿一套有体积的家居服，坐餐桌，S02/S08 使用完全相同的轻微头部 idle；未制作旧备注中的通勤服与户外人物。",
+      "source_storyboard_note": "35 岁上下。家居服 / 通勤衬衫两套。S02 坐餐桌，S09/S10 是在外面看手机的那个人",
+      "enabled_in_film": true
     },
     {
       "id": "P2",
       "name": "女主人",
       "height": 1.63,
-      "note": "33 岁上下。家居服。S02 在餐桌旁，S12 哄孩子睡"
+      "note": "本片穿一套有体积的家居服，坐餐桌，S02/S08 使用完全相同的轻微头部 idle；S12 采用儿童独自熟睡，没有哄睡动作。",
+      "source_storyboard_note": "33 岁上下。家居服。S02 在餐桌旁，S12 哄孩子睡",
+      "enabled_in_film": true
     },
     {
       "id": "P3",
       "name": "孩子",
       "height": 1.12,
-      "note": "6 岁左右。S02 在餐桌，S12 在儿童房床上熟睡"
+      "note": "餐桌旁的儿童与 S12 熟睡儿童使用同一 MakeHuman 体型；S12 使用独立侧卧骨架副本和实体被子。",
+      "source_storyboard_note": "6 岁左右。S02 在餐桌，S12 在儿童房床上熟睡",
+      "enabled_in_film": true
     },
     {
       "id": "P4",
       "name": "猫",
       "height": 0.26,
-      "note": "可选。S02 卧在地毯上，S12 卧在儿童房地毯上"
+      "note": "文档可选角色，本片未使用。",
+      "source_storyboard_note": "可选。S02 卧在地毯上，S12 卧在儿童房地毯上",
+      "enabled_in_film": false
     }
   ],
   "blocking": {
@@ -1495,15 +1675,29 @@
     "S12": [
       {
         "person": "P3",
-        "x": 11.9,
-        "y": 5.95,
-        "yaw_deg": 270
-      },
-      {
-        "person": "P4",
-        "x": 11.2,
+        "rig": "P3 sleeping rig",
+        "anchor": "rig root",
+        "x": 11.96,
         "y": 6.6,
-        "yaw_deg": 200
+        "z": 0.73,
+        "rotation_matrix_blender": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "pose": "MakeHuman side-lying pose with flexed knees and a separate geometric quilt"
       }
     ]
   },
@@ -1772,6 +1966,118 @@
         ]
       ],
       "radius_m": 0.003
+    }
+  ],
+  "source_house_cable_guides": [
+    {
+      "src": "D4",
+      "dst": "D3",
+      "path": [
+        [
+          8.34,
+          0.62
+        ],
+        [
+          9.1,
+          0.35
+        ],
+        [
+          12.6,
+          0.35
+        ],
+        [
+          12.82,
+          2.05
+        ]
+      ]
+    },
+    {
+      "src": "C1",
+      "dst": "D1",
+      "path": [
+        [
+          8.34,
+          3.52
+        ],
+        [
+          8.95,
+          3.52
+        ],
+        [
+          8.95,
+          0.45
+        ],
+        [
+          12.6,
+          0.45
+        ],
+        [
+          12.82,
+          1.05
+        ]
+      ]
+    },
+    {
+      "src": "C2",
+      "dst": "D1",
+      "path": [
+        [
+          8.34,
+          0.52
+        ],
+        [
+          9.0,
+          0.3
+        ],
+        [
+          12.6,
+          0.3
+        ],
+        [
+          12.82,
+          1.05
+        ]
+      ]
+    },
+    {
+      "src": "C3",
+      "dst": "D1",
+      "path": [
+        [
+          10.62,
+          4.88
+        ],
+        [
+          10.62,
+          4.55
+        ],
+        [
+          12.7,
+          4.55
+        ],
+        [
+          12.9,
+          3.4
+        ],
+        [
+          12.82,
+          1.05
+        ]
+      ]
+    }
+  ],
+  "source_storyboard_blocking_S12": [
+    {
+      "person": "P3",
+      "x": 11.9,
+      "y": 5.95,
+      "yaw_deg": 270
+    },
+    {
+      "person": "P4",
+      "x": 11.2,
+      "y": 6.6,
+      "yaw_deg": 200
     }
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "last_completed_frame": 1200,
+  "total_frames": 1200,
+  "elapsed_seconds": 6344.128786915913,
+  "rendered_this_run": 930,
+  "skipped_existing": 270,
+  "final_patch_seconds": 468.710019916296,
+  "final_patch_frames": 96
+}

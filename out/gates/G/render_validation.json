@@ -1,0 +1,188 @@
+{
+  "status": "PASS",
+  "frame_count": 1200,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "png_bit_depth": 16,
+  "png_color_mode": "RGBA",
+  "full_png_crc_and_sha256_checked": true,
+  "errors": [],
+  "render_seconds": 6344.128786915913,
+  "original_home_unchanged": true,
+  "paired_rendered_camera_frames": 90,
+  "selected_every_50_frames": [
+    50,
+    100,
+    150,
+    200,
+    250,
+    300,
+    350,
+    400,
+    450,
+    500,
+    550,
+    600,
+    650,
+    700,
+    750,
+    800,
+    850,
+    900,
+    950,
+    1000,
+    1050,
+    1100,
+    1150,
+    1200
+  ],
+  "selected_luminance": [
+    {
+      "frame": 50,
+      "look": "LOOK_DARK",
+      "low_0_to_025_fraction": 0.985958236882716,
+      "median": 0.0
+    },
+    {
+      "frame": 100,
+      "look": "LOOK_DUSK",
+      "low_0_to_025_fraction": 0.07444685570987654,
+      "median": 0.32156863808631897
+    },
+    {
+      "frame": 150,
+      "look": "LOOK_DUSK",
+      "low_0_to_025_fraction": 0.07446469907407408,
+      "median": 0.32156863808631897
+    },
+    {
+      "frame": 200,
+      "look": "LOOK_DARK",
+      "low_0_to_025_fraction": 0.9865735918209877,
+      "median": 0.0
+    },
+    {
+      "frame": 250,
+      "look": "LOOK_DARK",
+      "low_0_to_025_fraction": 0.9870572916666667,
+      "median": 0.0
+    },
+    {
+      "frame": 300,
+      "look": "LOOK_DARK",
+      "low_0_to_025_fraction": 0.9789192708333333,
+      "median": 0.0
+    },
+    {
+      "frame": 350,
+      "look": "LOOK_DARK",
+      "low_0_to_025_fraction": 0.9199729938271605,
+      "median": 0.0
+    },
+    {
+      "frame": 400,
+      "look": "LOOK_DUSK",
+      "low_0_to_025_fraction": 0.9521903935185185,
+      "median": 0.14315372705459595
+    },
+    {
+      "frame": 450,
+      "look": "LOOK_DUSK",
+      "low_0_to_025_fraction": 0.9100434027777777,
+      "median": 0.14398746192455292
+    },
+    {
+      "frame": 500,
+      "look": "LOOK_DUSK",
+      "low_0_to_025_fraction": 0.48498939043209877,
+      "median": 0.2536745071411133
+    },
+    {
+      "frame": 550,
+      "look": "LOOK_DARK",
+      "low_0_to_025_fraction": 0.9835257523148148,
+      "median": 0.0
+    },
+    {
+      "frame": 600,
+      "look": "LOOK_DARK",
+      "low_0_to_025_fraction": 0.9913194444444444,
+      "median": 0.0
+    },
+    {
+      "frame": 650,
+      "look": "LOOK_DUSK",
+      "low_0_to_025_fraction": 0.07267457561728395,
+      "median": 0.32156863808631897
+    },
+    {
+      "frame": 700,
+      "look": "LOOK_DUSK",
+      "low_0_to_025_fraction": 0.07262056327160493,
+      "median": 0.32156863808631897
+    },
+    {
+      "frame": 750,
+      "look": "LOOK_DUSK",
+      "low_0_to_025_fraction": 0.07078221450617284,
+      "median": 0.32156863808631897
+    },
+    {
+      "frame": 800,
+      "look": "LOOK_DUSK",
+      "low_0_to_025_fraction": 0.07045524691358025,
+      "median": 0.32156863808631897
+    },
+    {
+      "frame": 850,
+      "look": "LOOK_DUSK",
+      "low_0_to_025_fraction": 0.8678988233024691,
+      "median": 0.16503137350082397
+    },
+    {
+      "frame": 900,
+      "look": "LOOK_DUSK",
+      "low_0_to_025_fraction": 0.8678988233024691,
+      "median": 0.16503137350082397
+    },
+    {
+      "frame": 950,
+      "look": "LOOK_DUSK",
+      "low_0_to_025_fraction": 0.07489535108024692,
+      "median": 0.32156863808631897
+    },
+    {
+      "frame": 1000,
+      "look": "LOOK_NIGHT",
+      "low_0_to_025_fraction": 0.9249715470679012,
+      "median": 0.0227113738656044
+    },
+    {
+      "frame": 1050,
+      "look": "LOOK_NIGHT",
+      "low_0_to_025_fraction": 0.9250882523148148,
+      "median": 0.022376470267772675
+    },
+    {
+      "frame": 1100,
+      "look": "LOOK_DUSK",
+      "low_0_to_025_fraction": 0.07489535108024692,
+      "median": 0.32156863808631897
+    },
+    {
+      "frame": 1150,
+      "look": "LOOK_DARK",
+      "low_0_to_025_fraction": 0.9880005787037037,
+      "median": 0.0
+    },
+    {
+      "frame": 1200,
+      "look": "LOOK_DARK",
+      "low_0_to_025_fraction": 0.9880005787037037,
+      "median": 0.0
+    }
+  ],
+  "note": "Gate C thresholds apply to its calibrated look frames. This final-frame sample includes emissive effects and tightly cropped UI, which have different histograms."
+}

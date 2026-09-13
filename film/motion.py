@@ -62,7 +62,7 @@ def apply_frame(sc,*args):
         if role=='flow_fill':
             curve=bpy.data.objects[ob['flow_curve']];length=curve['path_length_m']
             ob.location=point_on_curve(curve,frame/30*1.2/length+ob['flow_phase'])+Vector((0,0,.08))
-            if shot=='S07':ob.hide_render=frame>=547
+            if shot=='S07':ob.hide_render=frame>=547 or 'S07' not in ob.get('film_shots','').split()
         elif role=='local_halo':ob.data.energy=3+2*(.5+.5*math.sin((frame-631)/30*2.1))
         elif role=='remote_window':
             b=ob.active_material.node_tree.nodes.get('Principled BSDF');row=ob['window_row'];b.inputs['Emission Strength'].default_value=.7+4*max(0,math.sin((frame-181)/9-row*.8))**8
@@ -90,7 +90,9 @@ def apply_frame(sc,*args):
         # Gentle round-trip light is created in F completion; this faint line remains local.
     else:bpy.data.lights['LOOK_NIGHT child night lamp'].energy=25
     if 'S04 frame emission' in bpy.data.materials:
-        n=bpy.data.materials['S04 frame emission'].node_tree.nodes.get('Principled BSDF');n.inputs['Emission Strength'].default_value=4+12*max(0,math.sin((frame-271)/12*math.pi))**6
+        n=bpy.data.materials['S04 frame emission'].node_tree.nodes.get('Principled BSDF')
+        # Two complete pulses across the 90-frame shot, peaking near frames 294/338.
+        n.inputs['Emission Strength'].default_value=4+12*(.5-.5*math.cos(2*math.pi*(frame-271)/45))**6
     # Image sequences are selected by shot, with a real 90-frame UI sequence in F.
     if 'FILM UI S05' in bpy.data.materials:
         mat=bpy.data.materials['FILM UI S05' if shot=='S05' else 'FILM UI S10' if shot=='S10' else 'FILM UI PAYMENT']

@@ -5,7 +5,9 @@ const fontCSS=[['Black','900'],['Bold','600 800'],['Regular','100 500']].map(([w
 (async()=>{
  const browser=await chromium.launch({headless:true,args:['--force-color-profile=srgb','--font-render-hinting=none']});
  const page=await browser.newPage({viewport:{width:1080,height:2200},deviceScaleFactor:1});
- for (const shot of ['S05','S10','PAYMENT','S14_bird_original']) {
+ const selected=process.argv.indexOf('--shot');
+ const shots=selected>=0?[process.argv[selected+1]]:['S05','S10','PAYMENT','S14_bird_original'];
+ for (const shot of shots) {
   const bird=shot.startsWith('S14');await page.setViewportSize({width:1080,height:bird?1920:2200});
   let svg=fs.readFileSync(path.join(dir,shot+'.svg'),'utf8').replace(/ns0:/g,'').replace(/xmlns:ns0=/g,'xmlns=');
   await page.setContent(`<style>${fontCSS}html,body{margin:0;padding:0;background:transparent}svg{display:block}text{font-family:'Noto Sans CJK SC'!important}</style>${svg}`);
@@ -20,8 +22,11 @@ const fontCSS=[['Black','900'],['Bold','600 800'],['Regular','100 500']].map(([w
      document.getElementById('timeline').setAttribute('opacity',String(1-.65*q));
      const lock=document.getElementById('lock');lock.setAttribute('opacity',String(q));lock.setAttribute('transform',`translate(0,${-25*(1-q)})`);
      const shake=f>=60&&f<76?Math.sin((f-60)*1.4)*7*(1-(f-60)/16):0;
-     document.getElementById('paywall').setAttribute('transform',`translate(${shake},${320*(1-p)**3})`);document.getElementById('paywall').setAttribute('opacity',String(p));
-     const ripple=document.getElementById('ripple');ripple.setAttribute('r',String(6+90*t));ripple.setAttribute('opacity',String(f>=60?.8*(1-t):0));
+     // Keep the original copy; reserve the locked caption baseline below the CTA.
+     document.getElementById('paywall').setAttribute('transform',`translate(${shake},${320*(1-p)**3-48*p})`);document.getElementById('paywall').setAttribute('opacity',String(p));
+     const helper=document.getElementById('paywall').querySelector('text:last-of-type');
+     helper.setAttribute('y','512');helper.setAttribute('font-size','14');
+     const ripple=document.getElementById('ripple');ripple.setAttribute('cy','498');ripple.setAttribute('r',String(6+90*t));ripple.setAttribute('opacity',String(f>=60?.8*(1-t):0));
     }else if(shot==='S10'){
      const q=Math.max(.0001,clamp(f/15));document.getElementById('livecard').setAttribute('transform',`translate(${18+138*(1-q)},${366+98*(1-q)}) scale(${q})`);
      document.getElementById('latency').textContent=f<15?'正在连接 · 延迟 --':'已连接 · 延迟 18ms';

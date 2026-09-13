@@ -5,5 +5,8 @@ __pycache__/
 out/frames/*.png
 out/ui/frames/
 out/composite_frames/
+out/caption_frames/
+out/gates/G/S04_pulse_correction/
+out/gates/G/final_corrections/before/
 out/logs/
 assets/characters/makehuman_tree.json

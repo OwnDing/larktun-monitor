@@ -2,14 +2,18 @@
   "source_home_sha256": "15fb9bde761c3eeddc9821581d3d45e278be4411659a840cc8c564a0ae229efb",
   "source_commit": "1caa9a9",
   "branch": "film/v1",
-  "stage": "F",
-  "status": "passed",
+  "stage": "G",
+  "status": "complete",
   "completed_stages": [
     "A",
     "B",
     "C",
     "D",
     "E",
-    "F"
-  ]
+    "F",
+    "G"
+  ],
+  "estimated_render_minutes": 126.08042593637947,
+  "render_over_two_hours_approved": true,
+  "actual_render_seconds": 6344.128786915913
 }

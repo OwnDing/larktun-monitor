@@ -1,0 +1,106 @@
+{
+  "status": "approved_rendering",
+  "engine": "BLENDER_EEVEE",
+  "blender_version": "5.2.1 LTS",
+  "resolution": [
+    1080,
+    1920
+  ],
+  "samples": 64,
+  "raytracing": true,
+  "fast_gi_distance": 0.35,
+  "frame_count": 1200,
+  "method": "One actual production-setting frame per shot, weighted by shot duration; includes frame/depsgraph update; 25% reserve.",
+  "measurements": [
+    {
+      "shot": "S01",
+      "frame": 20,
+      "seconds_including_state_update": 4.563476874958724,
+      "shot_frames": 90
+    },
+    {
+      "shot": "S02",
+      "frame": 135,
+      "seconds_including_state_update": 4.458169667050242,
+      "shot_frames": 90
+    },
+    {
+      "shot": "S03",
+      "frame": 225,
+      "seconds_including_state_update": 4.268389500211924,
+      "shot_frames": 90
+    },
+    {
+      "shot": "S04",
+      "frame": 340,
+      "seconds_including_state_update": 4.07042545825243,
+      "shot_frames": 90
+    },
+    {
+      "shot": "S05",
+      "frame": 424,
+      "seconds_including_state_update": 4.962616458069533,
+      "shot_frames": 90
+    },
+    {
+      "shot": "S06",
+      "frame": 495,
+      "seconds_including_state_update": 5.767770832870156,
+      "shot_frames": 90
+    },
+    {
+      "shot": "S07",
+      "frame": 552,
+      "seconds_including_state_update": 4.44307062542066,
+      "shot_frames": 90
+    },
+    {
+      "shot": "S08",
+      "frame": 675,
+      "seconds_including_state_update": 4.869644584134221,
+      "shot_frames": 90
+    },
+    {
+      "shot": "S09",
+      "frame": 770,
+      "seconds_including_state_update": 7.176597665995359,
+      "shot_frames": 90
+    },
+    {
+      "shot": "S10",
+      "frame": 840,
+      "seconds_including_state_update": 5.312355082947761,
+      "shot_frames": 90
+    },
+    {
+      "shot": "S11",
+      "frame": 945,
+      "seconds_including_state_update": 5.1010135831311345,
+      "shot_frames": 90
+    },
+    {
+      "shot": "S12",
+      "frame": 1030,
+      "seconds_including_state_update": 5.266900083050132,
+      "shot_frames": 90
+    },
+    {
+      "shot": "S13",
+      "frame": 1110,
+      "seconds_including_state_update": 5.9015462920069695,
+      "shot_frames": 60
+    },
+    {
+      "shot": "S14",
+      "frame": 1155,
+      "seconds_including_state_update": 4.572148832958192,
+      "shot_frames": 60
+    }
+  ],
+  "weighted_seconds": 6051.860444946215,
+  "estimated_seconds_with_25_percent_reserve": 7564.825556182768,
+  "estimated_minutes": 126.08042593637947,
+  "full_render_started": true,
+  "user_approved_original_settings": true,
+  "approval_utc": "2026-09-13T09:07:08.136077+00:00"
+}
