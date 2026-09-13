@@ -1,0 +1,124 @@
+{
+  "gate": "D",
+  "status": "PASS",
+  "frames": [
+    {
+      "shot": "S02",
+      "frame": 91,
+      "render_seconds": 2.8415587502531707,
+      "camera_location": [
+        -17.094005584716797,
+        18.494009017944336,
+        24.39401626586914
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 18.0,
+      "sha256": "797d8c627983c271ee59a972d7409c923de657f6846d8249101ae7ea0e91c8d7"
+    },
+    {
+      "shot": "S02",
+      "frame": 135,
+      "render_seconds": 2.1167992502450943,
+      "camera_location": [
+        -17.094005584716797,
+        18.494009017944336,
+        24.39401626586914
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 18.0,
+      "sha256": "068c027cf3515d2be103f2f52410adfc4046ec7e28d7e6b39dc51c4a1d52a0dd"
+    },
+    {
+      "shot": "S02",
+      "frame": 180,
+      "render_seconds": 2.2413770840503275,
+      "camera_location": [
+        -17.094005584716797,
+        18.494009017944336,
+        24.39401626586914
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 18.0,
+      "sha256": "c030fe8225a9da7c533c1a01621d0770d7ede0ad8e051c6af63a01daaef156ed"
+    },
+    {
+      "shot": "S08",
+      "frame": 631,
+      "render_seconds": 2.0081662917509675,
+      "camera_location": [
+        -17.094005584716797,
+        18.494009017944336,
+        24.39401626586914
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 18.0,
+      "sha256": "dc21bf59b13ceec8e6a6c4b467a17ea040d6c7ce172fbe11d617df3e41981ca0"
+    },
+    {
+      "shot": "S08",
+      "frame": 675,
+      "render_seconds": 2.0301086669787765,
+      "camera_location": [
+        -17.094005584716797,
+        18.494009017944336,
+        24.39401626586914
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 18.0,
+      "sha256": "9bfdd3fe3fdb64b4d0933b54ec23ecbdceed8a903337139137f1f46977ac0b75"
+    },
+    {
+      "shot": "S08",
+      "frame": 720,
+      "render_seconds": 1.99026979226619,
+      "camera_location": [
+        -17.094005584716797,
+        18.494009017944336,
+        24.39401626586914
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 18.0,
+      "sha256": "63be5bd9661496906a33dfa5a9b2aacbfa47baa94c2782e7b1e31940e8dbd74f"
+    }
+  ],
+  "semantic_colors": {
+    "red": "#FF4B4B",
+    "cyan": "#2FE0C8"
+  },
+  "packet_method": "Resample Curve / Sample Curve at fraction(index/count + time*1.2/length) / tangent-aligned diamond instances",
+  "curve_radii_m": {
+    "flow": 0.06,
+    "tunnel": 0.18
+  },
+  "samples": 32,
+  "visual_notes": [
+    "Red leaves C1 toward the top-right outside the house.",
+    "Three cyan paths follow the physical C1/C2/C3 cables to the relocated D1. Upper C3 and some corridor segments remain occluded by full-height far walls, as in Gate A; overlapping final cable descents visually merge near D1.",
+    "Packet positions differ across first/middle/last frames; positive path direction is source-camera to destination.",
+    "AgX maps high-emission cores toward white/pale colour; shader semantic RGB stays exactly specified."
+  ]
+}

@@ -218,3 +218,14 @@ def render(path, camera=None, samples=32):
     sc.render.filepath=str(path)
     t=time.monotonic();bpy.ops.render.render(write_still=True,layer=bpy.context.view_layer.name)
     return time.monotonic()-t
+
+
+def activate_look(name):
+    sc=bpy.context.scene;vl=sc.view_layers['LOOK_'+name]
+    bpy.context.window.view_layer=vl
+    for layer in sc.view_layers:layer.use=layer==vl
+    sc.world=vl.world_override;sc.view_settings.exposure=vl['film_exposure']
+    if sc.compositing_node_group:
+        for n in sc.compositing_node_group.nodes:
+            if n.type=='R_LAYERS':n.layer=vl.name
+    return vl
