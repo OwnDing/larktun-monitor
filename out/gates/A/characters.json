@@ -1,0 +1,38 @@
+[
+  {
+    "id": "P1",
+    "height_m": 1.76,
+    "position": [
+      4.925,
+      0.83,
+      0
+    ],
+    "yaw_blender_deg": 0,
+    "route": "MakeHuman core CC0; original volumetric cotton shirt and trousers",
+    "mesh_vertices": 15902
+  },
+  {
+    "id": "P2",
+    "height_m": 1.63,
+    "position": [
+      5.775,
+      2.32,
+      0
+    ],
+    "yaw_blender_deg": 180,
+    "route": "MakeHuman core CC0; original volumetric cotton shirt and trousers",
+    "mesh_vertices": 15865
+  },
+  {
+    "id": "P3",
+    "height_m": 1.12,
+    "position": [
+      4.925,
+      2.34,
+      0
+    ],
+    "yaw_blender_deg": 180,
+    "route": "MakeHuman core CC0; original volumetric cotton shirt and trousers",
+    "mesh_vertices": 15907
+  }
+]

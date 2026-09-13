@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.blend1
+*.blend2
+out/frames/*.png
+out/ui/frames/
+out/composite_frames/
+out/logs/
+assets/characters/makehuman_tree.json

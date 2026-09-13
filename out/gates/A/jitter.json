@@ -1,0 +1,105 @@
+{
+  "seed": 9131305,
+  "assemblies": [
+    {
+      "assembly": "R03 · 餐椅 1",
+      "rotation_z_deg": 1.770435239845539,
+      "translation_m": [
+        -0.0014357718173414469,
+        -0.00520192040130496,
+        0.0
+      ],
+      "objects": 12
+    },
+    {
+      "assembly": "R03 · 餐椅 2",
+      "rotation_z_deg": -0.7222183623048686,
+      "translation_m": [
+        0.010719138197600842,
+        -0.011108942329883575,
+        0.0
+      ],
+      "objects": 12
+    },
+    {
+      "assembly": "R03 · 餐椅 3",
+      "rotation_z_deg": -0.017378714258819095,
+      "translation_m": [
+        -0.01310817338526249,
+        -0.01155621837824583,
+        0.0
+      ],
+      "objects": 12
+    },
+    {
+      "assembly": "R03 · 餐椅 4",
+      "rotation_z_deg": -2.28619183906211,
+      "translation_m": [
+        0.0009183153160847723,
+        -0.00871734693646431,
+        0.0
+      ],
+      "objects": 12
+    },
+    {
+      "assembly": "R07 · 三人沙发 informal rust pillow",
+      "rotation_z_deg": -0.5578179891544561,
+      "translation_m": [
+        0.009940902702510357,
+        -0.014908082783222198,
+        0.0
+      ],
+      "objects": 2
+    },
+    {
+      "assembly": "R07 · 三人沙发 linen pillow",
+      "rotation_z_deg": -2.6825221381189444,
+      "translation_m": [
+        0.00013558886712417006,
+        0.004328262992203236,
+        0.0
+      ],
+      "objects": 2
+    },
+    {
+      "assembly": "R07 · 地毯",
+      "rotation_z_deg": 1.065137438496266,
+      "translation_m": [
+        0.00515833729878068,
+        0.009936932474374771,
+        0.0
+      ],
+      "objects": 327
+    },
+    {
+      "assembly": "Living mug",
+      "rotation_z_deg": 1.5946279122346132,
+      "translation_m": [
+        0.013091248460114002,
+        -0.007115678396075964,
+        0.0
+      ],
+      "objects": 3
+    },
+    {
+      "assembly": "Living art book",
+      "rotation_z_deg": -2.7396049268750886,
+      "translation_m": [
+        -0.007404729723930359,
+        0.011798775754868984,
+        0.0
+      ],
+      "objects": 4
+    },
+    {
+      "assembly": "Dining tea cup",
+      "rotation_z_deg": 2.9503296368574627,
+      "translation_m": [
+        -0.011004633270204067,
+        0.012339742854237556,
+        0.0
+      ],
+      "objects": 3
+    }
+  ]
+}
