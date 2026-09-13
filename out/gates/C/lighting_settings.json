@@ -1,0 +1,158 @@
+{
+  "LOOK_DARK": {
+    "world_color_linear": [
+      0.0015176349552348256,
+      0.002124688820913434,
+      0.0043914420530200005,
+      1.0
+    ],
+    "world_strength": 0.07999999821186066,
+    "exposure": -0.6,
+    "lights": [
+      {
+        "name": "LOOK_DARK key",
+        "power_W": 80.0,
+        "position_drawing": [
+          3.200000047683716,
+          3.0,
+          4.300000190734863
+        ],
+        "color_linear": [
+          0.5028864741325378,
+          0.6038273572921753,
+          0.7912979125976562
+        ],
+        "shadow": true
+      }
+    ]
+  },
+  "LOOK_DUSK": {
+    "world_color_linear": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "world_strength": 0.11999999731779099,
+    "exposure": -0.2,
+    "lights": [
+      {
+        "name": "LOOK_DUSK key",
+        "power_W": 220.0,
+        "position_drawing": [
+          -1.0,
+          3.700000047683716,
+          4.199999809265137
+        ],
+        "color_linear": [
+          1.0,
+          0.5149176716804504,
+          0.24228112399578094
+        ],
+        "shadow": true
+      },
+      {
+        "name": "LOOK_DUSK dining practical",
+        "power_W": 50.0,
+        "position_drawing": [
+          5.300000190734863,
+          1.600000023841858,
+          2.1500000953674316
+        ],
+        "color_linear": [
+          1.0,
+          0.38642942905426025,
+          0.09530746936798096
+        ],
+        "shadow": true
+      },
+      {
+        "name": "LOOK_DUSK living practical",
+        "power_W": 65.0,
+        "position_drawing": [
+          6.099999904632568,
+          6.5,
+          2.6500000953674316
+        ],
+        "color_linear": [
+          1.0,
+          0.38642942905426025,
+          0.09530746936798096
+        ],
+        "shadow": true
+      },
+      {
+        "name": "LOOK_DUSK foyer practical",
+        "power_W": 40.0,
+        "position_drawing": [
+          7.5,
+          1.5,
+          2.6500000953674316
+        ],
+        "color_linear": [
+          1.0,
+          0.38642942905426025,
+          0.09530746936798096
+        ],
+        "shadow": true
+      },
+      {
+        "name": "LOOK_DUSK child practical",
+        "power_W": 45.0,
+        "position_drawing": [
+          11.5,
+          6.199999809265137,
+          2.6500000953674316
+        ],
+        "color_linear": [
+          1.0,
+          0.38642942905426025,
+          0.09530746936798096
+        ],
+        "shadow": true
+      }
+    ]
+  },
+  "LOOK_NIGHT": {
+    "world_color_linear": [
+      0.005181516520678997,
+      0.009134058840572834,
+      0.022173885256052017,
+      1.0
+    ],
+    "world_strength": 0.05999999865889549,
+    "exposure": 0,
+    "lights": [
+      {
+        "name": "LOOK_NIGHT key",
+        "power_W": 45.0,
+        "position_drawing": [
+          11.600000381469727,
+          8.479999542236328,
+          2.1500000953674316
+        ],
+        "color_linear": [
+          0.0423114113509655,
+          0.09084171056747437,
+          0.2158605009317398
+        ],
+        "shadow": true
+      },
+      {
+        "name": "LOOK_NIGHT child night lamp",
+        "power_W": 25.0,
+        "position_drawing": [
+          12.859999656677246,
+          5.230000019073486,
+          0.7070000171661377
+        ],
+        "color_linear": [
+          1.0,
+          0.5271151065826416,
+          0.11953842639923096
+        ],
+        "shadow": false
+      }
+    ]
+  }
+}
