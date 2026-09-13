@@ -112,6 +112,8 @@ def full_layer():
 
 
 def bounds(o):
+    if o.hide_render or o.name not in bpy.context.view_layer.objects:
+        return [o.matrix_world@Vector(p) for p in o.bound_box]
     dg=bpy.context.evaluated_depsgraph_get(); ev=o.evaluated_get(dg)
     if o.type in {'CURVE','FONT','SURFACE'}:
         mesh=ev.to_mesh(); vs=np.empty(len(mesh.vertices)*3,dtype=np.float32)
@@ -132,7 +134,7 @@ def projection(camera, objects):
     c=sum(points,Vector())/len(points); ndc=world_to_camera_view(sc,camera,c)
     ps=[world_to_camera_view(sc,camera,p) for p in points]
     lo=[min(p[i] for p in ps) for i in range(3)]; hi=[max(p[i] for p in ps) for i in range(3)]
-    enabled=all(not o.hide_render for o in objects)
+    enabled=all(not o.hide_render and o.name in bpy.context.view_layer.objects and all(not c.hide_render for c in o.users_collection) for o in objects)
     return dict(in_frame=bool(0<=ndc.x<=1 and 0<=ndc.y<=1 and 0<ndc.z<camera.data.clip_end),
                 render_enabled=enabled, fully_in_frame=bool(0<=lo[0]<=hi[0]<=1 and 0<=lo[1]<=hi[1]<=1 and lo[2]>0),
                 projected_bounds_ndc=[lo[0],lo[1],hi[0],hi[1]],anchor_ndc=list(ndc),
@@ -155,6 +157,39 @@ def apply_v1_cut(angle=225):
         if o.get('film_role')=='physical_cable': o.hide_render=False
     bpy.context.view_layer.update()
     return frame['hidden_collections']
+
+
+def focus_cut(room_id, angle):
+    """Full-height directional cut relative to the selected room, not the origin."""
+    layout=json.loads((ROOT/'scene/layout.json').read_text());r=next(r for r in layout['rooms'] if r['id']==room_id)
+    east=angle in (45,135);south=angle in (45,315);sx=1 if east else -1;sy=1 if south else -1
+    hidden_rooms=set()
+    for other in layout['rooms']:
+        if other['id']==room_id:continue
+        x=(other['x0']+other['x1'])/2;y=(other['y0']+other['y1'])/2
+        tx=sorted(((r['x0']-x)/-sx,(r['x1']-x)/-sx));ty=sorted(((r['y0']-y)/-sy,(r['y1']-y)/-sy))
+        if max(tx[0],ty[0],.001)<min(tx[1],ty[1]):hidden_rooms.add(other['id'])
+    walls=layout['walls']+[dict(x0=8.52,y0=2.12,x1=9.6,y1=2.24)]
+    hidden_walls=set()
+    for i,w in enumerate(walls):
+        horizontal=w['x1']-w['x0']>w['y1']-w['y0']
+        if horizontal:
+            if (south and w['y0']>=r['y1']-.05) or (not south and w['y1']<=r['y0']+.15):hidden_walls.add(i)
+        elif (east and w['x0']>=r['x1']-.05) or (not east and w['x1']<=r['x0']+.15):hidden_walls.add(i)
+    manifest=json.loads((ROOT/'renders/v1_framing/visibility_groups.json').read_text())
+    hidden=set();hidden_cols=[]
+    import re
+    for name,g in manifest.items():
+        wall=re.search(r'Wall W(\d+)',name);room=re.search(r'Room (R\d+)',name)
+        hide=(wall and int(wall.group(1)) in hidden_walls) or (room and room.group(1) in hidden_rooms)
+        if hide:hidden.update(g['objects']);hidden_cols.append(name)
+    for ob in bpy.context.scene.objects:
+        if ob.type in {'CAMERA','LIGHT'}:continue
+        if 'film_base_hide' not in ob:ob['film_base_hide']=ob.hide_render
+        ob.hide_render=bool(ob.get('film_retired') or ob.get('film_base_hide') or ob.name in hidden)
+        if ob.get('film_room'):ob.hide_render=bool(ob.get('film_retired') or ob['film_room'] in hidden_rooms)
+    bpy.context.view_layer.update()
+    return sorted(hidden_cols)
 
 
 def save(stage):

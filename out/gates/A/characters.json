@@ -9,7 +9,7 @@
     ],
     "yaw_blender_deg": 0,
     "route": "MakeHuman core CC0; original volumetric cotton shirt and trousers",
-    "mesh_vertices": 15902
+    "mesh_vertices": 16224
   },
   {
     "id": "P2",
@@ -21,7 +21,7 @@
     ],
     "yaw_blender_deg": 180,
     "route": "MakeHuman core CC0; original volumetric cotton shirt and trousers",
-    "mesh_vertices": 15865
+    "mesh_vertices": 16157
   },
   {
     "id": "P3",
@@ -33,6 +33,6 @@
     ],
     "yaw_blender_deg": 180,
     "route": "MakeHuman core CC0; original volumetric cotton shirt and trousers",
-    "mesh_vertices": 15907
+    "mesh_vertices": 16178
   }
 ]

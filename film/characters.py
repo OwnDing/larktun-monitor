@@ -66,12 +66,12 @@ def build_person(pid, height, target_name, position, yaw, shirt_hex):
     # canonical vertex weights. They are not a body-colour texture or primitives.
     helper=faces['helper-tights']
     def centre(f): return verts[f].mean(axis=0)
-    tops=[f for f in helper if .50*height<centre(f)[2]<.825*height
+    tops=[f for f in helper if .50*height<centre(f)[2]<.872*height
           and (abs(centre(f)[0])<.18*height or centre(f)[2]>.63*height)]
     bottoms=[f for f in helper if .045*height<centre(f)[2]<.56*height and abs(centre(f)[0])<.22*height]
     top=part('cotton shirt geometry',tops,cloth,.015 if pid!='P3' else .011,.003)
     bottom=part('trouser geometry',bottoms,pants,.012,.003)
-    short_hair=[f for f in faces['helper-hair'] if verts[f].mean(axis=0)[2]>.89*height]
+    short_hair=[f for f in faces['body'] if verts[f].mean(axis=0)[2]>.943*height or (verts[f].mean(axis=0)[1]>.015*height and verts[f].mean(axis=0)[2]>.90*height)]
     cap=part('sculpted short hair cap',short_hair,hair,.006,.004)
     # Feet use the anatomical foot geometry, with separate opaque sock material.
     sock=material(pid+' socks','BDB6A8',.97)

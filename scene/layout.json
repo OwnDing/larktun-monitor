@@ -1339,18 +1339,20 @@
       "id": "V2",
       "name": "整户俯瞰",
       "look_at": [
-        6.6,
-        4.0,
-        0.0
+        16.1,
+        16.0,
+        3.0
       ],
       "azimuth": "东南上空",
-      "rot_z_deg": 45,
-      "scale": 17.5,
+      "rot_z_deg": 225,
+      "scale": 42,
       "type": "ISO",
       "shots": [
         "S03",
         "S04"
-      ]
+      ],
+      "rot_x_deg": 54.7356,
+      "ortho_scale": 42
     },
     {
       "id": "V3",
@@ -1358,63 +1360,88 @@
       "look_at": [
         5.3,
         1.6,
-        0.75
+        0.78
       ],
       "azimuth": "东南上空",
-      "rot_z_deg": 45,
-      "scale": 3.4,
+      "rot_z_deg": 225,
+      "scale": 3.8,
       "type": "ISO",
       "shots": [
         "S06"
-      ]
+      ],
+      "rot_x_deg": 54.7356,
+      "ortho_scale": 3.8
     },
     {
       "id": "V4",
       "name": "茶几 / 手机",
       "look_at": [
-        5.5,
-        6.15,
-        0.45
+        5.399728775024414,
+        6.317728042602539,
+        0.4778498113155365
       ],
       "azimuth": "东南上空",
-      "rot_z_deg": 45,
-      "scale": 1.4,
+      "rot_z_deg": 225,
+      "scale": 0.18,
       "type": "ISO",
       "shots": [
         "S05",
         "S10"
-      ]
+      ],
+      "rot_x_deg": 54.7356,
+      "ortho_scale": 0.18
     },
     {
       "id": "V5",
       "name": "儿童房夜景",
       "look_at": [
-        11.4,
-        6.4,
-        0.6
+        11.7,
+        6.2,
+        1.1
       ],
       "azimuth": "东南上空",
       "rot_z_deg": 45,
-      "scale": 5.2,
+      "scale": 7.5,
       "type": "ISO",
       "shots": [
         "S12"
-      ]
+      ],
+      "rot_x_deg": 54.7356,
+      "ortho_scale": 7.5
     },
     {
       "id": "V6",
       "name": "客厅望阳台",
       "look_at": [
-        6.0,
-        8.9,
-        1.35
+        6.8,
+        8.3,
+        1.15
       ],
       "azimuth": "屋内朝南",
-      "rot_z_deg": 90,
-      "scale": 35.0,
-      "type": "PERSP",
+      "rot_z_deg": 225,
+      "scale": 15,
+      "type": "ISO",
       "shots": [
         "S09"
+      ],
+      "rot_x_deg": 54.7356,
+      "ortho_scale": 15
+    },
+    {
+      "id": "V1a",
+      "name": "C1 钩子特写",
+      "type": "ISO",
+      "look_at": [
+        8.34,
+        3.52,
+        2.35
+      ],
+      "rot_x_deg": 54.7356,
+      "rot_z_deg": 225,
+      "scale": 1.6,
+      "scale_end": 18,
+      "shots": [
+        "S01"
       ]
     }
   ],
