@@ -1,6 +1,6 @@
 # 云雀通 01 · 制作报告
 
-状态：阶段 A–E 通过；F–H 尚未完成。此报告随每个阶段提交更新，不将预检当作成片。
+状态：阶段 A–F 通过；G–H 尚未完成。此报告随每个阶段提交更新，不将预检当作成片。
 
 制作分支：`film/v1`。源模型：`Larktun_Home.blend`；影片模型：`Larktun_Film.blend`。
 源模型 SHA-256：`15fb9bde761c3eeddc9821581d3d45e278be4411659a840cc8c564a0ae229efb`。
@@ -98,7 +98,11 @@ S12 使用同一 MakeHuman 儿童模型侧卧、屈膝，覆盖有厚度的小�
 
 ## F · 手机 UI
 
-待完成；`¥ XX` 保持占位。
+阶段 F：PASS。S05/S10 各 90 张 1080×2200 PNG，使用独立手机屏幕材质、Emission Strength 2.5。灰掉时间轴、落锁、付费墙滑入、点击弹回、实时卡片 15 帧展开和 `-- → 18ms` 均以序列图实现；S06 有独立扣费通知，金额始终为 `¥ XX`。
+
+`out/ui/*_original.svg` 保存源 `inner`；`out/ui/S05.svg` / `S10.svg` 是动画副本。修正源 SVG 无效的 `text-anchor="center"` 为 `middle`，否则文字会溢出右边。S10 使用本户真实渲染替换原示意缩略图，LIVE 标记统一青色。原始雀鸟完整提取到 `S14_bird_original.svg`，路径、形状和色值未改。
+
+UI 字体使用 Noto Sans CJK SC Regular/Bold/Black；字幕专用 Black 保留在 `assets/fonts/`。字体来自 [Noto 官方仓库](https://github.com/notofonts/noto-cjk)，OFL 许可证及固定提交/SHA 见 `assets/fonts/provenance.json`。UI 八张实际屏幕预览和拼版在 `out/gates/F/`。各 UI 材质保留 fake user，关闭再打开工程时不会丢失未激活的界面。
 
 ## G · 渲染
 
@@ -111,4 +115,4 @@ PNG 序列为本地生成交付物，Git 提交渲染脚本、清单和验收证
 
 ## 当前未完成项
 
-阶段 F–H 全部待完成；尚无成片。最终字幕安全区、S02/S08 逐帧相机一致性、数据流动态、完整视频解码均未验收。
+阶段 G–H 全部待完成；尚无成片。最终字幕安全区、S02/S08 逐帧相机一致性、数据流动态、完整视频解码均未验收。

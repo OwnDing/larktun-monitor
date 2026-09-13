@@ -95,7 +95,8 @@ def apply_frame(sc,*args):
     if 'FILM UI S05' in bpy.data.materials:
         mat=bpy.data.materials['FILM UI S05' if shot=='S05' else 'FILM UI S10' if shot=='S10' else 'FILM UI PAYMENT']
         for name in ('SHOT PHONE · Phone screen','S06 PHONE · Phone screen'):
-            ob=bpy.data.objects[name];ob.data.materials.clear();ob.data.materials.append(mat)
+            ob=bpy.data.objects[name]
+            if not ob.data.materials or ob.data.materials[0]!=mat:ob.data.materials.clear();ob.data.materials.append(mat)
         if mat.node_tree:
             for n in mat.node_tree.nodes:
                 if n.type=='TEX_IMAGE' and n.image and n.image.source=='SEQUENCE':n.image_user.frame_start=start;n.image_user.frame_offset=0

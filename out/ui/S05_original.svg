@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="2200" viewBox="0 0 312 652" preserveAspectRatio="none">
+  <rect width="312" height="652" rx="30" fill="#0B1120"/>
+  <rect x="0" y="0" width="312" height="92" fill="#111A2C"/>
+  <text x="24" y="58" text-anchor="start" font-family="Noto Sans CJK SC" font-weight="800" font-size="28" fill="#E6ECF7" fill-opacity="1.0" letter-spacing="0">云录像回看</text>
+  <g opacity=".35">
+    <rect x="22" y="112" width="268" height="150" rx="12" fill="#1B2438"/>
+    <path d="M40,240 L84,196 L120,222 L172,164 L214,200 L272,150" stroke="#3A4A6B" stroke-width="3" fill="none"/>
+    <rect x="22" y="276" width="268" height="16" rx="8" fill="#1B2438"/>
+    <rect x="22" y="276" width="70" height="16" rx="8" fill="#33405C"/>
+    <text x="22" y="322" text-anchor="start" font-family="Noto Sans CJK SC" font-weight="600" font-size="18" fill="#4E5C7A" fill-opacity="1.0" letter-spacing="0">09-11  14:20</text>
+    <text x="290" y="322" text-anchor="end" font-family="Noto Sans CJK SC" font-weight="600" font-size="18" fill="#4E5C7A" fill-opacity="1.0" letter-spacing="0">已过期</text>
+  </g>
+  <g>
+    <rect x="0" y="120" width="312" height="200" fill="#0B1120" opacity=".72"/>
+    <g transform="translate(156,196)">
+      <rect x="-30" y="-16" width="60" height="46" rx="10" fill="none" stroke="#FF4B4B" stroke-width="4"/>
+      <path d="M-16,-16 v-14 a16,16 0 0 1 32,0 v14" fill="none" stroke="#FF4B4B" stroke-width="4"/>
+      <circle cx="0" cy="6" r="5" fill="#FF4B4B"/>
+    </g>
+    <text x="156" y="268" text-anchor="center" font-family="Noto Sans CJK SC" font-weight="600" font-size="21" fill="#93A1BC" fill-opacity="1.0" letter-spacing="0">该时段录像已加密存储</text>
+  </g>
+  <rect x="22" y="372" width="268" height="122" rx="16" fill="#161F33" stroke="#2A344E" stroke-width="1.5"/>
+  <text x="44" y="416" text-anchor="start" font-family="Noto Sans CJK SC" font-weight="800" font-size="26" fill="#E6ECF7" fill-opacity="1.0" letter-spacing="0">7 天云录像</text>
+  <text x="44" y="456" text-anchor="start" font-family="Noto Sans CJK SC" font-weight="500" font-size="18" fill="#7E8CA8" fill-opacity="1.0" letter-spacing="0">解锁历史回看 / 事件标记</text>
+  <text x="288" y="440" text-anchor="end" font-family="Noto Sans CJK SC" font-weight="900" font-size="30" fill="#FF4B4B" fill-opacity="1.0" letter-spacing="0">¥ XX /月</text>
+  <rect x="22" y="516" width="268" height="60" rx="30" fill="#FF4B4B"/>
+  <text x="156" y="556" text-anchor="center" font-family="Noto Sans CJK SC" font-weight="900" font-size="27" fill="#12070A" fill-opacity="1.0" letter-spacing="0">立即开通</text>
+  <text x="156" y="616" text-anchor="center" font-family="Noto Sans CJK SC" font-weight="500" font-size="16" fill="#5A6784" fill-opacity="1.0" letter-spacing="0">取消订阅后历史录像将不可查看</text>
+</svg>

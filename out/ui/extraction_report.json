@@ -1,0 +1,11 @@
+{
+  "source_S05": "src/scenes_a.py:s05:inner",
+  "source_S10": "src/scenes_b.py:s10:inner",
+  "source_bird": "src/scenes_b.py:s14:bird",
+  "notes": [
+    "Source inner SVGs preserved verbatim in *_original.svg.",
+    "Animated DOM copies retain original UI copy, price placeholder and layout.",
+    "S10 replaces the generic room thumbnail with the actual S08 frame; LIVE indicator is cyan to keep semantic colour consistent.",
+    "The original bird paths and colour values are unchanged."
+  ]
+}

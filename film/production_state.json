@@ -2,13 +2,14 @@
   "source_home_sha256": "15fb9bde761c3eeddc9821581d3d45e278be4411659a840cc8c564a0ae229efb",
   "source_commit": "1caa9a9",
   "branch": "film/v1",
-  "stage": "E",
+  "stage": "F",
   "status": "passed",
   "completed_stages": [
     "A",
     "B",
     "C",
     "D",
-    "E"
+    "E",
+    "F"
   ]
 }

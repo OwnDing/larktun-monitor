@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="2200" viewBox="0 0 312 652" preserveAspectRatio="none">
+  <rect width="312" height="652" rx="30" fill="#0A101E"/>
+  <rect x="0" y="0" width="312" height="86" fill="#0E1728"/>
+  <text x="20" y="54" text-anchor="start" font-family="Noto Sans CJK SC" font-weight="900" font-size="28" fill="#E6ECF7" fill-opacity="1.0" letter-spacing="0">我的设备</text>
+  <circle cx="286" cy="46" r="6" fill="#2FE0C8"/>
+  <rect x="18" y="100" width="276" height="74" rx="16" fill="#17243B" stroke="#2FE0C8" stroke-width="2"/><circle cx="50" cy="137" r="7" fill="#2FE0C8"/><text x="76" y="134" text-anchor="start" font-family="Noto Sans CJK SC" font-weight="800" font-size="24" fill="#E6ECF7" fill-opacity="1.0" letter-spacing="0">家里 · 录像机</text><text x="76" y="160" text-anchor="start" font-family="Noto Sans CJK SC" font-weight="500" font-size="17" fill="#7E8CA8" fill-opacity="1.0" letter-spacing="0">192.168.1.20 · NVR</text><text x="278" y="144" text-anchor="end" font-family="Noto Sans CJK SC" font-weight="700" font-size="18" fill="#2FE0C8" fill-opacity="1.0" letter-spacing="0">在线</text>
+  <rect x="18" y="186" width="276" height="74" rx="16" fill="#111A2C" stroke="#232E47" stroke-width="1.2"/><circle cx="50" cy="223" r="7" fill="#2FE0C8"/><text x="76" y="220" text-anchor="start" font-family="Noto Sans CJK SC" font-weight="800" font-size="24" fill="#E6ECF7" fill-opacity="1.0" letter-spacing="0">客厅摄像头</text><text x="76" y="246" text-anchor="start" font-family="Noto Sans CJK SC" font-weight="500" font-size="17" fill="#7E8CA8" fill-opacity="1.0" letter-spacing="0">IPC-01</text><text x="278" y="230" text-anchor="end" font-family="Noto Sans CJK SC" font-weight="700" font-size="18" fill="#2FE0C8" fill-opacity="1.0" letter-spacing="0">在线</text>
+  <rect x="18" y="272" width="276" height="74" rx="16" fill="#111A2C" stroke="#232E47" stroke-width="1.2"/><circle cx="50" cy="309" r="7" fill="#2FE0C8"/><text x="76" y="306" text-anchor="start" font-family="Noto Sans CJK SC" font-weight="800" font-size="24" fill="#E6ECF7" fill-opacity="1.0" letter-spacing="0">玄关摄像头</text><text x="76" y="332" text-anchor="start" font-family="Noto Sans CJK SC" font-weight="500" font-size="17" fill="#7E8CA8" fill-opacity="1.0" letter-spacing="0">IPC-02</text><text x="278" y="316" text-anchor="end" font-family="Noto Sans CJK SC" font-weight="700" font-size="18" fill="#2FE0C8" fill-opacity="1.0" letter-spacing="0">在线</text>
+  <g transform="translate(18,366)">
+    <rect width="276" height="196" rx="16" fill="#0D1627" stroke="#2FE0C8" stroke-width="2"/>
+    <rect x="10" y="10" width="256" height="144" rx="10" fill="#20293C"/>
+    <g transform="translate(10,10)">
+      <rect width="256" height="144" rx="10" fill="#2A2016"/>
+      <rect y="96" width="256" height="48" fill="#7A5A38"/>
+      <rect x="22" y="52" width="92" height="48" rx="8" fill="#47567C"/>
+      <rect x="128" y="66" width="62" height="34" rx="6" fill="#8C6844"/>
+      <circle cx="212" cy="40" r="20" fill="#FFC65C" opacity=".5"/>
+      <circle cx="30" cy="18" r="6" fill="#FF4B4B"/>
+      <text x="46" y="24" font-family="Noto Sans CJK SC" font-weight="800" font-size="15" fill="#FFD9D9">LIVE</text>
+      <text x="246" y="136" text-anchor="end" font-family="Noto Sans CJK SC" font-weight="600" font-size="14" fill="#E6D3B8">客厅 · 实时</text>
+    </g>
+    <text x="14" y="182" text-anchor="start" font-family="Noto Sans CJK SC" font-weight="700" font-size="19" fill="#2FE0C8" fill-opacity="1.0" letter-spacing="0">已连接 · 延迟 18ms</text>
+    <text x="262" y="182" text-anchor="end" font-family="Noto Sans CJK SC" font-weight="600" font-size="19" fill="#7E8CA8" fill-opacity="1.0" letter-spacing="0">点对点</text>
+  </g>
+  <text x="156" y="604" text-anchor="center" font-family="Noto Sans CJK SC" font-weight="600" font-size="17" fill="#5A6784" fill-opacity="1.0" letter-spacing="0">无需公网 IP · 无需端口映射</text>
+</svg>

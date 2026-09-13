@@ -1,0 +1,64 @@
+{
+  "stage": "F",
+  "status": "PASS",
+  "screen_resolution": [
+    1080,
+    2200
+  ],
+  "emission_strength": 2.5,
+  "source_sequence_frames": {
+    "S05": 90,
+    "S10": 90,
+    "PAYMENT": 1
+  },
+  "previews": [
+    {
+      "frame": 361,
+      "render_seconds": 3.0787945417687297
+    },
+    {
+      "frame": 379,
+      "render_seconds": 2.6246079159900546
+    },
+    {
+      "frame": 409,
+      "render_seconds": 2.6449170000851154
+    },
+    {
+      "frame": 424,
+      "render_seconds": 2.5786263328045607
+    },
+    {
+      "frame": 840,
+      "render_seconds": 2.601401874795556
+    },
+    {
+      "frame": 811,
+      "render_seconds": 2.5647174580954015
+    },
+    {
+      "frame": 826,
+      "render_seconds": 2.729787833057344
+    },
+    {
+      "frame": 480,
+      "render_seconds": 3.27559604216367
+    }
+  ],
+  "sequence_validation": {
+    "S05": {
+      "count": 90,
+      "unique_png_hashes": 39
+    },
+    "S10": {
+      "count": 90,
+      "unique_png_hashes": 16
+    }
+  },
+  "notes": [
+    "Invalid text-anchor=center in the original SVG is normalized to middle in animated copies; originals remain unchanged.",
+    "Regular/Bold/Black font faces respect source UI weights.",
+    "Screen materials retain a fake user so inactive UI sequences survive saving and reopening.",
+    "The payment amount remains ¥ XX."
+  ]
+}
