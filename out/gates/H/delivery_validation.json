@@ -1,0 +1,234 @@
+{
+  "status": "PASS",
+  "videos": [
+    {
+      "file": "out/larktun_01_clean.mp4",
+      "sha256": "ab71795e965493fdfbdd68f928f589dbd8ab25aff4fefa9ff4fa1915fbefde26",
+      "bytes": 4768129,
+      "resolution": [
+        1080,
+        1920
+      ],
+      "fps": "30/1",
+      "duration_seconds": 40.0,
+      "decoded_frame_count": 1200,
+      "audio_streams": 0,
+      "full_null_decode": "PASS",
+      "decoded_black_frames": 15,
+      "maximum_rgb_channel_value": 0
+    },
+    {
+      "file": "out/larktun_01_sub.mp4",
+      "sha256": "5eeaa47181f991401901d1520d6a822baac53a29b560c05aed963e5a79f1ae2a",
+      "bytes": 4925109,
+      "resolution": [
+        1080,
+        1920
+      ],
+      "fps": "30/1",
+      "duration_seconds": 40.0,
+      "decoded_frame_count": 1200,
+      "audio_streams": 0,
+      "full_null_decode": "PASS",
+      "decoded_black_frames": 15,
+      "maximum_rgb_channel_value": 0
+    }
+  ],
+  "caption_geometry": [
+    {
+      "shot": "S01",
+      "pixel_bounds": [
+        267,
+        1481,
+        810,
+        1582
+      ],
+      "line_baselines": [
+        1560
+      ]
+    },
+    {
+      "shot": "S02",
+      "pixel_bounds": [
+        304,
+        1380,
+        775,
+        1582
+      ],
+      "line_baselines": [
+        1458,
+        1560
+      ]
+    },
+    {
+      "shot": "S03",
+      "pixel_bounds": [
+        306,
+        1380,
+        738,
+        1582
+      ],
+      "line_baselines": [
+        1458,
+        1560
+      ]
+    },
+    {
+      "shot": "S04",
+      "pixel_bounds": [
+        305,
+        1380,
+        775,
+        1582
+      ],
+      "line_baselines": [
+        1458,
+        1560
+      ]
+    },
+    {
+      "shot": "S05",
+      "pixel_bounds": [
+        305,
+        1380,
+        738,
+        1582
+      ],
+      "line_baselines": [
+        1458,
+        1560
+      ]
+    },
+    {
+      "shot": "S06",
+      "pixel_bounds": [
+        322,
+        224,
+        768,
+        1583
+      ],
+      "line_baselines": [
+        1560
+      ]
+    },
+    {
+      "shot": "S07",
+      "pixel_bounds": [
+        268,
+        224,
+        808,
+        1582
+      ],
+      "line_baselines": [
+        1458,
+        1560
+      ]
+    },
+    {
+      "shot": "S08",
+      "pixel_bounds": [
+        304,
+        1380,
+        775,
+        1582
+      ],
+      "line_baselines": [
+        1458,
+        1560
+      ]
+    },
+    {
+      "shot": "S09",
+      "pixel_bounds": [
+        233,
+        1381,
+        850,
+        1582
+      ],
+      "line_baselines": [
+        1458,
+        1560
+      ]
+    },
+    {
+      "shot": "S10",
+      "pixel_bounds": [
+        268,
+        1481,
+        810,
+        1587
+      ],
+      "line_baselines": [
+        1560
+      ]
+    },
+    {
+      "shot": "S11",
+      "pixel_bounds": [
+        234,
+        1380,
+        850,
+        1582
+      ],
+      "line_baselines": [
+        1458,
+        1560
+      ]
+    },
+    {
+      "shot": "S12",
+      "pixel_bounds": [
+        305,
+        1384,
+        775,
+        1582
+      ],
+      "line_baselines": [
+        1458,
+        1560
+      ]
+    },
+    {
+      "shot": "S13",
+      "pixel_bounds": [
+        449,
+        225,
+        628,
+        271
+      ],
+      "line_baselines": []
+    },
+    {
+      "shot": "S14",
+      "pixel_bounds": [
+        195,
+        1177,
+        882,
+        1575
+      ],
+      "line_baselines": [
+        1254,
+        1356,
+        1458,
+        1560
+      ]
+    }
+  ],
+  "subtitle_font": "Noto Sans CJK SC Black",
+  "subtitle_font_size_px": 74,
+  "outline_px": 14,
+  "final_line_baseline_y": 1560,
+  "caption_burn": "FFmpeg overlay of independent raster plates; no libass in installed build.",
+  "no_audio_created_or_muxed": true,
+  "logo_hold_clean_frames": [
+    1150,
+    1185
+  ],
+  "logo_hold_duration_seconds": 1.2,
+  "original_home_sha256": "15fb9bde761c3eeddc9821581d3d45e278be4411659a840cc8c564a0ae229efb",
+  "sound_sheet": "out/audio_cue_sheet.md",
+  "silence_cue_frames": [
+    541,
+    549
+  ]
+}

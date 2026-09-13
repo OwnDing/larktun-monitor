@@ -1,0 +1,43 @@
+[Script Info]
+Title: Larktun 01 / independent captions
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Noto Sans CJK SC Black,74,&H00FFFFFF,&H00FFFFFF,&H00150C08,&H00000000,0,0,0,0,100,100,0,0,1,14,0,2,60,60,340,1
+Style: Corner,Noto Sans CJK SC Black,34,&H00FFFFFF,&H00FFFFFF,&H00150C08,&H00000000,0,0,0,0,100,100,0,0,1,6,0,8,60,60,230,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.00,Main,,0,0,0,,{\an2\pos(540,1582)}你家客厅的画面
+Dialogue: 0,0:00:03.00,0:00:06.00,Main,,0,0,0,,{\an2\pos(540,1480)}每一秒
+Dialogue: 0,0:00:03.00,0:00:06.00,Main,,0,0,0,,{\an2\pos(540,1582)}都在离开你家
+Dialogue: 0,0:00:06.00,0:00:09.00,Main,,0,0,0,,{\an2\pos(540,1480)}最后存在
+Dialogue: 0,0:00:06.00,0:00:09.00,Main,,0,0,0,,{\an2\pos(540,1582)}谁的硬盘上？
+Dialogue: 0,0:00:09.00,0:00:12.00,Main,,0,0,0,,{\an2\pos(540,1480)}别人的机房里
+Dialogue: 0,0:00:09.00,0:00:12.00,Main,,0,0,0,,{\an2\pos(540,1582)}有一格是你家
+Dialogue: 0,0:00:12.00,0:00:15.00,Main,,0,0,0,,{\an2\pos(540,1480)}想回看昨天？
+Dialogue: 0,0:00:12.00,0:00:15.00,Main,,0,0,0,,{\an2\pos(540,1582)}先交月费
+Dialogue: 0,0:00:15.00,0:00:18.00,Main,,0,0,0,,{\an2\pos(540,1582)}×3 台摄像头
+Dialogue: 0,0:00:15.00,0:00:18.00,Corner,,0,0,0,,{\an8\pos(540,230)}云存储月费
+Dialogue: 0,0:00:18.00,0:00:21.00,Main,,0,0,0,,{\an2\pos(540,1480)}可它
+Dialogue: 0,0:00:18.00,0:00:21.00,Main,,0,0,0,,{\an2\pos(540,1582)}本来就不用出门
+Dialogue: 0,0:00:18.00,0:00:21.00,Corner,,0,0,0,,{\an8\pos(540,230)}转折
+Dialogue: 0,0:00:21.00,0:00:24.00,Main,,0,0,0,,{\an2\pos(540,1480)}录像
+Dialogue: 0,0:00:21.00,0:00:24.00,Main,,0,0,0,,{\an2\pos(540,1582)}存回你自己家
+Dialogue: 0,0:00:24.00,0:00:27.00,Main,,0,0,0,,{\an2\pos(540,1480)}云雀通
+Dialogue: 0,0:00:24.00,0:00:27.00,Main,,0,0,0,,{\an2\pos(540,1582)}只打一条回家的路
+Dialogue: 0,0:00:27.00,0:00:30.00,Main,,0,0,0,,{\an2\pos(540,1582)}点开，就是家里
+Dialogue: 0,0:00:30.00,0:00:33.00,Main,,0,0,0,,{\an2\pos(540,1480)}同一个画面
+Dialogue: 0,0:00:30.00,0:00:33.00,Main,,0,0,0,,{\an2\pos(540,1582)}两条完全不同的路
+Dialogue: 0,0:00:33.00,0:00:36.00,Main,,0,0,0,,{\an2\pos(540,1480)}画面
+Dialogue: 0,0:00:33.00,0:00:36.00,Main,,0,0,0,,{\an2\pos(540,1582)}从没离开过你
+Dialogue: 0,0:00:36.00,0:00:38.00,Corner,,0,0,0,,{\an8\pos(540,230)}装完就能用
+Dialogue: 0,0:00:38.27,0:00:39.50,Main,,0,0,0,,{\fad(300,0)}{\an2\pos(540,1276)}云雀通 Larktun
+Dialogue: 0,0:00:38.27,0:00:39.50,Main,,0,0,0,,{\fad(300,0)}{\an2\pos(540,1378)}把回家的路，
+Dialogue: 0,0:00:38.27,0:00:39.50,Main,,0,0,0,,{\fad(300,0)}{\an2\pos(540,1480)}握在自己手里
+Dialogue: 0,0:00:38.27,0:00:39.50,Main,,0,0,0,,{\fad(300,0)}{\an2\pos(540,1582)}docs.larktun.com

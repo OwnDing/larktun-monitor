@@ -1,0 +1,167 @@
+{
+  "font": "assets/fonts/NotoSansCJKsc-Black.otf",
+  "font_family": "Noto Sans CJK SC",
+  "font_size_px": 74,
+  "outline_px": 14,
+  "outline_rgb": "#080C15",
+  "final_line_baseline_y": 1560,
+  "line_spacing_px": 102,
+  "ass_baseline_compensation_px": 22,
+  "captions": [
+    {
+      "shot": "S01",
+      "start": 1,
+      "visible_start": 1,
+      "end": 90,
+      "lines": [
+        "你家客厅的画面"
+      ],
+      "corner": null
+    },
+    {
+      "shot": "S02",
+      "start": 91,
+      "visible_start": 91,
+      "end": 180,
+      "lines": [
+        "每一秒",
+        "都在离开你家"
+      ],
+      "corner": null
+    },
+    {
+      "shot": "S03",
+      "start": 181,
+      "visible_start": 181,
+      "end": 270,
+      "lines": [
+        "最后存在",
+        "谁的硬盘上？"
+      ],
+      "corner": null
+    },
+    {
+      "shot": "S04",
+      "start": 271,
+      "visible_start": 271,
+      "end": 360,
+      "lines": [
+        "别人的机房里",
+        "有一格是你家"
+      ],
+      "corner": null
+    },
+    {
+      "shot": "S05",
+      "start": 361,
+      "visible_start": 361,
+      "end": 450,
+      "lines": [
+        "想回看昨天？",
+        "先交月费"
+      ],
+      "corner": null
+    },
+    {
+      "shot": "S06",
+      "start": 451,
+      "visible_start": 451,
+      "end": 540,
+      "lines": [
+        "×3 台摄像头"
+      ],
+      "corner": "云存储月费"
+    },
+    {
+      "shot": "S07",
+      "start": 541,
+      "visible_start": 541,
+      "end": 630,
+      "lines": [
+        "可它",
+        "本来就不用出门"
+      ],
+      "corner": "转折"
+    },
+    {
+      "shot": "S08",
+      "start": 631,
+      "visible_start": 631,
+      "end": 720,
+      "lines": [
+        "录像",
+        "存回你自己家"
+      ],
+      "corner": null
+    },
+    {
+      "shot": "S09",
+      "start": 721,
+      "visible_start": 721,
+      "end": 810,
+      "lines": [
+        "云雀通",
+        "只打一条回家的路"
+      ],
+      "corner": null
+    },
+    {
+      "shot": "S10",
+      "start": 811,
+      "visible_start": 811,
+      "end": 900,
+      "lines": [
+        "点开，就是家里"
+      ],
+      "corner": null
+    },
+    {
+      "shot": "S11",
+      "start": 901,
+      "visible_start": 901,
+      "end": 990,
+      "lines": [
+        "同一个画面",
+        "两条完全不同的路"
+      ],
+      "corner": null
+    },
+    {
+      "shot": "S12",
+      "start": 991,
+      "visible_start": 991,
+      "end": 1080,
+      "lines": [
+        "画面",
+        "从没离开过你"
+      ],
+      "corner": null
+    },
+    {
+      "shot": "S13",
+      "start": 1081,
+      "visible_start": 1081,
+      "end": 1140,
+      "lines": [],
+      "corner": "装完就能用"
+    },
+    {
+      "shot": "S14",
+      "start": 1141,
+      "visible_start": 1149,
+      "end": 1185,
+      "lines": [
+        "云雀通 Larktun",
+        "把回家的路，",
+        "握在自己手里",
+        "docs.larktun.com"
+      ],
+      "corner": null
+    }
+  ],
+  "notes": [
+    "Narrative captions are independent of Blender.",
+    "Installed FFmpeg lacks libass; the final compositor uses an equivalent transparent raster caption layer drawn at the exact requested baselines, then overlays it with FFmpeg. ASS remains separately editable.",
+    "S14 caption fade overlaps the 1.2-second logo hold to retain reading time within the fixed 2-second shot and final 15 black frames."
+  ]
+}

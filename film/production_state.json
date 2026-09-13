@@ -2,7 +2,7 @@
   "source_home_sha256": "15fb9bde761c3eeddc9821581d3d45e278be4411659a840cc8c564a0ae229efb",
   "source_commit": "1caa9a9",
   "branch": "film/v1",
-  "stage": "G",
+  "stage": "H",
   "status": "complete",
   "completed_stages": [
     "A",
@@ -11,9 +11,15 @@
     "D",
     "E",
     "F",
-    "G"
+    "G",
+    "H"
   ],
   "estimated_render_minutes": 126.08042593637947,
   "render_over_two_hours_approved": true,
-  "actual_render_seconds": 6344.128786915913
+  "actual_render_seconds": 6344.128786915913,
+  "delivery_validation": "out/gates/H/delivery_validation.json",
+  "deliverables": [
+    "out/larktun_01_clean.mp4",
+    "out/larktun_01_sub.mp4"
+  ]
 }

@@ -1,0 +1,21 @@
+{
+  "status": "POST_GRAPHICS_PREVIEW",
+  "frames": [
+    20,
+    135,
+    225,
+    340,
+    424,
+    530,
+    552,
+    675,
+    770,
+    840,
+    945,
+    1030,
+    1115,
+    1165,
+    1190
+  ],
+  "source": "Available final raw PNGs, otherwise 64-sample production benchmark frames; not final frame validation."
+}

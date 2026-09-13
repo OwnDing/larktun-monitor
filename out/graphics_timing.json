@@ -1,0 +1,32 @@
+{
+  "coin_frames": [
+    457,
+    467,
+    476,
+    484,
+    491,
+    497,
+    502,
+    506,
+    509,
+    512,
+    514,
+    516
+  ],
+  "card_start_frames": [
+    1081,
+    1087,
+    1093
+  ],
+  "card_overshoot": 1.06,
+  "S11_red_path_frames": 36,
+  "S11_cyan_path_frames": 15,
+  "S14_black_frames": [
+    1186,
+    1200
+  ],
+  "S14_logo_hold_frames": [
+    1150,
+    1185
+  ]
+}
