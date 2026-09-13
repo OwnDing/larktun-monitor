@@ -1,0 +1,334 @@
+{
+  "gate": "E",
+  "status": "PASS",
+  "timeline": [
+    {
+      "shot": "S01",
+      "start": 1,
+      "end": 90,
+      "camera": "V1a",
+      "look": "DARK"
+    },
+    {
+      "shot": "S02",
+      "start": 91,
+      "end": 180,
+      "camera": "V1",
+      "look": "DUSK"
+    },
+    {
+      "shot": "S03",
+      "start": 181,
+      "end": 270,
+      "camera": "V2",
+      "look": "DARK"
+    },
+    {
+      "shot": "S04",
+      "start": 271,
+      "end": 360,
+      "camera": "V2",
+      "look": "DARK"
+    },
+    {
+      "shot": "S05",
+      "start": 361,
+      "end": 450,
+      "camera": "V4",
+      "look": "DUSK"
+    },
+    {
+      "shot": "S06",
+      "start": 451,
+      "end": 540,
+      "camera": "V3",
+      "look": "DUSK"
+    },
+    {
+      "shot": "S07",
+      "start": 541,
+      "end": 630,
+      "camera": "V2",
+      "look": "DARK"
+    },
+    {
+      "shot": "S08",
+      "start": 631,
+      "end": 720,
+      "camera": "V1",
+      "look": "DUSK"
+    },
+    {
+      "shot": "S09",
+      "start": 721,
+      "end": 810,
+      "camera": "V6",
+      "look": "DUSK"
+    },
+    {
+      "shot": "S10",
+      "start": 811,
+      "end": 900,
+      "camera": "V4",
+      "look": "DUSK"
+    },
+    {
+      "shot": "S11",
+      "start": 901,
+      "end": 990,
+      "camera": "V1",
+      "look": "DUSK"
+    },
+    {
+      "shot": "S12",
+      "start": 991,
+      "end": 1080,
+      "camera": "V5",
+      "look": "NIGHT"
+    },
+    {
+      "shot": "S13",
+      "start": 1081,
+      "end": 1140,
+      "camera": "V1",
+      "look": "DUSK"
+    },
+    {
+      "shot": "S14",
+      "start": 1141,
+      "end": 1200,
+      "camera": "V1",
+      "look": "DARK"
+    }
+  ],
+  "first_frames": [
+    {
+      "shot": "S01",
+      "frame": 1,
+      "render_seconds": 2.2041712501086295,
+      "camera_location": [
+        -14.754005432128906,
+        19.57400894165039,
+        25.44401741027832
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 1.600000023841858
+    },
+    {
+      "shot": "S02",
+      "frame": 91,
+      "render_seconds": 2.6413912079297006,
+      "camera_location": [
+        -17.094005584716797,
+        18.494009017944336,
+        24.39401626586914
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 18.0
+    },
+    {
+      "shot": "S03",
+      "frame": 181,
+      "render_seconds": 2.0803618752397597,
+      "camera_location": [
+        -6.99400520324707,
+        7.0940093994140625,
+        26.094017028808594
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 42.0
+    },
+    {
+      "shot": "S04",
+      "frame": 271,
+      "render_seconds": 2.3112739589996636,
+      "camera_location": [
+        -6.99400520324707,
+        7.0940093994140625,
+        26.094017028808594
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 42.0
+    },
+    {
+      "shot": "S05",
+      "frame": 361,
+      "render_seconds": 2.3686062088236213,
+      "camera_location": [
+        -17.694276809692383,
+        16.776281356811523,
+        23.571866989135742
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 0.18000000715255737
+    },
+    {
+      "shot": "S06",
+      "frame": 451,
+      "render_seconds": 2.938671584241092,
+      "camera_location": [
+        -17.79400634765625,
+        21.494009017944336,
+        23.8740177154541
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 3.799999952316284
+    },
+    {
+      "shot": "S07",
+      "frame": 541,
+      "render_seconds": 1.8201945000328124,
+      "camera_location": [
+        -6.99400520324707,
+        7.0940093994140625,
+        26.094017028808594
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 42.0
+    },
+    {
+      "shot": "S08",
+      "frame": 631,
+      "render_seconds": 2.239794499706477,
+      "camera_location": [
+        -17.094005584716797,
+        18.494009017944336,
+        24.39401626586914
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 18.0
+    },
+    {
+      "shot": "S09",
+      "frame": 721,
+      "render_seconds": 2.222232332918793,
+      "camera_location": [
+        -16.29400634765625,
+        14.7940092086792,
+        24.244016647338867
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 15.0
+    },
+    {
+      "shot": "S10",
+      "frame": 811,
+      "render_seconds": 2.3487427080981433,
+      "camera_location": [
+        -17.694276809692383,
+        16.776281356811523,
+        23.571866989135742
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 0.18000000715255737
+    },
+    {
+      "shot": "S11",
+      "frame": 901,
+      "render_seconds": 2.2965903747826815,
+      "camera_location": [
+        -17.094005584716797,
+        18.494009017944336,
+        24.39401626586914
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 18.0
+    },
+    {
+      "shot": "S12",
+      "frame": 991,
+      "render_seconds": 2.4632485420443118,
+      "camera_location": [
+        34.79400634765625,
+        -29.29400634765625,
+        24.19401741027832
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        45.00000125223908
+      ],
+      "ortho_scale": 7.5
+    },
+    {
+      "shot": "S13",
+      "frame": 1081,
+      "render_seconds": 2.499430290888995,
+      "camera_location": [
+        -17.094005584716797,
+        18.494009017944336,
+        24.39401626586914
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 18.0
+    },
+    {
+      "shot": "S14",
+      "frame": 1141,
+      "render_seconds": 2.0248306249268353,
+      "camera_location": [
+        -17.094005584716797,
+        18.494009017944336,
+        24.39401626586914
+      ],
+      "camera_rotation_euler_deg": [
+        54.73559921591893,
+        0.0,
+        224.99999601591165
+      ],
+      "ortho_scale": 18.0
+    }
+  ],
+  "pending_graphics": [
+    "S05/S10 phone UI in F",
+    "S06 money, S11 split screen, S13 cards, S14 original bird and final fade in H"
+  ]
+}
