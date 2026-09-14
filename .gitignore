@@ -23,3 +23,5 @@ out/tour/stills/
 out/tour/logs/
 out/tour/plan/*.npy
 out/tour/larktun_house_tour_1080p.mp4
+out/tour/larktun_house_tour_1080p_music.mp4
+out/tour/audio/*.wav

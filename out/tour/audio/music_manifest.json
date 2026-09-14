@@ -1,0 +1,665 @@
+{
+  "status": "COMPLETE",
+  "generator": "tour/music_tour.py + tour/music_kit.py (procedural, no samples; film/audio_dsp.py DSP)",
+  "video": "out/tour/larktun_house_tour_1080p.mp4",
+  "frames": 6359,
+  "fps": 30,
+  "sample_rate": 48000,
+  "channels": 2,
+  "samples": 10174400,
+  "duration_seconds": 211.9667,
+  "tempo_bpm": 112.5,
+  "beat_frames": 16,
+  "bar_frames": 64,
+  "bar_start_frame": "1 + 64 (bar - 1)",
+  "swing_beats": 0.06,
+  "key": "C major",
+  "style": "light, cheerful: ukulele, marimba, whistle, glockenspiel, bass, claps, shaker",
+  "form": [
+    {
+      "section": "intro",
+      "bars": [
+        1,
+        8
+      ],
+      "frames": [
+        1,
+        512
+      ],
+      "seconds": [
+        0.0,
+        17.07
+      ],
+      "chords": [
+        "Cmaj7",
+        "Fmaj7",
+        "Am7",
+        "Gsus4",
+        "Cmaj7",
+        "Fmaj7",
+        "Dm7",
+        "G"
+      ]
+    },
+    {
+      "section": "rise",
+      "bars": [
+        9,
+        10
+      ],
+      "frames": [
+        513,
+        640
+      ],
+      "seconds": [
+        17.07,
+        21.33
+      ],
+      "chords": [
+        "F",
+        "G"
+      ]
+    },
+    {
+      "section": "A1",
+      "bars": [
+        11,
+        18
+      ],
+      "frames": [
+        641,
+        1152
+      ],
+      "seconds": [
+        21.33,
+        38.4
+      ],
+      "chords": [
+        "C",
+        "G",
+        "Am",
+        "F",
+        "C",
+        "G",
+        "F",
+        "G"
+      ]
+    },
+    {
+      "section": "A2",
+      "bars": [
+        19,
+        26
+      ],
+      "frames": [
+        1153,
+        1664
+      ],
+      "seconds": [
+        38.4,
+        55.47
+      ],
+      "chords": [
+        "C",
+        "G",
+        "Am",
+        "F",
+        "C",
+        "G",
+        "F",
+        "G"
+      ]
+    },
+    {
+      "section": "B1",
+      "bars": [
+        27,
+        34
+      ],
+      "frames": [
+        1665,
+        2176
+      ],
+      "seconds": [
+        55.47,
+        72.53
+      ],
+      "chords": [
+        "F",
+        "G",
+        "Em",
+        "Am",
+        "F",
+        "G",
+        "C",
+        "C"
+      ]
+    },
+    {
+      "section": "A3",
+      "bars": [
+        35,
+        42
+      ],
+      "frames": [
+        2177,
+        2688
+      ],
+      "seconds": [
+        72.53,
+        89.6
+      ],
+      "chords": [
+        "C",
+        "G",
+        "Am",
+        "F",
+        "C",
+        "G",
+        "F",
+        "G"
+      ]
+    },
+    {
+      "section": "B2",
+      "bars": [
+        43,
+        50
+      ],
+      "frames": [
+        2689,
+        3200
+      ],
+      "seconds": [
+        89.6,
+        106.67
+      ],
+      "chords": [
+        "F",
+        "G",
+        "Em",
+        "Am",
+        "F",
+        "G",
+        "C",
+        "C"
+      ]
+    },
+    {
+      "section": "A4",
+      "bars": [
+        51,
+        58
+      ],
+      "frames": [
+        3201,
+        3712
+      ],
+      "seconds": [
+        106.67,
+        123.73
+      ],
+      "chords": [
+        "C",
+        "G",
+        "Am",
+        "F",
+        "C",
+        "G",
+        "F",
+        "G"
+      ]
+    },
+    {
+      "section": "D1",
+      "bars": [
+        59,
+        66
+      ],
+      "frames": [
+        3713,
+        4224
+      ],
+      "seconds": [
+        123.73,
+        140.8
+      ],
+      "chords": [
+        "Am",
+        "F",
+        "C",
+        "G",
+        "Am",
+        "F",
+        "Dm7",
+        "G"
+      ]
+    },
+    {
+      "section": "D2",
+      "bars": [
+        67,
+        74
+      ],
+      "frames": [
+        4225,
+        4736
+      ],
+      "seconds": [
+        140.8,
+        157.87
+      ],
+      "chords": [
+        "Am",
+        "F",
+        "C",
+        "G",
+        "Am",
+        "F",
+        "Dm7",
+        "G"
+      ]
+    },
+    {
+      "section": "build",
+      "bars": [
+        75,
+        82
+      ],
+      "frames": [
+        4737,
+        5248
+      ],
+      "seconds": [
+        157.87,
+        174.93
+      ],
+      "chords": [
+        "F",
+        "G",
+        "Em",
+        "Am",
+        "Dm7",
+        "Em",
+        "F",
+        "G"
+      ]
+    },
+    {
+      "section": "A5",
+      "bars": [
+        83,
+        90
+      ],
+      "frames": [
+        5249,
+        5760
+      ],
+      "seconds": [
+        174.93,
+        192.0
+      ],
+      "chords": [
+        "C",
+        "G",
+        "Am",
+        "F",
+        "C",
+        "G",
+        "F",
+        "G"
+      ]
+    },
+    {
+      "section": "B3",
+      "bars": [
+        91,
+        98
+      ],
+      "frames": [
+        5761,
+        6272
+      ],
+      "seconds": [
+        192.0,
+        209.07
+      ],
+      "chords": [
+        "F",
+        "G",
+        "Em",
+        "Am",
+        "F",
+        "G",
+        "C",
+        "C"
+      ]
+    },
+    {
+      "section": "ending",
+      "bars": [
+        99,
+        100
+      ],
+      "frames": [
+        6273,
+        6359
+      ],
+      "seconds": [
+        209.07,
+        211.97
+      ],
+      "chords": [
+        "C"
+      ]
+    }
+  ],
+  "picture_sync": {
+    "walls_rise_frames": [
+      529,
+      601
+    ],
+    "rise_starts_on": "bar 9 beat 2 (frame 529)",
+    "door_frames": [
+      607,
+      652
+    ],
+    "walk_start_frame": 637,
+    "band_enters": "bar 11 (frame 641)",
+    "last_chord": "bar 99 (frame 6273)",
+    "audio_fade_out_seconds": 1.4
+  },
+  "rooms": [
+    {
+      "name": "玄关",
+      "frames": [
+        894,
+        971
+      ],
+      "bar": 14.95
+    },
+    {
+      "name": "过道 · 公卫",
+      "frames": [
+        1132,
+        1209
+      ],
+      "bar": 18.67
+    },
+    {
+      "name": "书房",
+      "frames": [
+        1376,
+        1492
+      ],
+      "bar": 22.48
+    },
+    {
+      "name": "书房 · 书柜设备",
+      "frames": [
+        1601,
+        1711
+      ],
+      "bar": 26.0
+    },
+    {
+      "name": "储藏间",
+      "frames": [
+        2062,
+        2148
+      ],
+      "bar": 33.2
+    },
+    {
+      "name": "儿童房",
+      "frames": [
+        2437,
+        2580
+      ],
+      "bar": 39.06
+    },
+    {
+      "name": "客厅入口",
+      "frames": [
+        2907,
+        3044
+      ],
+      "bar": 46.41
+    },
+    {
+      "name": "餐厅",
+      "frames": [
+        3195,
+        3263
+      ],
+      "bar": 50.91
+    },
+    {
+      "name": "厨房",
+      "frames": [
+        3465,
+        3581
+      ],
+      "bar": 55.12
+    },
+    {
+      "name": "生活阳台",
+      "frames": [
+        3746,
+        3847
+      ],
+      "bar": 59.52
+    },
+    {
+      "name": "主卧",
+      "frames": [
+        4316,
+        4417
+      ],
+      "bar": 68.42
+    },
+    {
+      "name": "主卧 · 飘窗",
+      "frames": [
+        4638,
+        4709
+      ],
+      "bar": 73.45
+    },
+    {
+      "name": "主卫",
+      "frames": [
+        5033,
+        5137
+      ],
+      "bar": 79.62
+    },
+    {
+      "name": "客厅",
+      "frames": [
+        5831,
+        5935
+      ],
+      "bar": 92.09
+    },
+    {
+      "name": "南阳台",
+      "frames": [
+        6192,
+        6359
+      ],
+      "bar": 97.73
+    }
+  ],
+  "buses": {
+    "bass": {
+      "cues": 373,
+      "active_lufs": -9.4,
+      "gain_db": -11.6,
+      "target_active_lufs": -21.0,
+      "eq": {
+        "hp": 32,
+        "lp": 2500
+      },
+      "reverb_send": 0.0
+    },
+    "clap": {
+      "cues": 140,
+      "active_lufs": -17.6,
+      "gain_db": -7.4,
+      "target_active_lufs": -25.0,
+      "eq": {
+        "hp": 250
+      },
+      "reverb_send": 0.22
+    },
+    "fx": {
+      "cues": 5,
+      "active_lufs": -13.1,
+      "gain_db": -12.9,
+      "target_active_lufs": -26.0,
+      "eq": {
+        "hp": 200
+      },
+      "reverb_send": 0.25
+    },
+    "glock": {
+      "cues": 179,
+      "active_lufs": -7.9,
+      "gain_db": -15.6,
+      "target_active_lufs": -23.5,
+      "eq": {
+        "hp": 700
+      },
+      "reverb_send": 0.34
+    },
+    "kick": {
+      "cues": 237,
+      "active_lufs": -9.9,
+      "gain_db": -12.6,
+      "target_active_lufs": -22.5,
+      "eq": {
+        "hp": 30
+      },
+      "reverb_send": 0.02
+    },
+    "marimba": {
+      "cues": 346,
+      "active_lufs": -9.3,
+      "gain_db": -9.7,
+      "target_active_lufs": -19.0,
+      "eq": {
+        "hp": 180
+      },
+      "reverb_send": 0.22
+    },
+    "pad": {
+      "cues": 27,
+      "active_lufs": -10.7,
+      "gain_db": -16.3,
+      "target_active_lufs": -27.0,
+      "eq": {
+        "hp": 140,
+        "lp": 5000
+      },
+      "reverb_send": 0.35
+    },
+    "perc": {
+      "cues": 1296,
+      "active_lufs": -18.8,
+      "gain_db": -9.2,
+      "target_active_lufs": -28.0,
+      "eq": {
+        "hp": 2500
+      },
+      "reverb_send": 0.08
+    },
+    "snap": {
+      "cues": 40,
+      "active_lufs": -24.9,
+      "gain_db": -2.1,
+      "target_active_lufs": -27.0,
+      "eq": {
+        "hp": 400
+      },
+      "reverb_send": 0.2
+    },
+    "uke": {
+      "cues": 649,
+      "active_lufs": -12.1,
+      "gain_db": -7.9,
+      "target_active_lufs": -20.0,
+      "eq": {
+        "hp": 110
+      },
+      "reverb_send": 0.16
+    },
+    "whistle": {
+      "cues": 4,
+      "active_lufs": -2.4,
+      "gain_db": -18.1,
+      "target_active_lufs": -20.5,
+      "eq": {
+        "hp": 350,
+        "lp": 9000
+      },
+      "reverb_send": 0.26
+    }
+  },
+  "loudness": {
+    "target_integrated_lufs": -14.0,
+    "integrated_lufs": -14.0,
+    "lra_lu": 6.1,
+    "true_peak_dbtp_ffmpeg": -1.1,
+    "true_peak_dbtp_4x_oversampled": -1.1,
+    "max_limiter_reduction_db": 2.13
+  },
+  "files": {
+    "master": {
+      "path": "out/tour/audio/tour_music.wav",
+      "format": "WAV PCM 24-bit",
+      "sha256": "f1102246d18f7acec45de8f57f83ffd19fbc6be41879665d5d4dbd98c2bc2d5a",
+      "bytes": 61046444
+    }
+  },
+  "mux": {
+    "path": "out/tour/larktun_house_tour_1080p_music.mp4",
+    "sha256": "565a15d107311ce34e1ce2a6af9962cd010ec82ac844e76682c99f254fdf6fb9",
+    "bytes": 139406144,
+    "audio_codec": "aac_at",
+    "video_packets_identical_to": "out/tour/larktun_house_tour_1080p.mp4",
+    "video_frames": 6359,
+    "video": {
+      "codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "color": "bt709"
+    },
+    "audio": {
+      "codec": "aac",
+      "profile": "LC",
+      "bit_rate": "256020",
+      "sample_rate": 48000,
+      "channels": 2,
+      "start_time": "0.000000",
+      "duration": "211.968000"
+    },
+    "decoded_vs_master": {
+      "lag_samples_at_25s_and_175s": [
+        0,
+        0
+      ],
+      "snr_db": 26.0,
+      "decoded_samples": 10175424,
+      "last_2048_samples_peak_dbfs": -80.2
+    },
+    "loudness": {
+      "integrated_lufs": -14.0,
+      "lra_lu": 6.1,
+      "true_peak_dbtp": -1.2
+    },
+    "full_decode": "ffmpeg -xerror: no errors",
+    "evidence": "out/tour/audio/music_overview.png"
+  }
+}

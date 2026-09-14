@@ -11,6 +11,7 @@
 | 画面 | 1920×1080，30 fps，6359 帧，约 3 分 32 秒 |
 | 渲染 | Blender 5.2.1 EEVEE，光线追踪，32 采样，快门 0.3 的运动模糊，AgX |
 | 成片 | `out/tour/larktun_house_tour_1080p.mp4`：H.264 / CRF 17 / yuv420p / BT.709，首 0.8 s 淡入、尾 1.4 s 淡出 |
+| 有声版 | `out/tour/larktun_house_tour_1080p_music.mp4`：视频数据包与成片逐包相同，加原创轻快配乐（AAC-LC 256 kbps / 48 kHz 立体声，−14 LUFS），见下文“配乐” |
 | 预览 | `out/tour/larktun_house_tour_preview.mp4`：Workbench 960×540，用于检查路线与节奏（不显示升墙材质效果） |
 | 路线图 | `out/tour/plan/path_overlay.png`：俯视图上的相机路径、每 10 秒时间点和停留点 |
 
@@ -79,10 +80,43 @@ $FILM_PY tour/encode_tour.py --mode final
 
 改完从第 2 步重跑；改变门的开合状态（`tour_scene.py`）时从第 1 步开始。`camera_path.py` 报告里出现 `<-- check` 时，说明这一段离障碍物过近，需要调整途经点。
 
+## 配乐
+
+有声版 `out/tour/larktun_house_tour_1080p_music.mp4`：视频数据包直接复制自无声成片，没有重新编码，逐包相同；只新增 AAC-LC 256 kbps / 48 kHz 立体声音轨。无声版原样保留。
+
+- **来源**：`music_tour.py` 负责编曲、与画面对位、混音、母带、封装与检查，`music_kit.py` 提供音色。全部用 NumPy 程序化合成，复用 `film/audio_dsp.py` 的滤波、混响和限幅；没有采样或第三方音乐。随机种子固定，重跑后母带和 MP4 逐字节相同。
+- **风格**：轻松欢快。C 大调，112.5 BPM，轻微摇摆。乐器有尤克里里（Karplus-Strong 拨弦）、马林巴、口哨、钢片琴、拨弦贝斯、拍手、响指、沙锤、铃鼓。
+- **对位**：一拍正好 16 帧，第 b 小节从第 `1 + 64(b-1)` 帧开始。
+
+| 小节 | 帧 | 画面 | 音乐 |
+|---|---|---|---|
+| 1–8 | 1–512 | 俯瞰环绕、下降 | 铺底和弦与钢片琴；第 5 小节起加入尤克里里指弹和响指 |
+| 9–10 | 513–640 | 墙体升起（529 帧 = 第 9 小节第 2 拍）、开门 | 钢片琴随墙体上行，拍手渐强，反向钢片琴推进 |
+| 11–58 | 641–3712 | 玄关 → 书房 → 储藏间 → 儿童房 → 客厅入口 → 餐厅 → 厨房 → 生活阳台 | 乐队进入：扫弦、贝斯、鼓组；A 段马林巴、B 段口哨轮流领奏，逐段加厚 |
+| 59–74 | 3713–4736 | 主卧、飘窗 | 乐队退后：指弹、铺底、钢片琴 |
+| 75–82 | 4737–5248 | 主卫 → 回客厅 | 逐步回升，马林巴上行琶音，拍手滚奏进入副歌 |
+| 83–98 | 5249–6272 | 客厅 → 南阳台 | 全编制副歌与口哨终段 |
+| 99– | 6273–6359 | 南阳台回望 | 主和弦收尾，随画面最后 1.4 s 淡出，末采样为数字零 |
+
+- **响度**：集成 −14.0 LUFS，真峰值 −1.1 dBTP（MP4 解码后 −1.2），LRA 6.1 LU，限幅最多 2.1 dB。各乐器按“演奏时的响度”自动配平（`TARGETS`），数值记在 manifest。
+- **检查**：视频逐包相同、6359 帧；解码音轨与母带在 25 s、175 s 处互相关偏移均为 0 采样；FFmpeg 完整解码无错误。报告见 `out/tour/audio/music_manifest.json`，频谱、段落、房间与响度总览见 `out/tour/audio/music_overview.png`。
+
+```bash
+FILM_PY=/Users/ownding/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3
+$FILM_PY tour/music_tour.py               # 合成、混音、母带，再封装并检查（约 2.5 分钟，内存峰值约 5.6 GB）
+$FILM_PY tour/music_tour.py --stage mux   # 只重新封装与检查
+```
+
+- 改旋律、和弦、段落：`music_tour.py` 的 `MEL_*`、`FORM`、`score()`。改各乐器音量：`TARGETS`。改音色：`music_kit.py`。
+- 配乐依据客观测量完成（音准、响度、频谱、同步），**制作过程中未经人耳试听**。请在手机外放和耳机上各听一遍。
+- 有声 MP4 约 139 MB，超过 GitHub 单文件 100 MB 限制，不进 Git，发布在 Release [`tour-music-v1`](https://github.com/OwnDing/larktun-monitor/releases/tag/tour-music-v1)。母带 `out/tour/audio/tour_music.wav` 同样在 `.gitignore` 中。
+
 ## 文件
 
 | 文件 | 作用 |
 |---|---|
+| `music_tour.py` | 配乐：编曲、与画面对位、混音、母带、封装与检查 |
+| `music_kit.py` | 配乐音色：尤克里里、马林巴、钢片琴、口哨、贝斯、拍手、响指、铃鼓、镲 |
 | `route_def.py` | 路线脚本：航拍关键帧、停留点、途经点、视线 |
 | `tour_scene.py` | 共用函数：视图层切换、推拉门/平开门状态、EEVEE 设置 |
 | `plan_map.py` | 在 Blender 中射线扫描，生成地面 / 低家具 / 障碍三类网格和间距场 |
