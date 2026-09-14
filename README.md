@@ -5,7 +5,7 @@
 - [影片工程、重渲与后期说明](film/README.md)
 - [制作报告与验收证据](PRODUCTION_REPORT.md)
 - [整片制作要求](06-给Codex-整片制作.md)
-- [声音设计与混音说明](out/audio/SOUND_DESIGN.md)
+- [声音设计、字幕旁白与混音说明](out/audio/SOUND_DESIGN.md)
 
 `Larktun_Home.blend` 是保留的房屋源工程；影片改动位于 `Larktun_Film.blend`。
-无声与有声两版成片、独立字幕、帧级音效表、原创音轨与原始 PNG 序列位于 `out/`。实际完成状态以制作报告为准。
+无声版与有声版（含字幕旁白）两套成片、独立字幕、帧级音效表、原创音轨与原始 PNG 序列位于 `out/`。实际完成状态以制作报告为准。

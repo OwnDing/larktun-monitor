@@ -1,0 +1,366 @@
+{
+  "status": "COMPLETE",
+  "sample_rate": 48000,
+  "speaker": {
+    "id": 68,
+    "name": "zm_029"
+  },
+  "base_speed": 0.95,
+  "tts": {
+    "engine": "sherpa-onnx 1.13.8",
+    "role": "Voice-over text-to-speech used in the delivered soundtrack",
+    "model": "Kokoro-82M v1.1-zh, ONNX export by sherpa-onnx",
+    "upstream": "https://huggingface.co/hexgrad/Kokoro-82M-v1.1-zh",
+    "archive_url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-multi-lang-v1_1.tar.bz2",
+    "archive_bytes": 364816464,
+    "archive_sha256": "a3f4c73d043860e3fd2e5b06f36795eb81de0fc8e8de6df703245edddd87dbad",
+    "extracted_to": "assets/voice/kokoro-multi-lang-v1_1/",
+    "license": "Apache-2.0 (LICENSE file inside the archive; Hugging Face model card licence apache-2.0)"
+  },
+  "qa": {
+    "engine": "sherpa-onnx 1.13.8",
+    "metric": "ASR agreement: characters, toneless and toned pinyin syllables",
+    "role": "Speech recognition for internal quality checks only; nothing from this model is in the film",
+    "model": "SenseVoice-small int8 (zh/en/ja/ko/yue) 2024-07-17, ONNX export by sherpa-onnx",
+    "upstream": "https://github.com/FunAudioLLM/SenseVoice",
+    "archive_url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-int8-2024-07-17.tar.bz2",
+    "archive_bytes": 163002883,
+    "archive_sha256": "7d1efa2138a65b0b488df37f8b89e3d91a60676e416f515b952358d83dfd347e",
+    "extracted_to": "assets/voice/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-int8-2024-07-17/",
+    "license": "FunASR model licence, see https://github.com/modelscope/FunASR?tab=readme-ov-file#license"
+  },
+  "lines": [
+    {
+      "shot": "S01",
+      "text": "你家客厅的画面。",
+      "caption_lines": [
+        "你家客厅的画面"
+      ],
+      "caption_corner": null,
+      "caption_frames": [
+        1,
+        90
+      ],
+      "start_frame": 6,
+      "last_allowed_frame": 88,
+      "seconds": 1.948,
+      "ends_at_frame": 64.44,
+      "speed": 0.95,
+      "asr_text": "你佳克听的画面",
+      "cer": 0.429,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0,
+      "file": "out/audio/voice/S01.wav",
+      "sha256": "2069e984cd6452f5f2b6215fe5e02b179e99af7a9c5a69300254d6f38b8826ba"
+    },
+    {
+      "shot": "S02",
+      "text": "每一秒，都在离开你家。",
+      "caption_lines": [
+        "每一秒",
+        "都在离开你家"
+      ],
+      "caption_corner": null,
+      "caption_frames": [
+        91,
+        180
+      ],
+      "start_frame": 92,
+      "last_allowed_frame": 178,
+      "seconds": 2.844,
+      "ends_at_frame": 177.33,
+      "speed": 0.985,
+      "asr_text": "每一秒都在离开你家",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0,
+      "file": "out/audio/voice/S02.wav",
+      "sha256": "e0f92ac78bd64fd91346ab0bbbd8af7c786b4afdd7076e85f595f3c5ec3a47ed"
+    },
+    {
+      "shot": "S03",
+      "text": "最后，存在谁的硬盘上？",
+      "caption_lines": [
+        "最后存在",
+        "谁的硬盘上？"
+      ],
+      "caption_corner": null,
+      "caption_frames": [
+        181,
+        270
+      ],
+      "start_frame": 182,
+      "last_allowed_frame": 268,
+      "seconds": 2.872,
+      "ends_at_frame": 268.17,
+      "speed": 1.062,
+      "asr_text": "最后存在谁的硬盘上",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0,
+      "file": "out/audio/voice/S03.wav",
+      "sha256": "8398030611936bda77aa3d89543100584c5f1aa0210987d911cdf5bb3ebaa5d8"
+    },
+    {
+      "shot": "S04",
+      "text": "别人的机房里，有一格是你家。",
+      "caption_lines": [
+        "别人的机房里",
+        "有一格是你家"
+      ],
+      "caption_corner": null,
+      "caption_frames": [
+        271,
+        360
+      ],
+      "start_frame": 272,
+      "last_allowed_frame": 358,
+      "seconds": 2.878,
+      "ends_at_frame": 358.33,
+      "speed": 1.161,
+      "asr_text": "别人的机房里有一格是你家",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0,
+      "file": "out/audio/voice/S04.wav",
+      "sha256": "2122fd996bbcd1b871580a0590aab77f837b7e31acf02a8fc43485357baa5011"
+    },
+    {
+      "shot": "S05",
+      "text": "想回看昨天？先交月费。",
+      "caption_lines": [
+        "想回看昨天？",
+        "先交月费"
+      ],
+      "caption_corner": null,
+      "caption_frames": [
+        361,
+        450
+      ],
+      "start_frame": 362,
+      "last_allowed_frame": 448,
+      "seconds": 2.773,
+      "ends_at_frame": 445.18,
+      "speed": 1.022,
+      "asr_text": "想回看昨天先交岳飞",
+      "cer": 0.222,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.111,
+      "file": "out/audio/voice/S05.wav",
+      "sha256": "0944b17def6b0563b496f7a396e14523c6694479f179e7be2c58c329162043b2"
+    },
+    {
+      "shot": "S06",
+      "text": "三台摄像头，乘十二个月。",
+      "caption_lines": [
+        "×3 台摄像头"
+      ],
+      "caption_corner": "云存储月费",
+      "caption_frames": [
+        451,
+        540
+      ],
+      "start_frame": 452,
+      "last_allowed_frame": 538,
+      "seconds": 2.788,
+      "ends_at_frame": 535.64,
+      "speed": 1.105,
+      "asr_text": "三台摄像头乘十二个月",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0,
+      "file": "out/audio/voice/S06.wav",
+      "sha256": "0c8e3acc2229c19a18e910a39838d0f17d2507e8bc55793df3d05e5b43dd58d8"
+    },
+    {
+      "shot": "S07",
+      "text": "可它，本来就不用出门。",
+      "caption_lines": [
+        "可它",
+        "本来就不用出门"
+      ],
+      "caption_corner": "转折",
+      "caption_frames": [
+        541,
+        630
+      ],
+      "start_frame": 552,
+      "last_allowed_frame": 628,
+      "seconds": 2.518,
+      "ends_at_frame": 627.53,
+      "speed": 1.099,
+      "asr_text": "可他本来就不用出门",
+      "cer": 0.111,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0,
+      "file": "out/audio/voice/S07.wav",
+      "sha256": "7e9ccf967c6997d3ab9d96b6b6d0d74f676b04cd327fbe87060afecb6a02f39a"
+    },
+    {
+      "shot": "S08",
+      "text": "录像，存回你自己家。",
+      "caption_lines": [
+        "录像",
+        "存回你自己家"
+      ],
+      "caption_corner": null,
+      "caption_frames": [
+        631,
+        720
+      ],
+      "start_frame": 632,
+      "last_allowed_frame": 718,
+      "seconds": 2.817,
+      "ends_at_frame": 716.5,
+      "speed": 0.95,
+      "asr_text": "录像存回你自己家",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0,
+      "file": "out/audio/voice/S08.wav",
+      "sha256": "5027950b37baf435c9c08132a0bbcf9a918c30b55d0d502c4be3a3ec66dce190"
+    },
+    {
+      "shot": "S09",
+      "text": "云雀通，只打一条回家的路。",
+      "caption_lines": [
+        "云雀通",
+        "只打一条回家的路"
+      ],
+      "caption_corner": null,
+      "caption_frames": [
+        721,
+        810
+      ],
+      "start_frame": 722,
+      "last_allowed_frame": 808,
+      "seconds": 2.858,
+      "ends_at_frame": 807.75,
+      "speed": 1.107,
+      "asr_text": "云却痛只打一条回家的路",
+      "cer": 0.182,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.091,
+      "file": "out/audio/voice/S09.wav",
+      "sha256": "3c16c5f7d2a20a48b52da8c6033a0b28552c349d68f82439fece1428c4b940b8"
+    },
+    {
+      "shot": "S10",
+      "text": "点开，就是家里。",
+      "caption_lines": [
+        "点开，就是家里"
+      ],
+      "caption_corner": null,
+      "caption_frames": [
+        811,
+        900
+      ],
+      "start_frame": 812,
+      "last_allowed_frame": 898,
+      "seconds": 2.182,
+      "ends_at_frame": 877.47,
+      "speed": 0.95,
+      "asr_text": "点开就是家里",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0,
+      "file": "out/audio/voice/S10.wav",
+      "sha256": "8a34561644d1648a69d263cb79344ae0fae63779febc4d84a064be11ea4cd09b"
+    },
+    {
+      "shot": "S11",
+      "text": "同一个画面，两条完全不同的路。",
+      "caption_lines": [
+        "同一个画面",
+        "两条完全不同的路"
+      ],
+      "caption_corner": null,
+      "caption_frames": [
+        901,
+        990
+      ],
+      "start_frame": 902,
+      "last_allowed_frame": 988,
+      "seconds": 2.796,
+      "ends_at_frame": 985.89,
+      "speed": 1.255,
+      "asr_text": "同一个画面两条完全不同的路",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0,
+      "file": "out/audio/voice/S11.wav",
+      "sha256": "a53ec2cac5b57a19b50289ae8beddf668c6b513083c911cf27dceeca8ff273ed"
+    },
+    {
+      "shot": "S12",
+      "text": "画面，从没离开过你。",
+      "caption_lines": [
+        "画面",
+        "从没离开过你"
+      ],
+      "caption_corner": null,
+      "caption_frames": [
+        991,
+        1080
+      ],
+      "start_frame": 992,
+      "last_allowed_frame": 1078,
+      "seconds": 2.822,
+      "ends_at_frame": 1076.66,
+      "speed": 0.95,
+      "asr_text": "画面从没离开过你",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0,
+      "file": "out/audio/voice/S12.wav",
+      "sha256": "3425e730fa137d919cd08c78e146b2e5162bf190de75a319b03177d51a505c66"
+    },
+    {
+      "shot": "S13",
+      "text": "装完就能用。",
+      "caption_lines": [],
+      "caption_corner": "装完就能用",
+      "caption_frames": [
+        1081,
+        1140
+      ],
+      "start_frame": 1082,
+      "last_allowed_frame": 1138,
+      "seconds": 1.513,
+      "ends_at_frame": 1127.4,
+      "speed": 0.95,
+      "asr_text": "装完就能用",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0,
+      "file": "out/audio/voice/S13.wav",
+      "sha256": "deb9cfc6d4e4b13e4373d4428388ab46c85ad05a7f854885db4cceec10bad080"
+    },
+    {
+      "shot": "S14",
+      "text": "云雀通。",
+      "caption_lines": [
+        "云雀通 Larktun",
+        "把回家的路，",
+        "握在自己手里",
+        "docs.larktun.com"
+      ],
+      "caption_corner": null,
+      "caption_frames": [
+        1149,
+        1185
+      ],
+      "start_frame": 1151,
+      "last_allowed_frame": 1183,
+      "seconds": 1.086,
+      "ends_at_frame": 1183.58,
+      "speed": 0.987,
+      "asr_text": "云雀通",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0,
+      "file": "out/audio/voice/S14.wav",
+      "sha256": "658fa3daa04d01c3d64961294479a49c11a70ae56f4120996b8a2808bd764ba1"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "status": "PASS",
+  "source": "out/larktun_01_sub_audio.mp4",
+  "metric": "SenseVoice transcript of the final mix inside each narration window; syllable_error ignores tones",
+  "lines": [
+    {
+      "shot": "S01",
+      "text": "你家客厅的画面。",
+      "frames": [
+        6,
+        88
+      ],
+      "asr_text": "你佳客听的画面",
+      "cer": 0.286,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0
+    },
+    {
+      "shot": "S02",
+      "text": "每一秒，都在离开你家。",
+      "frames": [
+        92,
+        178
+      ],
+      "asr_text": "每一秒都在离开你家",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0
+    },
+    {
+      "shot": "S03",
+      "text": "最后，存在谁的硬盘上？",
+      "frames": [
+        182,
+        268
+      ],
+      "asr_text": "最后存在谁的硬盘上",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0
+    },
+    {
+      "shot": "S04",
+      "text": "别人的机房里，有一格是你家。",
+      "frames": [
+        272,
+        358
+      ],
+      "asr_text": "别人的机房里有一格是你家",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0
+    },
+    {
+      "shot": "S05",
+      "text": "想回看昨天？先交月费。",
+      "frames": [
+        362,
+        448
+      ],
+      "asr_text": "想回看昨天先交岳飞",
+      "cer": 0.222,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.111
+    },
+    {
+      "shot": "S06",
+      "text": "三台摄像头，乘十二个月。",
+      "frames": [
+        452,
+        538
+      ],
+      "asr_text": "三台摄像头乘十二个月",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0
+    },
+    {
+      "shot": "S07",
+      "text": "可它，本来就不用出门。",
+      "frames": [
+        552,
+        628
+      ],
+      "asr_text": "可他本来就不用出门",
+      "cer": 0.111,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0
+    },
+    {
+      "shot": "S08",
+      "text": "录像，存回你自己家。",
+      "frames": [
+        632,
+        718
+      ],
+      "asr_text": "录像存回你自己家",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0
+    },
+    {
+      "shot": "S09",
+      "text": "云雀通，只打一条回家的路。",
+      "frames": [
+        722,
+        808
+      ],
+      "asr_text": "云却通只打一条回家的路",
+      "cer": 0.091,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0
+    },
+    {
+      "shot": "S10",
+      "text": "点开，就是家里。",
+      "frames": [
+        812,
+        898
+      ],
+      "asr_text": "点开就是家里",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0
+    },
+    {
+      "shot": "S11",
+      "text": "同一个画面，两条完全不同的路。",
+      "frames": [
+        902,
+        988
+      ],
+      "asr_text": "同一个画面两条完全不同的路",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0
+    },
+    {
+      "shot": "S12",
+      "text": "画面，从没离开过你。",
+      "frames": [
+        992,
+        1078
+      ],
+      "asr_text": "画面从没离开过你",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0
+    },
+    {
+      "shot": "S13",
+      "text": "装完就能用。",
+      "frames": [
+        1082,
+        1138
+      ],
+      "asr_text": "装完就能用",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0
+    },
+    {
+      "shot": "S14",
+      "text": "云雀通。",
+      "frames": [
+        1151,
+        1183
+      ],
+      "asr_text": "云雀通",
+      "cer": 0.0,
+      "syllable_error": 0.0,
+      "tone_syllable_error": 0.0
+    }
+  ]
+}

@@ -2,14 +2,14 @@
   "status": "PASS",
   "master": {
     "path": "out/audio/larktun_01_mix.wav",
-    "sha256": "3775c7060676dfa92bfa6a541d019d714ceea3f4976ecca71892c9fd38643645",
+    "sha256": "4faa4d68ef47d03226ca639491b7779bc31411f69399b52e41b1e515170d5963",
     "sample_rate": 48000,
     "channels": 2,
     "bits": 24,
     "samples": 1920000,
     "seconds": 40.0
   },
-  "stems_sum_to_master_max_abs_error": 1.6763806343078613e-07,
+  "stems_sum_to_master_max_abs_error": 1.763837644830346e-07,
   "silence": {
     "bed_exactly_zero_samples": [
       864000,
@@ -28,8 +28,8 @@
   },
   "loudness": {
     "integrated_lufs": -14.0,
-    "lra_lu": 6.0,
-    "true_peak_dbtp": -1.1
+    "lra_lu": 2.2,
+    "true_peak_dbtp": -1.3
   },
   "per_shot": [
     {
@@ -38,8 +38,8 @@
         1,
         90
       ],
-      "momentary_max_lufs": -22.9,
-      "short_term_at_end_lufs": -28.0
+      "momentary_max_lufs": -12.2,
+      "short_term_at_end_lufs": -15.6
     },
     {
       "shot": "S02",
@@ -47,8 +47,8 @@
         91,
         180
       ],
-      "momentary_max_lufs": -13.8,
-      "short_term_at_end_lufs": -17.4
+      "momentary_max_lufs": -12.4,
+      "short_term_at_end_lufs": -14.2
     },
     {
       "shot": "S03",
@@ -56,8 +56,8 @@
         181,
         270
       ],
-      "momentary_max_lufs": -14.1,
-      "short_term_at_end_lufs": -15.6
+      "momentary_max_lufs": -11.4,
+      "short_term_at_end_lufs": -14.0
     },
     {
       "shot": "S04",
@@ -65,8 +65,8 @@
         271,
         360
       ],
-      "momentary_max_lufs": -11.8,
-      "short_term_at_end_lufs": -13.0
+      "momentary_max_lufs": -12.1,
+      "short_term_at_end_lufs": -13.6
     },
     {
       "shot": "S05",
@@ -74,8 +74,8 @@
         361,
         450
       ],
-      "momentary_max_lufs": -12.2,
-      "short_term_at_end_lufs": -14.1
+      "momentary_max_lufs": -11.8,
+      "short_term_at_end_lufs": -13.7
     },
     {
       "shot": "S06",
@@ -83,8 +83,8 @@
         451,
         540
       ],
-      "momentary_max_lufs": -9.1,
-      "short_term_at_end_lufs": -11.3
+      "momentary_max_lufs": -11.3,
+      "short_term_at_end_lufs": -13.1
     },
     {
       "shot": "S07",
@@ -92,7 +92,7 @@
         541,
         630
       ],
-      "momentary_max_lufs": -11.1,
+      "momentary_max_lufs": -12.0,
       "short_term_at_end_lufs": -13.7
     },
     {
@@ -101,8 +101,8 @@
         631,
         720
       ],
-      "momentary_max_lufs": -12.2,
-      "short_term_at_end_lufs": -13.6
+      "momentary_max_lufs": -10.9,
+      "short_term_at_end_lufs": -13.9
     },
     {
       "shot": "S09",
@@ -110,8 +110,8 @@
         721,
         810
       ],
-      "momentary_max_lufs": -12.9,
-      "short_term_at_end_lufs": -14.8
+      "momentary_max_lufs": -11.3,
+      "short_term_at_end_lufs": -13.9
     },
     {
       "shot": "S10",
@@ -119,8 +119,8 @@
         811,
         900
       ],
-      "momentary_max_lufs": -11.6,
-      "short_term_at_end_lufs": -13.7
+      "momentary_max_lufs": -12.4,
+      "short_term_at_end_lufs": -14.5
     },
     {
       "shot": "S11",
@@ -128,8 +128,8 @@
         901,
         990
       ],
-      "momentary_max_lufs": -11.1,
-      "short_term_at_end_lufs": -12.8
+      "momentary_max_lufs": -11.5,
+      "short_term_at_end_lufs": -13.8
     },
     {
       "shot": "S12",
@@ -137,8 +137,8 @@
         991,
         1080
       ],
-      "momentary_max_lufs": -15.5,
-      "short_term_at_end_lufs": -17.7
+      "momentary_max_lufs": -13.2,
+      "short_term_at_end_lufs": -15.8
     },
     {
       "shot": "S13",
@@ -146,8 +146,8 @@
         1081,
         1140
       ],
-      "momentary_max_lufs": -13.0,
-      "short_term_at_end_lufs": -14.9
+      "momentary_max_lufs": -12.2,
+      "short_term_at_end_lufs": -14.8
     },
     {
       "shot": "S14",
@@ -155,13 +155,216 @@
         1141,
         1200
       ],
-      "momentary_max_lufs": -11.6,
-      "short_term_at_end_lufs": -15.0
+      "momentary_max_lufs": -11.5,
+      "short_term_at_end_lufs": -15.1
     }
   ],
   "stereo": {
-    "lr_correlation": 0.629,
-    "mono_fold_loss_db": 0.89
+    "lr_correlation": 0.929,
+    "mono_fold_loss_db": 0.16
+  },
+  "narration": {
+    "status": "PASS",
+    "speech_samples_outside_caption_frames": 0,
+    "speaking_threshold": "20 ms RMS above -26 dB re. voice peak",
+    "lines": [
+      {
+        "shot": "S01",
+        "text": "你家客厅的画面。",
+        "caption_frames": [
+          1,
+          90
+        ],
+        "speech_frames": [
+          6.86,
+          61.98
+        ],
+        "voice_over_bed_lu": 23.7,
+        "passed": true
+      },
+      {
+        "shot": "S02",
+        "text": "每一秒，都在离开你家。",
+        "caption_frames": [
+          91,
+          180
+        ],
+        "speech_frames": [
+          92.77,
+          175.06
+        ],
+        "voice_over_bed_lu": 14.9,
+        "passed": true
+      },
+      {
+        "shot": "S03",
+        "text": "最后，存在谁的硬盘上？",
+        "caption_frames": [
+          181,
+          270
+        ],
+        "speech_frames": [
+          183.17,
+          265.77
+        ],
+        "voice_over_bed_lu": 13.3,
+        "passed": true
+      },
+      {
+        "shot": "S04",
+        "text": "别人的机房里，有一格是你家。",
+        "caption_frames": [
+          271,
+          360
+        ],
+        "speech_frames": [
+          273.16,
+          356.31
+        ],
+        "voice_over_bed_lu": 10.5,
+        "passed": true
+      },
+      {
+        "shot": "S05",
+        "text": "想回看昨天？先交月费。",
+        "caption_frames": [
+          361,
+          450
+        ],
+        "speech_frames": [
+          363.11,
+          442.24
+        ],
+        "voice_over_bed_lu": 12.0,
+        "passed": true
+      },
+      {
+        "shot": "S06",
+        "text": "三台摄像头，乘十二个月。",
+        "caption_frames": [
+          451,
+          540
+        ],
+        "speech_frames": [
+          453.35,
+          533.03
+        ],
+        "voice_over_bed_lu": 7.8,
+        "passed": true
+      },
+      {
+        "shot": "S07",
+        "text": "可它，本来就不用出门。",
+        "caption_frames": [
+          541,
+          630
+        ],
+        "speech_frames": [
+          553.36,
+          625.59
+        ],
+        "voice_over_bed_lu": 11.0,
+        "passed": true
+      },
+      {
+        "shot": "S08",
+        "text": "录像，存回你自己家。",
+        "caption_frames": [
+          631,
+          720
+        ],
+        "speech_frames": [
+          633.05,
+          714.14
+        ],
+        "voice_over_bed_lu": 10.5,
+        "passed": true
+      },
+      {
+        "shot": "S09",
+        "text": "云雀通，只打一条回家的路。",
+        "caption_frames": [
+          721,
+          810
+        ],
+        "speech_frames": [
+          722.95,
+          805.64
+        ],
+        "voice_over_bed_lu": 11.7,
+        "passed": true
+      },
+      {
+        "shot": "S10",
+        "text": "点开，就是家里。",
+        "caption_frames": [
+          811,
+          900
+        ],
+        "speech_frames": [
+          812.9,
+          874.46
+        ],
+        "voice_over_bed_lu": 11.1,
+        "passed": true
+      },
+      {
+        "shot": "S11",
+        "text": "同一个画面，两条完全不同的路。",
+        "caption_frames": [
+          901,
+          990
+        ],
+        "speech_frames": [
+          903.06,
+          983.49
+        ],
+        "voice_over_bed_lu": 10.3,
+        "passed": true
+      },
+      {
+        "shot": "S12",
+        "text": "画面，从没离开过你。",
+        "caption_frames": [
+          991,
+          1080
+        ],
+        "speech_frames": [
+          993.67,
+          1074.1
+        ],
+        "voice_over_bed_lu": 14.4,
+        "passed": true
+      },
+      {
+        "shot": "S13",
+        "text": "装完就能用。",
+        "caption_frames": [
+          1081,
+          1140
+        ],
+        "speech_frames": [
+          1083.32,
+          1124.59
+        ],
+        "voice_over_bed_lu": 12.7,
+        "passed": true
+      },
+      {
+        "shot": "S14",
+        "text": "云雀通。",
+        "caption_frames": [
+          1149,
+          1185
+        ],
+        "speech_frames": [
+          1151.97,
+          1179.03
+        ],
+        "voice_over_bed_lu": 13.1,
+        "passed": true
+      }
+    ]
   },
   "sync": {
     "max_abs_offset_ms": 0.81,
@@ -181,10 +384,10 @@
         "frame": 64,
         "expected_sample": 100800,
         "offset_samples": 0,
-        "correlation_at_frame": 0.921,
-        "correlation_best": 0.927,
+        "correlation_at_frame": 0.923,
+        "correlation_best": 0.929,
         "passed": true,
-        "onset_contrast_db": 89.8
+        "onset_contrast_db": 89.9
       },
       {
         "cue": "S05 lock lands",
@@ -291,18 +494,18 @@
         "frame": 506,
         "expected_sample": 808000,
         "offset_samples": 0,
-        "correlation_at_frame": 0.786,
-        "correlation_best": 0.786,
+        "correlation_at_frame": 0.785,
+        "correlation_best": 0.785,
         "passed": true,
-        "onset_contrast_db": 4.7
+        "onset_contrast_db": 5.0
       },
       {
         "cue": "S06 coin stack 9",
         "frame": 509,
         "expected_sample": 812800,
         "offset_samples": 0,
-        "correlation_at_frame": 0.711,
-        "correlation_best": 0.711,
+        "correlation_at_frame": 0.71,
+        "correlation_best": 0.71,
         "passed": true,
         "onset_contrast_db": 4.9
       },
@@ -314,15 +517,15 @@
         "correlation_at_frame": 0.767,
         "correlation_best": 0.767,
         "passed": true,
-        "onset_contrast_db": 3.5
+        "onset_contrast_db": 3.4
       },
       {
         "cue": "S06 coin stack 11",
         "frame": 514,
         "expected_sample": 820800,
         "offset_samples": 0,
-        "correlation_at_frame": 0.761,
-        "correlation_best": 0.761,
+        "correlation_at_frame": 0.76,
+        "correlation_best": 0.76,
         "passed": true,
         "onset_contrast_db": 3.1
       },
@@ -334,7 +537,7 @@
         "correlation_at_frame": 0.71,
         "correlation_best": 0.71,
         "passed": true,
-        "onset_contrast_db": 1.4
+        "onset_contrast_db": 1.6
       },
       {
         "cue": "S07 cyan pulse ding (only sound in 541-549)",
@@ -351,8 +554,8 @@
         "frame": 550.0,
         "expected_sample": 878400,
         "offset_samples": 39,
-        "correlation_at_frame": 0.086,
-        "correlation_best": 0.918,
+        "correlation_at_frame": 0.084,
+        "correlation_best": 0.941,
         "passed": true,
         "onset_contrast_db": 99.9
       },
@@ -371,10 +574,10 @@
         "frame": 631,
         "expected_sample": 1008000,
         "offset_samples": 0,
-        "correlation_at_frame": 0.981,
-        "correlation_best": 0.981,
+        "correlation_at_frame": 0.985,
+        "correlation_best": 0.985,
         "passed": true,
-        "onset_contrast_db": 69.2
+        "onset_contrast_db": 69.4
       },
       {
         "cue": "S08 disk LED A5",
@@ -401,10 +604,10 @@
         "frame": 811,
         "expected_sample": 1296000,
         "offset_samples": 0,
-        "correlation_at_frame": 0.986,
-        "correlation_best": 0.986,
+        "correlation_at_frame": 0.988,
+        "correlation_best": 0.988,
         "passed": true,
-        "onset_contrast_db": 24.1
+        "onset_contrast_db": 24.4
       },
       {
         "cue": "S10 connected",
@@ -431,10 +634,10 @@
         "frame": 1081,
         "expected_sample": 1728000,
         "offset_samples": 0,
-        "correlation_at_frame": 0.995,
-        "correlation_best": 0.995,
+        "correlation_at_frame": 0.992,
+        "correlation_best": 0.992,
         "passed": true,
-        "onset_contrast_db": 28.3
+        "onset_contrast_db": 28.2
       },
       {
         "cue": "S13 card 咔哒 A5",
@@ -455,6 +658,146 @@
         "correlation_best": 0.98,
         "passed": true,
         "onset_contrast_db": 13.3
+      },
+      {
+        "cue": "VO S01 你家客厅的画面。",
+        "frame": 6,
+        "expected_sample": 8000,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.988,
+        "correlation_best": 0.988,
+        "passed": true,
+        "onset_contrast_db": 13.9
+      },
+      {
+        "cue": "VO S02 每一秒，都在离开你家。",
+        "frame": 92,
+        "expected_sample": 145600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.985,
+        "correlation_best": 0.985,
+        "passed": true,
+        "onset_contrast_db": 21.9
+      },
+      {
+        "cue": "VO S03 最后，存在谁的硬盘上？",
+        "frame": 182,
+        "expected_sample": 289600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.988,
+        "correlation_best": 0.988,
+        "passed": true,
+        "onset_contrast_db": -1.7
+      },
+      {
+        "cue": "VO S04 别人的机房里，有一格是你家。",
+        "frame": 272,
+        "expected_sample": 433600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.988,
+        "correlation_best": 0.988,
+        "passed": true,
+        "onset_contrast_db": -1.8
+      },
+      {
+        "cue": "VO S05 想回看昨天？先交月费。",
+        "frame": 362,
+        "expected_sample": 577600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.991,
+        "correlation_best": 0.991,
+        "passed": true,
+        "onset_contrast_db": 3.1
+      },
+      {
+        "cue": "VO S06 三台摄像头，乘十二个月。",
+        "frame": 452,
+        "expected_sample": 721600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.99,
+        "correlation_best": 0.99,
+        "passed": true,
+        "onset_contrast_db": -1.1
+      },
+      {
+        "cue": "VO S07 可它，本来就不用出门。",
+        "frame": 552,
+        "expected_sample": 881600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.988,
+        "correlation_best": 0.988,
+        "passed": true,
+        "onset_contrast_db": 23.5
+      },
+      {
+        "cue": "VO S08 录像，存回你自己家。",
+        "frame": 632,
+        "expected_sample": 1009600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.989,
+        "correlation_best": 0.989,
+        "passed": true,
+        "onset_contrast_db": -0.0
+      },
+      {
+        "cue": "VO S09 云雀通，只打一条回家的路。",
+        "frame": 722,
+        "expected_sample": 1153600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.991,
+        "correlation_best": 0.991,
+        "passed": true,
+        "onset_contrast_db": -3.1
+      },
+      {
+        "cue": "VO S10 点开，就是家里。",
+        "frame": 812,
+        "expected_sample": 1297600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.988,
+        "correlation_best": 0.988,
+        "passed": true,
+        "onset_contrast_db": -1.1
+      },
+      {
+        "cue": "VO S11 同一个画面，两条完全不同的路。",
+        "frame": 902,
+        "expected_sample": 1441600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.991,
+        "correlation_best": 0.991,
+        "passed": true,
+        "onset_contrast_db": 23.3
+      },
+      {
+        "cue": "VO S12 画面，从没离开过你。",
+        "frame": 992,
+        "expected_sample": 1585600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.99,
+        "correlation_best": 0.99,
+        "passed": true,
+        "onset_contrast_db": -3.8
+      },
+      {
+        "cue": "VO S13 装完就能用。",
+        "frame": 1082,
+        "expected_sample": 1729600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.991,
+        "correlation_best": 0.991,
+        "passed": true,
+        "onset_contrast_db": -2.8
+      },
+      {
+        "cue": "VO S14 云雀通。",
+        "frame": 1151,
+        "expected_sample": 1840000,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.993,
+        "correlation_best": 0.993,
+        "passed": true,
+        "onset_contrast_db": 14.6
       }
     ]
   },

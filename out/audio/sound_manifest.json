@@ -1,6 +1,6 @@
 {
   "status": "COMPLETE",
-  "generator": "film/sound_design.py (procedural, no third-party audio)",
+  "generator": "film/sound_design.py (procedural music and effects; narration from film/voice_tts.py)",
   "sample_rate": 48000,
   "channels": 2,
   "samples": 1920000,
@@ -17,10 +17,10 @@
   "loudness": {
     "target_integrated_lufs": -14.0,
     "integrated_lufs": -14.0,
-    "lra_lu": 6.0,
-    "true_peak_dbtp_ffmpeg": -1.1,
-    "true_peak_dbtp_4x_oversampled": -1.1,
-    "max_limiter_reduction_db": 1.01,
+    "lra_lu": 2.2,
+    "true_peak_dbtp_ffmpeg": -1.3,
+    "true_peak_dbtp_4x_oversampled": -1.27,
+    "max_limiter_reduction_db": -0.0,
     "per_shot": [
       {
         "shot": "S01",
@@ -28,8 +28,8 @@
           1,
           90
         ],
-        "momentary_max_lufs": -22.9,
-        "short_term_at_end_lufs": -28.0
+        "momentary_max_lufs": -12.2,
+        "short_term_at_end_lufs": -15.6
       },
       {
         "shot": "S02",
@@ -37,8 +37,8 @@
           91,
           180
         ],
-        "momentary_max_lufs": -13.8,
-        "short_term_at_end_lufs": -17.4
+        "momentary_max_lufs": -12.4,
+        "short_term_at_end_lufs": -14.2
       },
       {
         "shot": "S03",
@@ -46,8 +46,8 @@
           181,
           270
         ],
-        "momentary_max_lufs": -14.1,
-        "short_term_at_end_lufs": -15.6
+        "momentary_max_lufs": -11.4,
+        "short_term_at_end_lufs": -14.0
       },
       {
         "shot": "S04",
@@ -55,8 +55,8 @@
           271,
           360
         ],
-        "momentary_max_lufs": -11.8,
-        "short_term_at_end_lufs": -13.0
+        "momentary_max_lufs": -12.1,
+        "short_term_at_end_lufs": -13.6
       },
       {
         "shot": "S05",
@@ -64,8 +64,8 @@
           361,
           450
         ],
-        "momentary_max_lufs": -12.2,
-        "short_term_at_end_lufs": -14.1
+        "momentary_max_lufs": -11.8,
+        "short_term_at_end_lufs": -13.7
       },
       {
         "shot": "S06",
@@ -73,8 +73,8 @@
           451,
           540
         ],
-        "momentary_max_lufs": -9.1,
-        "short_term_at_end_lufs": -11.3
+        "momentary_max_lufs": -11.3,
+        "short_term_at_end_lufs": -13.1
       },
       {
         "shot": "S07",
@@ -82,7 +82,7 @@
           541,
           630
         ],
-        "momentary_max_lufs": -11.1,
+        "momentary_max_lufs": -12.0,
         "short_term_at_end_lufs": -13.7
       },
       {
@@ -91,8 +91,8 @@
           631,
           720
         ],
-        "momentary_max_lufs": -12.2,
-        "short_term_at_end_lufs": -13.6
+        "momentary_max_lufs": -10.9,
+        "short_term_at_end_lufs": -13.9
       },
       {
         "shot": "S09",
@@ -100,8 +100,8 @@
           721,
           810
         ],
-        "momentary_max_lufs": -12.9,
-        "short_term_at_end_lufs": -14.8
+        "momentary_max_lufs": -11.3,
+        "short_term_at_end_lufs": -13.9
       },
       {
         "shot": "S10",
@@ -109,8 +109,8 @@
           811,
           900
         ],
-        "momentary_max_lufs": -11.6,
-        "short_term_at_end_lufs": -13.7
+        "momentary_max_lufs": -12.4,
+        "short_term_at_end_lufs": -14.5
       },
       {
         "shot": "S11",
@@ -118,8 +118,8 @@
           901,
           990
         ],
-        "momentary_max_lufs": -11.1,
-        "short_term_at_end_lufs": -12.8
+        "momentary_max_lufs": -11.5,
+        "short_term_at_end_lufs": -13.8
       },
       {
         "shot": "S12",
@@ -127,8 +127,8 @@
           991,
           1080
         ],
-        "momentary_max_lufs": -15.5,
-        "short_term_at_end_lufs": -17.7
+        "momentary_max_lufs": -13.2,
+        "short_term_at_end_lufs": -15.8
       },
       {
         "shot": "S13",
@@ -136,8 +136,8 @@
           1081,
           1140
         ],
-        "momentary_max_lufs": -13.0,
-        "short_term_at_end_lufs": -14.9
+        "momentary_max_lufs": -12.2,
+        "short_term_at_end_lufs": -14.8
       },
       {
         "shot": "S14",
@@ -145,8 +145,8 @@
           1141,
           1200
         ],
-        "momentary_max_lufs": -11.6,
-        "short_term_at_end_lufs": -15.0
+        "momentary_max_lufs": -11.5,
+        "short_term_at_end_lufs": -15.1
       }
     ]
   },
@@ -173,6 +173,76 @@
       39.0,
       39.5
     ]
+  },
+  "narration": {
+    "source": "out/audio/voice/voice_manifest.json",
+    "lines": 14,
+    "speech_samples": [
+      [
+        9440,
+        98476
+      ],
+      [
+        146896,
+        278919
+      ],
+      [
+        291037,
+        424511
+      ],
+      [
+        435032,
+        568893
+      ],
+      [
+        579040,
+        707326
+      ],
+      [
+        723040,
+        851954
+      ],
+      [
+        883005,
+        999908
+      ],
+      [
+        1011041,
+        1141990
+      ],
+      [
+        1154989,
+        1288021
+      ],
+      [
+        1298957,
+        1398738
+      ],
+      [
+        1442997,
+        1572908
+      ],
+      [
+        1587033,
+        1718090
+      ],
+      [
+        1731040,
+        1799118
+      ],
+      [
+        1841440,
+        1889023
+      ]
+    ],
+    "ducking_db": {
+      "music": -9.0,
+      "ambience": -8.0,
+      "sfx": -6.0
+    },
+    "duck_attack_s": 0.12,
+    "duck_release_s": "0.4 (the S06 line releases early so the bed is back before frame 541)",
+    "music_presence_carve": "-35% of the 2.5 kHz band while a line speaks"
   },
   "cues": [
     {
@@ -1222,7 +1292,7 @@
       "frame": 541,
       "onset_sample": 864000,
       "onset_seconds": 18.0,
-      "gain_db": -8.0,
+      "gain_db": -5.0,
       "pan": 0,
       "reverb_send": 0.35,
       "sync_probe": "093"
@@ -3745,38 +3815,211 @@
       "gain_db": -20.0,
       "pan": 0.0,
       "reverb_send": 0.0
+    },
+    {
+      "stem": "voice",
+      "section": "cold",
+      "name": "VO S01 你家客厅的画面。",
+      "frame": 6,
+      "onset_sample": 8000,
+      "onset_seconds": 0.16667,
+      "gain_db": 7.0,
+      "pan": 0,
+      "reverb_send": 0.1,
+      "sync_probe": "322"
+    },
+    {
+      "stem": "voice",
+      "section": "cold",
+      "name": "VO S02 每一秒，都在离开你家。",
+      "frame": 92,
+      "onset_sample": 145600,
+      "onset_seconds": 3.03333,
+      "gain_db": 7.0,
+      "pan": 0,
+      "reverb_send": 0.1,
+      "sync_probe": "323"
+    },
+    {
+      "stem": "voice",
+      "section": "cold",
+      "name": "VO S03 最后，存在谁的硬盘上？",
+      "frame": 182,
+      "onset_sample": 289600,
+      "onset_seconds": 6.03333,
+      "gain_db": 7.0,
+      "pan": 0,
+      "reverb_send": 0.1,
+      "sync_probe": "324"
+    },
+    {
+      "stem": "voice",
+      "section": "cold",
+      "name": "VO S04 别人的机房里，有一格是你家。",
+      "frame": 272,
+      "onset_sample": 433600,
+      "onset_seconds": 9.03333,
+      "gain_db": 7.0,
+      "pan": 0,
+      "reverb_send": 0.1,
+      "sync_probe": "325"
+    },
+    {
+      "stem": "voice",
+      "section": "cold",
+      "name": "VO S05 想回看昨天？先交月费。",
+      "frame": 362,
+      "onset_sample": 577600,
+      "onset_seconds": 12.03333,
+      "gain_db": 7.0,
+      "pan": 0,
+      "reverb_send": 0.1,
+      "sync_probe": "326"
+    },
+    {
+      "stem": "voice",
+      "section": "cold",
+      "name": "VO S06 三台摄像头，乘十二个月。",
+      "frame": 452,
+      "onset_sample": 721600,
+      "onset_seconds": 15.03333,
+      "gain_db": 7.0,
+      "pan": 0,
+      "reverb_send": 0.1,
+      "sync_probe": "327"
+    },
+    {
+      "stem": "voice",
+      "section": "warm",
+      "name": "VO S07 可它，本来就不用出门。",
+      "frame": 552,
+      "onset_sample": 881600,
+      "onset_seconds": 18.36667,
+      "gain_db": 7.0,
+      "pan": 0,
+      "reverb_send": 0.1,
+      "sync_probe": "328"
+    },
+    {
+      "stem": "voice",
+      "section": "warm",
+      "name": "VO S08 录像，存回你自己家。",
+      "frame": 632,
+      "onset_sample": 1009600,
+      "onset_seconds": 21.03333,
+      "gain_db": 7.0,
+      "pan": 0,
+      "reverb_send": 0.1,
+      "sync_probe": "329"
+    },
+    {
+      "stem": "voice",
+      "section": "warm",
+      "name": "VO S09 云雀通，只打一条回家的路。",
+      "frame": 722,
+      "onset_sample": 1153600,
+      "onset_seconds": 24.03333,
+      "gain_db": 7.0,
+      "pan": 0,
+      "reverb_send": 0.1,
+      "sync_probe": "330"
+    },
+    {
+      "stem": "voice",
+      "section": "warm",
+      "name": "VO S10 点开，就是家里。",
+      "frame": 812,
+      "onset_sample": 1297600,
+      "onset_seconds": 27.03333,
+      "gain_db": 7.0,
+      "pan": 0,
+      "reverb_send": 0.1,
+      "sync_probe": "331"
+    },
+    {
+      "stem": "voice",
+      "section": "warm",
+      "name": "VO S11 同一个画面，两条完全不同的路。",
+      "frame": 902,
+      "onset_sample": 1441600,
+      "onset_seconds": 30.03333,
+      "gain_db": 7.0,
+      "pan": 0,
+      "reverb_send": 0.1,
+      "sync_probe": "332"
+    },
+    {
+      "stem": "voice",
+      "section": "warm",
+      "name": "VO S12 画面，从没离开过你。",
+      "frame": 992,
+      "onset_sample": 1585600,
+      "onset_seconds": 33.03333,
+      "gain_db": 5.5,
+      "pan": 0,
+      "reverb_send": 0.1,
+      "sync_probe": "333"
+    },
+    {
+      "stem": "voice",
+      "section": "warm",
+      "name": "VO S13 装完就能用。",
+      "frame": 1082,
+      "onset_sample": 1729600,
+      "onset_seconds": 36.03333,
+      "gain_db": 7.0,
+      "pan": 0,
+      "reverb_send": 0.1,
+      "sync_probe": "334"
+    },
+    {
+      "stem": "voice",
+      "section": "warm",
+      "name": "VO S14 云雀通。",
+      "frame": 1151,
+      "onset_sample": 1840000,
+      "onset_seconds": 38.33333,
+      "gain_db": 7.0,
+      "pan": 0,
+      "reverb_send": 0.1,
+      "sync_probe": "335"
     }
   ],
   "files": {
     "master": {
       "path": "out/audio/larktun_01_mix.wav",
-      "sha256": "3775c7060676dfa92bfa6a541d019d714ceea3f4976ecca71892c9fd38643645",
+      "sha256": "4faa4d68ef47d03226ca639491b7779bc31411f69399b52e41b1e515170d5963",
       "bytes": 11520044
     },
     "music": {
       "path": "out/audio/stems/music.wav",
-      "sha256": "c7f07565da4bf62d14463a08401b99b52635cc2fbea6dca64bc634f2e1c69f7c",
+      "sha256": "cf149787a3da22aaa40e3a8a3f30c4b68fd3de6985c92a7cf9a9ebe7d8604215",
       "bytes": 15360056
     },
     "sfx": {
       "path": "out/audio/stems/sfx.wav",
-      "sha256": "3acdff8110922a37ec8c2d09cdf0314ebb044651508dedb4a75d6577173d3765",
+      "sha256": "29b4b3c2af527a0fb34d325822d2d9037982cf03891e5f5601cd53d19046479c",
       "bytes": 15360056
     },
     "ambience": {
       "path": "out/audio/stems/ambience.wav",
-      "sha256": "fc409a7c80dbab6f3a6449be9afc0f282c50df71a603650b767086afc221f4b1",
+      "sha256": "379ecabb1ebec285df1c8f60c371140055c0c4aa145b254d74f4e500c1b8f8ed",
       "bytes": 15360056
     },
     "ding": {
       "path": "out/audio/stems/ding.wav",
-      "sha256": "9135aa66b07301b74103858400c33403f49c2d6f62bcc4d0eeeae6991462b084",
+      "sha256": "35f47090fe7e21ab295660f6e27a4e90e8d0be23fb72d6489befa5c559d5fd62",
+      "bytes": 15360056
+    },
+    "voice": {
+      "path": "out/audio/stems/voice.wav",
+      "sha256": "37bfad25c1a6ed22b94c1af23121cbdb7202a0ae2057717ea88b87dbbbe612a1",
       "bytes": 15360056
     },
     "sync_probes": {
       "path": "out/audio/sync_probes.npz",
-      "sha256": "2cb280c7b6383d5b91a2427b7b73a7c112c5b1d9d46970533f60ac5822252c1c",
-      "bytes": 325454
+      "sha256": "26b2232e15f113ebf2e2a7d11a3cabb38111b3fb0397a9a92c2f0acbe2fc028e",
+      "bytes": 1585036
     }
   }
 }

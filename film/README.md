@@ -15,8 +15,8 @@
 | `out/larktun_01_sub.mp4` | 带叙事字幕、无音轨 |
 | `out/subtitles.ass` | 可单独编辑的字幕时间轴 |
 | `out/audio_cue_sheet.md` | 帧级声音规格；阶段 I 按此表生成音轨 |
-| `out/larktun_01_clean_audio.mp4` / `out/larktun_01_sub_audio.mp4` | 两版有声成片：视频数据包与无声版逐包相同，AAC 256 kbps / 48 kHz 立体声 |
-| `out/audio/` | 母带 WAV（48 kHz / 24-bit）、四轨分轨、`sound_manifest.json`、同步探针与 `SOUND_DESIGN.md` |
+| `out/larktun_01_clean_audio.mp4` / `out/larktun_01_sub_audio.mp4` | 两版有声成片（音乐、音效与逐句字幕旁白）：视频数据包与无声版逐包相同，AAC 256 kbps / 48 kHz 立体声 |
+| `out/audio/` | 母带 WAV（48 kHz / 24-bit）、五轨分轨（含旁白）、逐句旁白 `voice/`、`sound_manifest.json`、同步探针与 `SOUND_DESIGN.md` |
 | `out/gates/` | 构图、光照、动态、叠图和最终编码验收证据 |
 | `scene/layout.json` | 图纸坐标系下的最终设备、人物和机位参数 |
 
@@ -81,23 +81,31 @@ S14：1141–1149 淡出房屋并显出原始雀鸟；1150–1185 共 36 帧保�
 
 ## 声音与混音
 
-音轨全部由 NumPy 程序化合成，没有外部音频素材。完整结构、逐镜 cue、响度与限制见 `out/audio/SOUND_DESIGN.md`。在仓库根目录执行即可，约 1 分钟，不需要重渲 Blender 或字幕：
+音乐、音效与环境声由 NumPy 程序化合成。字幕旁白由 `film/voice_tts.py` 在独立环境 `.venv-voice` 中用开源 Kokoro 普通话模型生成（Apache-2.0），另用 SenseVoice 做 ASR 自检。完整结构、旁白时间表、响度与限制见 `out/audio/SOUND_DESIGN.md`。
+
+首次运行前，按 `assets/voice/provenance.json` 下载两个模型压缩包，核对 SHA-256，解压到 `assets/voice/`。之后在仓库根目录执行，约 2 分钟，不需要重渲 Blender 或字幕：
 
 ```bash
+python3 -m venv .venv-voice && .venv-voice/bin/pip install -r film/voice_requirements.txt   # 首次
 FILM_PY=/Users/ownding/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3
+.venv-voice/bin/python film/voice_tts.py
 "$FILM_PY" film/sound_design.py
 "$FILM_PY" film/validate_audio.py --stage master
 "$FILM_PY" film/mux_audio.py
 "$FILM_PY" film/validate_audio.py --stage mux
+.venv-voice/bin/python film/voice_tts.py --check
 ```
 
 帧 f 起点为采样 `(f-1)×1600`。`sound_design.py` 的 `cue()` 按帧号放置声音，并拒绝在 541–549 放入“叮”以外的声音；冷段及其混响尾巴从 541 帧起逐采样为 0，1186 帧起全轨为数字零。
 
-修改后要重跑两个验收步骤：
-- **master**：检查静音窗口、响度（−14 LUFS / ≤−1 dBTP）、分轨求和，以及 29 个关键 cue 的逐采样同步。
+修改后要重跑三个验收步骤：
+- **master**：检查静音窗口、响度（−14 LUFS / ≤−1 dBTP）、分轨求和、43 个关键 cue（含 14 句旁白）的逐采样同步，并确认每句旁白都在字幕帧内、高出底层至少 6 LU。
 - **mux**：确认视频数据包与无声版逐包一致，A/V 偏移为 0。
+- **ASR**：`voice_tts.py --check` 转写成片里的每句旁白，不计声调的拼音音节必须全部正确。
 
-WAV 母带与分轨是确定性输出，不进入 Git；有声 MP4、manifest 和验收证据进入阶段提交。
+旁白文案、起止帧和音色在 `voice_tts.py` 的 `NARRATION`、`SPEAKER`；人声音量和闪避在 `sound_design.py` 的 `VOICE_GAIN`、`DUCK`。
+
+WAV 母带、分轨、逐句旁白 WAV、语音模型和 `.venv-voice` 不进入 Git；有声 MP4、manifest、`voice_manifest.json` 和验收证据进入阶段提交。
 
 ## 重新生成手机 UI
 
@@ -122,6 +130,6 @@ python3 film/extract_ui.py
 | F | `extract_ui.py`, `render_ui.cjs`, `stage_f.py` | `out/gates/F/ui_report.json` |
 | G | `render_film.py`, `validate_delivery.py --stage G` | 原始全片 24 帧拼版、90 对叠图、清单和校验 |
 | H | `prepare_post.py`, `compose_film.py`, `export_video.py` | `out/gates/H/` 最终拼版、ffprobe 与完整解码 |
-| I | `sound_design.py`, `sound_kit.py`, `audio_dsp.py`, `mux_audio.py`, `validate_audio.py` | `out/gates/I/` 同步、静音窗口、响度与封装报告，以及频谱图 |
+| I | `voice_tts.py`, `sound_design.py`, `sound_kit.py`, `audio_dsp.py`, `mux_audio.py`, `validate_audio.py` | `out/gates/I/` 同步、静音窗口、旁白窗口、响度、封装与成片 ASR 报告，以及频谱图 |
 
 阶段建模脚本会修改影片工程，不是日常播放入口。日常查看及重渲使用最终 `.blend` 与 `motion.py` / `render_film.py`。本项目所有资产与许可的逐文件来源在 `assets/characters/provenance.json`、`assets/fonts/provenance.json`。

@@ -21,7 +21,8 @@
   "delivery_validation": "out/gates/H/delivery_validation.json",
   "sound_validation": [
     "out/gates/I/audio_master_validation.json",
-    "out/gates/I/audio_mux_validation.json"
+    "out/gates/I/audio_mux_validation.json",
+    "out/gates/I/voice_asr_mix.json"
   ],
   "deliverables": [
     "out/larktun_01_clean.mp4",

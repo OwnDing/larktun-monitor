@@ -7,7 +7,7 @@ from pathlib import Path
 import argparse, hashlib, json, subprocess
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
-from audio_dsp import FFMPEG, FPS, LENGTH, SR, decode, filt, fs, loudness
+from audio_dsp import FFMPEG, FPS, LENGTH, SPF, SR, decode, filt, fs, loudness
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'out'
@@ -15,8 +15,10 @@ AUDIO = OUT / 'audio'
 GATE = OUT / 'gates/I'
 FFPROBE = '/opt/homebrew/bin/ffprobe'
 CUT, RESUME, BLACK = fs(541), fs(550), fs(1186)
-STEMS = ('music', 'sfx', 'ambience', 'ding')
-COLORS = {'music': (111, 168, 255), 'sfx': (47, 224, 200), 'ambience': (180, 180, 190), 'ding': (255, 220, 120)}
+STEMS = ('music', 'sfx', 'ambience', 'ding', 'voice')
+BED = ('music', 'sfx', 'ambience', 'voice')          # everything that must be silent inside frames 541-549
+COLORS = {'music': (111, 168, 255), 'sfx': (47, 224, 200), 'ambience': (180, 180, 190), 'ding': (255, 220, 120),
+          'voice': (255, 150, 200)}
 SHOTS = [('S01', 1), ('S02', 91), ('S03', 181), ('S04', 271), ('S05', 361), ('S06', 451), ('S07', 541), ('S08', 631),
          ('S09', 721), ('S10', 811), ('S11', 901), ('S12', 991), ('S13', 1081), ('S14', 1141)]
 
@@ -46,6 +48,41 @@ def onset_contrast_db(stem, sample):
     before = np.sum(stem[:, sample - SR // 100 - SR // 500:sample - SR // 500] ** 2)
     return 10 * np.log10((after + 1e-18) / (before + 1e-18))
 
+def moving_rms(x, n):
+    c = np.concatenate(([0.], np.cumsum(x * x)))
+    i = np.arange(len(x))
+    lo, hi = np.maximum(0, i - n // 2), np.minimum(len(x), i + n // 2 + 1)
+    return np.sqrt((c[hi] - c[lo]) / (hi - lo))
+
+def k_power(x):
+    """Approximate BS.1770 K-weighting (38 Hz high-pass, +4 dB shelf above ~1.5 kHz), channel-summed power per sample."""
+    y = filt(x, hp=38) + (10 ** (4 / 20) - 1) * filt(x, hp=1500, order=1)
+    return np.sum(y ** 2, axis=0)
+
+def narration_check(stems):
+    """Narration heard in the voice stem lies inside the frames of the caption it reads, clearly above the bed."""
+    path = AUDIO / 'voice/voice_manifest.json'
+    if not path.exists():
+        return dict(status='PASS', lines=[], note='no narration rendered')
+    voice = stems['voice']
+    speaking = moving_rms(voice.mean(axis=0), SR // 50) > 10 ** (-26 / 20) * np.max(np.abs(voice))
+    allowed = np.zeros(LENGTH, dtype=bool)
+    spoken, bed = k_power(voice), k_power(sum(stems[s] for s in STEMS if s != 'voice'))
+    rows = []
+    for line in json.loads(path.read_text())['lines']:
+        a, b = fs(line['caption_frames'][0]), fs(line['caption_frames'][1] + 1)
+        allowed[a:b] = True
+        idx = np.nonzero(speaking[a:b])[0]
+        onset, offset = a + int(idx[0]), a + int(idx[-1])
+        over_bed = 10 * np.log10(spoken[onset:offset].mean() / max(bed[onset:offset].mean(), 1e-18))
+        rows.append(dict(shot=line['shot'], text=line['text'], caption_frames=line['caption_frames'],
+                         speech_frames=[round(1 + onset / SPF, 2), round(1 + offset / SPF, 2)],
+                         voice_over_bed_lu=round(float(over_bed), 1), passed=bool(over_bed >= 6.)))
+    outside = int(np.count_nonzero(speaking & ~allowed))
+    return dict(status='PASS' if outside == 0 and all(r['passed'] for r in rows) else 'FAIL',
+                speech_samples_outside_caption_frames=outside, speaking_threshold='20 ms RMS above -26 dB re. voice peak',
+                lines=rows)
+
 def colormap(v):
     stops = np.array([[4, 6, 12], [20, 30, 80], [30, 120, 150], [60, 220, 190], [250, 235, 150], [255, 255, 255]], float)
     p = np.clip(v, 0, 1) * (len(stops) - 1)
@@ -68,7 +105,7 @@ def spectrogram(mono, t0, t1, width, height, fmin=30., fmax=16000.):
 def sheet(stems, mix, steps, cues, t0, t1, path, title, frame_grid=False):
     width, spec_h, lane_h, left = 2400, 620, 70, 90
     top = 56
-    height = top + spec_h + lane_h * 4 + 150 + 40
+    height = top + spec_h + lane_h * len(STEMS) + 150 + 40
     im = Image.new('RGB', (left + width + 20, height), (8, 12, 21))
     d = ImageDraw.Draw(im)
     d.text((left, 14), title, font=font(26), fill=(235, 240, 248))
@@ -100,7 +137,7 @@ def sheet(stems, mix, steps, cues, t0, t1, path, title, frame_grid=False):
             hgt = np.clip((v + 72) / 66, 0, 1) * (lane_h - 8)
             if hgt > 0:
                 d.line((left + px, y + lane_h - 4, left + px, y + lane_h - 4 - hgt), fill=COLORS[name])
-    y = y0 + 4 * lane_h + 10
+    y = y0 + len(STEMS) * lane_h + 10
     d.text((8, y + 40), 'LUFS M', font=font(18), fill=(235, 240, 248))
     pts = [(xs(t - .2), y + 140 - np.clip((m + 50) / 50, 0, 1) * 130) for t, m, s in steps if t0 <= t - .2 <= t1]
     ref = y + 140 - (36 / 50) * 130
@@ -131,12 +168,12 @@ def validate_master():
     assert mix.shape == (2, LENGTH) and all(x.shape == (2, LENGTH) for x in stems.values())
     residual = float(np.max(np.abs(sum(stems.values()) - mix)))
     assert residual < 2e-6, residual
-    for s in ('music', 'sfx', 'ambience'):
+    for s in BED:
         assert np.all(stems[s][:, CUT:RESUME] == 0), s
     assert np.all(stems['ding'][:, :CUT] == 0)
     assert np.all(mix[:, BLACK:] == 0)
-    last_cold = max(int(np.max(np.nonzero(np.any(stems[s][:, :RESUME] != 0, axis=0))[0])) for s in ('music', 'sfx', 'ambience'))
-    first_warm = min(int(np.min(np.nonzero(np.any(stems[s][:, CUT:] != 0, axis=0))[0])) + CUT for s in ('music', 'sfx', 'ambience'))
+    last_cold = max(int(np.max(np.nonzero(np.any(stems[s][:, :RESUME] != 0, axis=0))[0])) for s in BED)
+    first_warm = min(int(np.min(np.nonzero(np.any(stems[s][:, CUT:] != 0, axis=0))[0])) + CUT for s in BED)
     # Warm entry is a 1 ms raised-cosine gate starting exactly at frame 550, so its first sample is still zero.
     assert last_cold < CUT and RESUME <= first_warm <= RESUME + SR // 1000, (last_cold, first_warm)
     measured = loudness(master_path)
@@ -155,6 +192,7 @@ def validate_master():
                              onset_contrast_db=round(min(99.9, onset_contrast_db(stems[c['stem']], c['onset_sample'])), 1)))
     worst = max(abs(s['offset_samples']) for s in sync) / SR * 1000
     late = [s for s in sync if not s['passed']]
+    narration = narration_check(stems)
     mono_loss = 10 * np.log10(np.mean(mix ** 2) * 2 / np.mean((mix.sum(axis=0) / np.sqrt(2)) ** 2 + 1e-18) + 1e-18)
     corr = float(np.corrcoef(mix[0], mix[1])[0, 1])
     sheet(stems, mix, measured['steps'], manifest['cues'], 0, 40, GATE / 'soundtrack_overview.png',
@@ -163,20 +201,21 @@ def validate_master():
           'S06 → S07 · bed stops before frame 541 · ding only in 541–549 · warm entry at frame 550', frame_grid=True)
     sheet(stems, mix, measured['steps'], manifest['cues'], 35.8, 40, GATE / 'ending_zoom.png',
           'S13 cards → S14 final chord · tail closed before frame 1186 · digital silence to 40.000 s', frame_grid=True)
-    report = dict(status='FAIL' if late else 'PASS', master=dict(path=str(master_path.relative_to(ROOT)), sha256=sha(master_path), sample_rate=SR,
+    report = dict(status='FAIL' if late or narration['status'] != 'PASS' else 'PASS', master=dict(path=str(master_path.relative_to(ROOT)), sha256=sha(master_path), sample_rate=SR,
                   channels=2, bits=24, samples=LENGTH, seconds=LENGTH / SR),
                   stems_sum_to_master_max_abs_error=residual,
                   silence=dict(bed_exactly_zero_samples=[CUT, RESUME], last_cold_bed_sample=last_cold, first_warm_sample=first_warm,
                                ding_only_frames=[541, 549], black_digital_silence_samples=[BLACK, LENGTH]),
                   loudness={k: v for k, v in measured.items() if k != 'steps'},
                   per_shot=manifest['loudness']['per_shot'], stereo=dict(lr_correlation=round(corr, 3), mono_fold_loss_db=round(float(mono_loss), 2)),
-                  sync=dict(max_abs_offset_ms=round(worst, 2), cues=sync),
+                  narration=narration, sync=dict(max_abs_offset_ms=round(worst, 2), cues=sync),
                   evidence=['out/gates/I/soundtrack_overview.png', 'out/gates/I/cut_541_549_zoom.png', 'out/gates/I/ending_zoom.png'])
     GATE.mkdir(parents=True, exist_ok=True)
     (GATE / 'audio_master_validation.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     print(json.dumps({k: v for k, v in report.items() if k not in ('sync', 'per_shot')}, ensure_ascii=False), flush=True)
     print('SYNC worst offset ms', round(worst, 2), flush=True)
     assert not late, late
+    assert narration['status'] == 'PASS', narration
     return report
 
 def best_lag(ref, test, max_lag=2400):

@@ -1,0 +1,6 @@
+# Isolated voice-over environment (TTS generation and ASR checks only; the mix itself runs on the NumPy runtime):
+#   python3 -m venv .venv-voice && .venv-voice/bin/pip install -r film/voice_requirements.txt
+# Models are not installed by pip: see assets/voice/provenance.json for archive URLs, SHA-256 and licences.
+sherpa-onnx==1.13.8
+numpy==2.5.3
+pypinyin==0.55.0

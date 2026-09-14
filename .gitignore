@@ -12,3 +12,8 @@ out/logs/
 assets/characters/makehuman_tree.json
 out/audio/*.wav
 out/audio/stems/
+out/audio/voice/*.wav
+.venv-voice/
+assets/voice/kokoro-multi-lang-v1_1/
+assets/voice/sherpa-onnx-sense-voice-*/
+assets/voice/*.sha256

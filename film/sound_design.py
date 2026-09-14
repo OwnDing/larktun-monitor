@@ -9,8 +9,8 @@ from pathlib import Path
 import hashlib, json, time
 import numpy as np
 import sound_kit as K
-from audio_dsp import (FPS, LENGTH, SPF, SR, convolve, db, echoes, env, filt, fs, hz, limit, loudness, noise, pan,
-                       place, reverb_ir, smooth, taxis, tape, true_peak, write_wav)
+from audio_dsp import (FPS, LENGTH, SPF, SR, convolve, db, decode, echoes, env, filt, fs, hz, limit, loudness, noise,
+                       pan, place, reverb_ir, smooth, taxis, tape, true_peak, write_wav)
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'out'
@@ -23,11 +23,15 @@ SHOTS = [('S01', 1, 90), ('S02', 91, 180), ('S03', 181, 270), ('S04', 271, 360),
          ('S11', 901, 990), ('S12', 991, 1080), ('S13', 1081, 1140), ('S14', 1141, 1200)]
 # (T60 at 200 Hz, T60 at 8 kHz, pre-delay) per stem and section; ambience stays dry.
 REVERBS = {('music', 'cold'): (3.2, 1.6, .025), ('music', 'warm'): (1.9, 1.0, .012),
-           ('sfx', 'cold'): (.9, .5, .006), ('sfx', 'warm'): (1.1, .6, .008), ('ding', 'silence'): (1.1, .8, .01)}
-STEMS = ('music', 'sfx', 'ambience', 'ding')
-# Transient cues whose first 40 ms are kept as matched-filter probes for sample-exact sync verification.
+           ('sfx', 'cold'): (.9, .5, .006), ('sfx', 'warm'): (1.1, .6, .008), ('ding', 'silence'): (1.1, .8, .01),
+           ('voice', 'cold'): (.45, .3, .006), ('voice', 'warm'): (.45, .3, .006)}
+STEMS = ('music', 'sfx', 'ambience', 'ding', 'voice')
+VOICE_DIR = AUDIO / 'voice'
+VOICE_GAIN = 7.
+DUCK = {'music': -9., 'ambience': -8., 'sfx': -6.}     # dB while a narration line speaks; no line overlaps the ding
+# Cues kept as matched-filter probes for sample-exact sync verification (first 40 ms; narration lines 250 ms).
 SYNC_PREFIXES = ('S01 LED', 'S05 ', 'S06 coin', 'S07 cyan pulse ding', 'S07 warm roll F3', 'S08 disk LED', 'S10 tap',
-                 'S10 connected', 'S13 card', 'S14 final soft kick')
+                 'S10 connected', 'S13 card', 'S14 final soft kick', 'VO ')
 BUS, SEND, CUES, PROBES = {}, {}, [], {}
 
 def section_of(frame):
@@ -50,7 +54,7 @@ def cue(stem, name, frame, sound, gain=0., position=0., send=0.):
                      onset_seconds=round(start / SR, 5), gain_db=round(float(gain), 2), pan=position, reverb_send=send))
     if name.startswith(SYNC_PREFIXES):
         key = f'{len(CUES) - 1:03d}'
-        PROBES[key] = (sound[:, :K.secs(.04)] * db(gain)).astype(np.float32)
+        PROBES[key] = (sound[:, :K.secs(.25 if stem == 'voice' else .04)] * db(gain)).astype(np.float32)
         CUES[-1]['sync_probe'] = key
 
 def automation(start_frame, n, keys):
@@ -112,7 +116,7 @@ def cold():
     cue('music', 'S06 riser into the cut', 497, K.riser((541 - 497) / FPS + .2), -12, 0, .25)
 
 def the_cut():
-    cue('ding', 'S07 cyan pulse ding (only sound in 541-549)', 541, K.ding(), -8, 0, .35)
+    cue('ding', 'S07 cyan pulse ding (only sound in 541-549)', 541, K.ding(), -5, 0, .35)
 
 # ---------------------------------------------------------------- 550-1185: warm
 
@@ -232,6 +236,55 @@ def warm_fx():
     n = K.secs((1186 - 550) / FPS)
     cue('ambience', 'warm vinyl texture', 550, K.crackle(n / SR) * env(n, 1., None, .5), -20)
 
+# ---------------------------------------------------------------- caption narration
+
+def moving_mean(x, n):
+    c = np.concatenate(([0.], np.cumsum(x)))
+    i = np.arange(len(x))
+    lo, hi = np.maximum(0, i - n // 2), np.minimum(len(x), i + n // 2 + 1)
+    return (c[hi] - c[lo]) / (hi - lo)
+
+def voice_chain(x):
+    """Rumble cut, slight low-mid dip and presence lift, 2:1 levelling above -12 dB re. the loudest syllable, fixed RMS."""
+    y = filt(x, hp=85)
+    y = y + .25 * filt(y, bp=(3200, 1.2)) - .15 * filt(y, bp=(300, 1.))
+    level = 10 * np.log10(moving_mean(y * y, int(.02 * SR)) + 1e-12)
+    y = y * moving_mean(db(-np.maximum(0, level - (level.max() - 12)) / 2), int(.03 * SR))
+    active = moving_mean(y * y, int(.05 * SR)) > np.max(y * y) * 10 ** -3.5
+    return y * db(-20) / np.sqrt(np.mean(y[active] ** 2))
+
+def narration():
+    """Caption voice-over from film/voice_tts.py: each line starts on its planned frame inside its caption window.
+
+    Returns the speaking interval (first, last sample) of every line for ducking.
+    """
+    path = VOICE_DIR / 'voice_manifest.json'
+    if not path.exists():
+        return []
+    intervals = []
+    for line in json.loads(path.read_text())['lines']:
+        x = voice_chain(decode(ROOT / line['file'], channels=1)[0])
+        cue('voice', f"VO {line['shot']} {line['text']}", line['start_frame'], x,
+            VOICE_GAIN - (1.5 if line['shot'] == 'S12' else 0), 0, .1)     # the sleeping-child line stays softer
+        active = np.nonzero(np.abs(x) > np.abs(x).max() * .02)[0]
+        intervals.append((fs(line['start_frame']) + int(active[0]), fs(line['start_frame']) + int(active[-1])))
+    return intervals
+
+def duck_curve(intervals, attack=.12, release=.4):
+    """1 while a line speaks, raised-cosine ramps before and after it.
+
+    A line ending just before frame 541 releases early, so the cold bed and riser surge back before the hard cut.
+    """
+    d = np.zeros(LENGTH)
+    for a, b in intervals:
+        rel = release if b >= CUT else max(.08, min(release, (CUT - b) / SR - .12))
+        lo, hi = max(0, a - int(attack * SR)), min(LENGTH, b + int(rel * SR))
+        seg = np.ones(hi - lo)
+        seg[:a - lo] = smooth(np.arange(a - lo) / max(1, a - lo))
+        seg[b - lo:] = smooth((hi - np.arange(b, hi)) / max(1, hi - b))
+        d[lo:hi] = np.maximum(d[lo:hi], seg)
+    return d
+
 # ---------------------------------------------------------------- mix and master
 
 def section_gate(section):
@@ -251,7 +304,7 @@ def section_gate(section):
     g[BLACK:] = 0.
     return g
 
-def mixdown():
+def mixdown(intervals):
     stems = {name: np.zeros((2, LENGTH)) for name in STEMS}
     for (stem, section), dry in BUS.items():
         y = dry.copy()
@@ -261,6 +314,14 @@ def mixdown():
         if (stem, section) == ('music', 'warm'):
             y = filt(tape(y), lp=7800, order=1)
         stems[stem] += filt(y, hp=28) * section_gate(section)
+    if intervals:
+        # Duck the bed under narration and carve a little of the music's 2.5 kHz band where speech intelligibility lives.
+        # The carve is a 40 s FFT filter, so it is re-gated: nothing may ring into frames 541-549 or the black tail.
+        d = duck_curve(intervals)
+        carve = filt(stems['music'], bp=(2500, .9)) * (section_gate('cold') + section_gate('warm'))
+        stems['music'] = (stems['music'] - .35 * carve * d) * db(DUCK['music'] * d)
+        for name in ('sfx', 'ambience'):
+            stems[name] *= db(DUCK[name] * d)
     return stems
 
 def master(mix):
@@ -300,8 +361,9 @@ def main():
     the_cut()
     warm()
     warm_fx()
-    print('CUES PLACED', len(CUES), round(time.time() - started, 1), 's', flush=True)
-    stems = mixdown()
+    intervals = narration()
+    print('CUES PLACED', len(CUES), 'narration lines', len(intervals), round(time.time() - started, 1), 's', flush=True)
+    stems = mixdown(intervals)
     out, curve, measured, peak = master(sum(stems.values()))
     assert all(np.all(stems[s][:, CUT:RESUME] == 0) for s in STEMS if s != 'ding'), 'bed leaked into 541-549'
     assert np.all(stems['ding'][:, :CUT] == 0) and np.all(out[:, BLACK:] == 0)
@@ -312,7 +374,8 @@ def main():
         write_wav(files[s], stems[s] * curve, float32=True)
     np.savez_compressed(files['sync_probes'], **PROBES)
     manifest = dict(
-        status='COMPLETE', generator='film/sound_design.py (procedural, no third-party audio)', sample_rate=SR, channels=2,
+        status='COMPLETE', generator='film/sound_design.py (procedural music and effects; narration from film/voice_tts.py)',
+        sample_rate=SR, channels=2,
         samples=LENGTH, duration_seconds=LENGTH / SR, master_format='WAV PCM 24-bit', stem_format='WAV float32, sum equals master',
         frame_to_sample='(frame - 1) * 1600', tempo_bpm=90, beat_frames='1 + 20k', keys=dict(frames_1_540='D minor', frames_550_1185='F major'),
         loudness=dict(target_integrated_lufs=TARGET_LUFS, integrated_lufs=measured['integrated_lufs'], lra_lu=measured['lra_lu'],
@@ -321,6 +384,10 @@ def main():
                       per_shot=shot_loudness(measured['steps'])),
         silence=dict(cut_frames=[541, 549], cut_samples=[CUT, RESUME], only_stem_inside='ding', cold_fade_out_ms=4,
                      black_frames=[1186, 1200], black_samples=[BLACK, LENGTH], final_fade_seconds=[39.0, 39.5]),
+        narration=dict(source=str((VOICE_DIR / 'voice_manifest.json').relative_to(ROOT)), lines=len(intervals),
+                       speech_samples=intervals, ducking_db=DUCK, duck_attack_s=.12,
+                       duck_release_s='0.4 (the S06 line releases early so the bed is back before frame 541)',
+                       music_presence_carve='-35% of the 2.5 kHz band while a line speaks') if intervals else None,
         cues=CUES, files={k: dict(path=str(v.relative_to(ROOT)), sha256=sha(v), bytes=v.stat().st_size) for k, v in files.items()})
     (AUDIO / 'sound_manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
     print('MASTER', json.dumps({k: v for k, v in manifest['loudness'].items() if k != 'per_shot'}), flush=True)

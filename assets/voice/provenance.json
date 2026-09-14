@@ -1,0 +1,27 @@
+{
+  "kokoro": {
+    "role": "Voice-over text-to-speech used in the delivered soundtrack",
+    "model": "Kokoro-82M v1.1-zh, ONNX export by sherpa-onnx",
+    "upstream": "https://huggingface.co/hexgrad/Kokoro-82M-v1.1-zh",
+    "archive_url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-multi-lang-v1_1.tar.bz2",
+    "archive_bytes": 364816464,
+    "archive_sha256": "a3f4c73d043860e3fd2e5b06f36795eb81de0fc8e8de6df703245edddd87dbad",
+    "extracted_to": "assets/voice/kokoro-multi-lang-v1_1/",
+    "license": "Apache-2.0 (LICENSE file inside the archive; Hugging Face model card licence apache-2.0)"
+  },
+  "sensevoice": {
+    "role": "Speech recognition for internal quality checks only; nothing from this model is in the film",
+    "model": "SenseVoice-small int8 (zh/en/ja/ko/yue) 2024-07-17, ONNX export by sherpa-onnx",
+    "upstream": "https://github.com/FunAudioLLM/SenseVoice",
+    "archive_url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-int8-2024-07-17.tar.bz2",
+    "archive_bytes": 163002883,
+    "archive_sha256": "7d1efa2138a65b0b488df37f8b89e3d91a60676e416f515b952358d83dfd347e",
+    "extracted_to": "assets/voice/sherpa-onnx-sense-voice-zh-en-ja-ko-yue-int8-2024-07-17/",
+    "license": "FunASR model licence, see https://github.com/modelscope/FunASR?tab=readme-ov-file#license"
+  },
+  "runtime": {
+    "environment": ".venv-voice (python -m venv, then pip install sherpa-onnx numpy)",
+    "sherpa_onnx": "1.13.8 from PyPI, Apache-2.0"
+  },
+  "not_used": "macOS system voices (Tingting, Eddy, Reed, ...): Apple's licence restricts system voices to personal, non-commercial use."
+}
