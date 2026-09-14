@@ -1,0 +1,466 @@
+{
+  "status": "PASS",
+  "master": {
+    "path": "out/audio/larktun_01_mix.wav",
+    "sha256": "3775c7060676dfa92bfa6a541d019d714ceea3f4976ecca71892c9fd38643645",
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "samples": 1920000,
+    "seconds": 40.0
+  },
+  "stems_sum_to_master_max_abs_error": 1.6763806343078613e-07,
+  "silence": {
+    "bed_exactly_zero_samples": [
+      864000,
+      878400
+    ],
+    "last_cold_bed_sample": 863999,
+    "first_warm_sample": 878401,
+    "ding_only_frames": [
+      541,
+      549
+    ],
+    "black_digital_silence_samples": [
+      1896000,
+      1920000
+    ]
+  },
+  "loudness": {
+    "integrated_lufs": -14.0,
+    "lra_lu": 6.0,
+    "true_peak_dbtp": -1.1
+  },
+  "per_shot": [
+    {
+      "shot": "S01",
+      "frames": [
+        1,
+        90
+      ],
+      "momentary_max_lufs": -22.9,
+      "short_term_at_end_lufs": -28.0
+    },
+    {
+      "shot": "S02",
+      "frames": [
+        91,
+        180
+      ],
+      "momentary_max_lufs": -13.8,
+      "short_term_at_end_lufs": -17.4
+    },
+    {
+      "shot": "S03",
+      "frames": [
+        181,
+        270
+      ],
+      "momentary_max_lufs": -14.1,
+      "short_term_at_end_lufs": -15.6
+    },
+    {
+      "shot": "S04",
+      "frames": [
+        271,
+        360
+      ],
+      "momentary_max_lufs": -11.8,
+      "short_term_at_end_lufs": -13.0
+    },
+    {
+      "shot": "S05",
+      "frames": [
+        361,
+        450
+      ],
+      "momentary_max_lufs": -12.2,
+      "short_term_at_end_lufs": -14.1
+    },
+    {
+      "shot": "S06",
+      "frames": [
+        451,
+        540
+      ],
+      "momentary_max_lufs": -9.1,
+      "short_term_at_end_lufs": -11.3
+    },
+    {
+      "shot": "S07",
+      "frames": [
+        541,
+        630
+      ],
+      "momentary_max_lufs": -11.1,
+      "short_term_at_end_lufs": -13.7
+    },
+    {
+      "shot": "S08",
+      "frames": [
+        631,
+        720
+      ],
+      "momentary_max_lufs": -12.2,
+      "short_term_at_end_lufs": -13.6
+    },
+    {
+      "shot": "S09",
+      "frames": [
+        721,
+        810
+      ],
+      "momentary_max_lufs": -12.9,
+      "short_term_at_end_lufs": -14.8
+    },
+    {
+      "shot": "S10",
+      "frames": [
+        811,
+        900
+      ],
+      "momentary_max_lufs": -11.6,
+      "short_term_at_end_lufs": -13.7
+    },
+    {
+      "shot": "S11",
+      "frames": [
+        901,
+        990
+      ],
+      "momentary_max_lufs": -11.1,
+      "short_term_at_end_lufs": -12.8
+    },
+    {
+      "shot": "S12",
+      "frames": [
+        991,
+        1080
+      ],
+      "momentary_max_lufs": -15.5,
+      "short_term_at_end_lufs": -17.7
+    },
+    {
+      "shot": "S13",
+      "frames": [
+        1081,
+        1140
+      ],
+      "momentary_max_lufs": -13.0,
+      "short_term_at_end_lufs": -14.9
+    },
+    {
+      "shot": "S14",
+      "frames": [
+        1141,
+        1200
+      ],
+      "momentary_max_lufs": -11.6,
+      "short_term_at_end_lufs": -15.0
+    }
+  ],
+  "stereo": {
+    "lr_correlation": 0.629,
+    "mono_fold_loss_db": 0.89
+  },
+  "sync": {
+    "max_abs_offset_ms": 0.81,
+    "cues": [
+      {
+        "cue": "S01 LED peak beep",
+        "frame": 22,
+        "expected_sample": 33600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.921,
+        "correlation_best": 0.927,
+        "passed": true,
+        "onset_contrast_db": 89.8
+      },
+      {
+        "cue": "S01 LED peak beep",
+        "frame": 64,
+        "expected_sample": 100800,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.921,
+        "correlation_best": 0.927,
+        "passed": true,
+        "onset_contrast_db": 89.8
+      },
+      {
+        "cue": "S05 lock lands",
+        "frame": 379,
+        "expected_sample": 604800,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.925,
+        "correlation_best": 0.925,
+        "passed": true,
+        "onset_contrast_db": 11.5
+      },
+      {
+        "cue": "S05 paywall 咔",
+        "frame": 397,
+        "expected_sample": 633600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.998,
+        "correlation_best": 0.998,
+        "passed": true,
+        "onset_contrast_db": 23.3
+      },
+      {
+        "cue": "S05 tap denied",
+        "frame": 421,
+        "expected_sample": 672000,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.998,
+        "correlation_best": 0.998,
+        "passed": true,
+        "onset_contrast_db": 29.9
+      },
+      {
+        "cue": "S06 coin stack 1",
+        "frame": 457,
+        "expected_sample": 729600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.987,
+        "correlation_best": 0.987,
+        "passed": true,
+        "onset_contrast_db": 27.9
+      },
+      {
+        "cue": "S06 coin stack 2",
+        "frame": 467,
+        "expected_sample": 745600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.956,
+        "correlation_best": 0.956,
+        "passed": true,
+        "onset_contrast_db": 10.1
+      },
+      {
+        "cue": "S06 coin stack 3",
+        "frame": 476,
+        "expected_sample": 760000,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.971,
+        "correlation_best": 0.971,
+        "passed": true,
+        "onset_contrast_db": 12.3
+      },
+      {
+        "cue": "S06 coin stack 4",
+        "frame": 484,
+        "expected_sample": 772800,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.94,
+        "correlation_best": 0.94,
+        "passed": true,
+        "onset_contrast_db": 9.2
+      },
+      {
+        "cue": "S06 coin stack 5",
+        "frame": 491,
+        "expected_sample": 784000,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.949,
+        "correlation_best": 0.949,
+        "passed": true,
+        "onset_contrast_db": 9.2
+      },
+      {
+        "cue": "S06 coin stack 6",
+        "frame": 497,
+        "expected_sample": 793600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.921,
+        "correlation_best": 0.921,
+        "passed": true,
+        "onset_contrast_db": 6.2
+      },
+      {
+        "cue": "S06 coin stack 7",
+        "frame": 502,
+        "expected_sample": 801600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.888,
+        "correlation_best": 0.888,
+        "passed": true,
+        "onset_contrast_db": 7.5
+      },
+      {
+        "cue": "S06 coin stack 8",
+        "frame": 506,
+        "expected_sample": 808000,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.786,
+        "correlation_best": 0.786,
+        "passed": true,
+        "onset_contrast_db": 4.7
+      },
+      {
+        "cue": "S06 coin stack 9",
+        "frame": 509,
+        "expected_sample": 812800,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.711,
+        "correlation_best": 0.711,
+        "passed": true,
+        "onset_contrast_db": 4.9
+      },
+      {
+        "cue": "S06 coin stack 10",
+        "frame": 512,
+        "expected_sample": 817600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.767,
+        "correlation_best": 0.767,
+        "passed": true,
+        "onset_contrast_db": 3.5
+      },
+      {
+        "cue": "S06 coin stack 11",
+        "frame": 514,
+        "expected_sample": 820800,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.761,
+        "correlation_best": 0.761,
+        "passed": true,
+        "onset_contrast_db": 3.1
+      },
+      {
+        "cue": "S06 coin stack 12",
+        "frame": 516,
+        "expected_sample": 824000,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.71,
+        "correlation_best": 0.71,
+        "passed": true,
+        "onset_contrast_db": 1.4
+      },
+      {
+        "cue": "S07 cyan pulse ding (only sound in 541-549)",
+        "frame": 541,
+        "expected_sample": 864000,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.993,
+        "correlation_best": 0.993,
+        "passed": true,
+        "onset_contrast_db": 99.9
+      },
+      {
+        "cue": "S07 warm roll F3",
+        "frame": 550.0,
+        "expected_sample": 878400,
+        "offset_samples": 39,
+        "correlation_at_frame": 0.086,
+        "correlation_best": 0.918,
+        "passed": true,
+        "onset_contrast_db": 99.9
+      },
+      {
+        "cue": "S14 final soft kick",
+        "frame": 1141,
+        "expected_sample": 1824000,
+        "offset_samples": 32,
+        "correlation_at_frame": 0.42,
+        "correlation_best": 0.463,
+        "passed": true,
+        "onset_contrast_db": 1.0
+      },
+      {
+        "cue": "S08 disk LED F5",
+        "frame": 631,
+        "expected_sample": 1008000,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.981,
+        "correlation_best": 0.981,
+        "passed": true,
+        "onset_contrast_db": 69.2
+      },
+      {
+        "cue": "S08 disk LED A5",
+        "frame": 638,
+        "expected_sample": 1019200,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.891,
+        "correlation_best": 0.891,
+        "passed": true,
+        "onset_contrast_db": 6.0
+      },
+      {
+        "cue": "S08 disk LED C6",
+        "frame": 645,
+        "expected_sample": 1030400,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.78,
+        "correlation_best": 0.783,
+        "passed": true,
+        "onset_contrast_db": 3.9
+      },
+      {
+        "cue": "S10 tap",
+        "frame": 811,
+        "expected_sample": 1296000,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.986,
+        "correlation_best": 0.986,
+        "passed": true,
+        "onset_contrast_db": 24.1
+      },
+      {
+        "cue": "S10 connected",
+        "frame": 826,
+        "expected_sample": 1320000,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.974,
+        "correlation_best": 0.976,
+        "passed": true,
+        "onset_contrast_db": 21.3
+      },
+      {
+        "cue": "S10 connected",
+        "frame": 829,
+        "expected_sample": 1324800,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.681,
+        "correlation_best": 0.682,
+        "passed": true,
+        "onset_contrast_db": 2.3
+      },
+      {
+        "cue": "S13 card 咔哒 G5",
+        "frame": 1081,
+        "expected_sample": 1728000,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.995,
+        "correlation_best": 0.995,
+        "passed": true,
+        "onset_contrast_db": 28.3
+      },
+      {
+        "cue": "S13 card 咔哒 A5",
+        "frame": 1087,
+        "expected_sample": 1737600,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.997,
+        "correlation_best": 0.997,
+        "passed": true,
+        "onset_contrast_db": 19.0
+      },
+      {
+        "cue": "S13 card 咔哒 C6",
+        "frame": 1093,
+        "expected_sample": 1747200,
+        "offset_samples": 0,
+        "correlation_at_frame": 0.98,
+        "correlation_best": 0.98,
+        "passed": true,
+        "onset_contrast_db": 13.3
+      }
+    ]
+  },
+  "evidence": [
+    "out/gates/I/soundtrack_overview.png",
+    "out/gates/I/cut_541_549_zoom.png",
+    "out/gates/I/ending_zoom.png"
+  ]
+}

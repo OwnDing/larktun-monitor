@@ -38,9 +38,9 @@ for shot,start,end,lines,corner in rows:
 manifest=dict(font='assets/fonts/NotoSansCJKsc-Black.otf',font_family='Noto Sans CJK SC',font_size_px=74,outline_px=14,outline_rgb='#080C15',final_line_baseline_y=1560,line_spacing_px=102,ass_baseline_compensation_px=descent,captions=entries,notes=['Narrative captions are independent of Blender.','Installed FFmpeg lacks libass; the final compositor uses an equivalent transparent raster caption layer drawn at the exact requested baselines, then overlays it with FFmpeg. ASS remains separately editable.','S14 caption fade overlaps the 1.2-second logo hold to retain reading time within the fixed 2-second shot and final 15 black frames.'])
 (OUT/'caption_manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 coin_frames=[457,467,476,484,491,497,502,506,509,512,514,516]
-sound='''# 云雀通 01 · 帧级音效表（交声音制作）
+sound='''# 云雀通 01 · 帧级音效表
 
-本项目交付无声视频，不生成、不混入任何音轨。以下是制作指示，依据 `01-创意与分镜脚本.md` 第三节；具体单点按本片实际动作帧标定。
+以下是帧级声音规格，依据 `01-创意与分镜脚本.md` 第三节；具体单点按本片实际动作帧标定。阶段 I 已按本表生成原创音轨，有声成片为 `out/larktun_01_clean_audio.mp4` 与 `out/larktun_01_sub_audio.mp4`。实际实现、新增细节音效与混音参数见 `out/audio/SOUND_DESIGN.md`。
 
 30 fps，帧号从 1 开始；帧 f 的起始时间为 `(f-1)/30` 秒。最后一帧为 1200，片长 40 秒。
 

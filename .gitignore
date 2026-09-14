@@ -10,3 +10,5 @@ out/gates/G/S04_pulse_correction/
 out/gates/G/final_corrections/before/
 out/logs/
 assets/characters/makehuman_tree.json
+out/audio/*.wav
+out/audio/stems/

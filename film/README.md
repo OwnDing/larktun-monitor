@@ -14,7 +14,9 @@
 | `out/larktun_01_clean.mp4` | 无叙事字幕、无音轨；保留手机 UI、金额、分屏、卡片、Logo |
 | `out/larktun_01_sub.mp4` | 带叙事字幕、无音轨 |
 | `out/subtitles.ass` | 可单独编辑的字幕时间轴 |
-| `out/audio_cue_sheet.md` | 交给声音制作的帧级指示；本工程不生成声音 |
+| `out/audio_cue_sheet.md` | 帧级声音规格；阶段 I 按此表生成音轨 |
+| `out/larktun_01_clean_audio.mp4` / `out/larktun_01_sub_audio.mp4` | 两版有声成片：视频数据包与无声版逐包相同，AAC 256 kbps / 48 kHz 立体声 |
+| `out/audio/` | 母带 WAV（48 kHz / 24-bit）、四轨分轨、`sound_manifest.json`、同步探针与 `SOUND_DESIGN.md` |
 | `out/gates/` | 构图、光照、动态、叠图和最终编码验收证据 |
 | `scene/layout.json` | 图纸坐标系下的最终设备、人物和机位参数 |
 
@@ -77,6 +79,26 @@ S11 上下画面逐帧对应 S02 的 91–180 帧及 S08 的 631–720 帧，使
 
 S14：1141–1149 淡出房屋并显出原始雀鸟；1150–1185 共 36 帧保持 Logo；字幕淡入与这段重叠；1186–1200 共 15 帧纯黑。这个重叠是固定两秒时长下的明确时序折扣。
 
+## 声音与混音
+
+音轨全部由 NumPy 程序化合成，没有外部音频素材。完整结构、逐镜 cue、响度与限制见 `out/audio/SOUND_DESIGN.md`。在仓库根目录执行即可，约 1 分钟，不需要重渲 Blender 或字幕：
+
+```bash
+FILM_PY=/Users/ownding/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3
+"$FILM_PY" film/sound_design.py
+"$FILM_PY" film/validate_audio.py --stage master
+"$FILM_PY" film/mux_audio.py
+"$FILM_PY" film/validate_audio.py --stage mux
+```
+
+帧 f 起点为采样 `(f-1)×1600`。`sound_design.py` 的 `cue()` 按帧号放置声音，并拒绝在 541–549 放入“叮”以外的声音；冷段及其混响尾巴从 541 帧起逐采样为 0，1186 帧起全轨为数字零。
+
+修改后要重跑两个验收步骤：
+- **master**：检查静音窗口、响度（−14 LUFS / ≤−1 dBTP）、分轨求和，以及 29 个关键 cue 的逐采样同步。
+- **mux**：确认视频数据包与无声版逐包一致，A/V 偏移为 0。
+
+WAV 母带与分轨是确定性输出，不进入 Git；有声 MP4、manifest 和验收证据进入阶段提交。
+
 ## 重新生成手机 UI
 
 源 SVG 从 `src/scenes_a.py:s05:inner` 和 `src/scenes_b.py:s10:inner` 提取；原始版本保留为 `out/ui/*_original.svg`。动画修改在 DOM 副本上进行，价格保持 `¥ XX`。
@@ -100,5 +122,6 @@ python3 film/extract_ui.py
 | F | `extract_ui.py`, `render_ui.cjs`, `stage_f.py` | `out/gates/F/ui_report.json` |
 | G | `render_film.py`, `validate_delivery.py --stage G` | 原始全片 24 帧拼版、90 对叠图、清单和校验 |
 | H | `prepare_post.py`, `compose_film.py`, `export_video.py` | `out/gates/H/` 最终拼版、ffprobe 与完整解码 |
+| I | `sound_design.py`, `sound_kit.py`, `audio_dsp.py`, `mux_audio.py`, `validate_audio.py` | `out/gates/I/` 同步、静音窗口、响度与封装报告，以及频谱图 |
 
 阶段建模脚本会修改影片工程，不是日常播放入口。日常查看及重渲使用最终 `.blend` 与 `motion.py` / `render_film.py`。本项目所有资产与许可的逐文件来源在 `assets/characters/provenance.json`、`assets/fonts/provenance.json`。

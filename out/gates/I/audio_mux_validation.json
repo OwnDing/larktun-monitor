@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "videos": [
+    {
+      "file": "out/larktun_01_clean_audio.mp4",
+      "sha256": "a199afaf191a057c216d1783b75bf85d6b824d6897d68dd8397aea720238b019",
+      "bytes": 6080334,
+      "video_packets_identical_to": "out/larktun_01_clean.mp4",
+      "video_frames": 1200,
+      "audio": {
+        "codec": "aac",
+        "profile": "LC",
+        "bit_rate": "256110",
+        "sample_rate": 48000,
+        "channels": 2,
+        "start_time": "0.000000",
+        "duration": "40.000000"
+      },
+      "decoded_vs_master": {
+        "best_lag_samples": 0,
+        "snr_db": 32.6,
+        "black_tail_peak_dbfs": -240.0
+      },
+      "loudness": {
+        "integrated_lufs": -14.0,
+        "lra_lu": 6.0,
+        "true_peak_dbtp": -1.1
+      }
+    },
+    {
+      "file": "out/larktun_01_sub_audio.mp4",
+      "sha256": "34209b1ed796ced61795d7dbb0db2ce13e939722fbd59b9df4fe8f21f2058de2",
+      "bytes": 6237314,
+      "video_packets_identical_to": "out/larktun_01_sub.mp4",
+      "video_frames": 1200,
+      "audio": {
+        "codec": "aac",
+        "profile": "LC",
+        "bit_rate": "256110",
+        "sample_rate": 48000,
+        "channels": 2,
+        "start_time": "0.000000",
+        "duration": "40.000000"
+      },
+      "decoded_vs_master": {
+        "best_lag_samples": 0,
+        "snr_db": 32.6,
+        "black_tail_peak_dbfs": -240.0
+      },
+      "loudness": {
+        "integrated_lufs": -14.0,
+        "lra_lu": 6.0,
+        "true_peak_dbtp": -1.1
+      }
+    }
+  ]
+}
