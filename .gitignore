@@ -17,3 +17,9 @@ out/audio/voice/*.wav
 assets/voice/kokoro-multi-lang-v1_1/
 assets/voice/sherpa-onnx-sense-voice-*/
 assets/voice/*.sha256
+out/tour/frames/
+out/tour/preview_frames/
+out/tour/stills/
+out/tour/logs/
+out/tour/plan/*.npy
+out/tour/larktun_house_tour_1080p.mp4

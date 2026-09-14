@@ -1,0 +1,74 @@
+{
+ "frames_checked": 2892,
+ "step": 2,
+ "limit_m": 0.15,
+ "min_distance_m": 0.245,
+ "frames_under_limit": 0,
+ "under_limit": [],
+ "view_limit_m": 0.8,
+ "close_up_stretches": [
+  {
+   "frames": [
+    1215,
+    1231
+   ],
+   "seconds": 0.53,
+   "label": "书房",
+   "nearest_view_m": 0.43
+  },
+  {
+   "frames": [
+    2181,
+    2201
+   ],
+   "seconds": 0.67,
+   "label": "儿童房",
+   "nearest_view_m": 0.38
+  },
+  {
+   "frames": [
+    2601,
+    2629
+   ],
+   "seconds": 0.93,
+   "label": "客厅入口",
+   "nearest_view_m": 0.45
+  },
+  {
+   "frames": [
+    3737,
+    3765
+   ],
+   "seconds": 0.93,
+   "label": "生活阳台",
+   "nearest_view_m": 0.76
+  },
+  {
+   "frames": [
+    3961,
+    3981
+   ],
+   "seconds": 0.67,
+   "label": "主卧",
+   "nearest_view_m": 0.55
+  },
+  {
+   "frames": [
+    4249,
+    4269
+   ],
+   "seconds": 0.67,
+   "label": "主卧",
+   "nearest_view_m": 0.34
+  },
+  {
+   "frames": [
+    5187,
+    5201
+   ],
+   "seconds": 0.47,
+   "label": "客厅",
+   "nearest_view_m": 0.31
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "res": 0.05,
+ "x0": -0.6,
+ "y0": -3.6,
+ "nx": 288,
+ "ny": 284,
+ "ray_start_z": 2.05,
+ "hard_top": 1.12,
+ "sweep_heights": [
+  1.25,
+  1.55,
+  1.85
+ ],
+ "classes": {
+  "FLOOR": 0,
+  "SOFT": 1,
+  "HARD": 2
+ },
+ "counts": {
+  "floor": 35270,
+  "soft": 13097,
+  "hard": 33425,
+  "hard_added_by_sweeps": 3525
+ },
+ "door_state": {
+  "swing": {
+   "入户门": {
+    "pivot": [
+     7.337,
+     0.022
+    ],
+    "open_deg": -80.0
+   },
+   "主卧门": {
+    "pivot": [
+     3.622,
+     5.007
+    ],
+    "open_deg": 70.0
+   },
+   "书房门 · corrected access": {
+    "pivot": [
+     9.6,
+     2.27
+    ],
+    "open_deg": 30.0
+   }
+  },
+  "sliders": [
+   "厨房推拉门",
+   "公卫移门",
+   "储藏门",
+   "阳台推拉门",
+   "客厅推拉门"
+  ]
+ }
+}

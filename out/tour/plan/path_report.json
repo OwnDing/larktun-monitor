@@ -1,0 +1,255 @@
+{
+ "frames": 6359,
+ "duration_s": 212.0,
+ "overview_s": 21.2,
+ "walk_s": 190.8,
+ "motion": {
+  "max_walk_speed": 0.8,
+  "max_yaw_deg_s": 42.9,
+  "p95_yaw_deg_s": 42.0,
+  "max_pitch_deg_s": 29.0
+ },
+ "legs": [
+  {
+   "to": "玄关",
+   "length_m": 4.18,
+   "seconds": 8.57,
+   "used_astar": false,
+   "min_hard": 0.381,
+   "min_hard_at": [
+    7.85,
+    0.23
+   ],
+   "max_soft_depth": 0.0,
+   "max_soft_at": [
+    7.88,
+    -2.4
+   ]
+  },
+  {
+   "to": "过道 · 公卫",
+   "length_m": 1.98,
+   "seconds": 5.33,
+   "used_astar": false,
+   "min_hard": 0.393,
+   "min_hard_at": [
+    7.95,
+    2.17
+   ],
+   "max_soft_depth": 0.0,
+   "max_soft_at": [
+    7.85,
+    1.75
+   ]
+  },
+  {
+   "to": "书房",
+   "length_m": 2.23,
+   "seconds": 5.53,
+   "used_astar": false,
+   "min_hard": 0.275,
+   "min_hard_at": [
+    10.58,
+    2.28
+   ],
+   "max_soft_depth": 0.062,
+   "max_soft_at": [
+    10.59,
+    2.26
+   ]
+  },
+  {
+   "to": "书房 · 书柜设备",
+   "length_m": 1.36,
+   "seconds": 3.6,
+   "used_astar": false,
+   "min_hard": 0.526,
+   "min_hard_at": [
+    10.8,
+    1.9
+   ],
+   "max_soft_depth": 0.0,
+   "max_soft_at": [
+    10.8,
+    1.9
+   ]
+  },
+  {
+   "to": "储藏间",
+   "length_m": 5.48,
+   "seconds": 11.67,
+   "used_astar": false,
+   "min_hard": 0.277,
+   "min_hard_at": [
+    10.57,
+    2.3
+   ],
+   "max_soft_depth": 0.064,
+   "max_soft_at": [
+    10.59,
+    2.26
+   ]
+  },
+  {
+   "to": "儿童房",
+   "length_m": 4.81,
+   "seconds": 9.6,
+   "used_astar": true,
+   "min_hard": 0.3,
+   "min_hard_at": [
+    9.58,
+    4.35
+   ],
+   "max_soft_depth": 0.0,
+   "max_soft_at": [
+    9.85,
+    4.36
+   ]
+  },
+  {
+   "to": "客厅入口",
+   "length_m": 5.72,
+   "seconds": 10.87,
+   "used_astar": true,
+   "min_hard": 0.345,
+   "min_hard_at": [
+    9.78,
+    7.45
+   ],
+   "max_soft_depth": 0.0,
+   "max_soft_at": [
+    10.45,
+    7.7
+   ]
+  },
+  {
+   "to": "餐厅",
+   "length_m": 2.51,
+   "seconds": 5.0,
+   "used_astar": false,
+   "min_hard": 0.446,
+   "min_hard_at": [
+    6.65,
+    3.56
+   ],
+   "max_soft_depth": 0.0,
+   "max_soft_at": [
+    7.55,
+    4.15
+   ]
+  },
+  {
+   "to": "厨房",
+   "length_m": 3.25,
+   "seconds": 6.7,
+   "used_astar": false,
+   "min_hard": 0.302,
+   "min_hard_at": [
+    3.55,
+    2.1
+   ],
+   "max_soft_depth": 0.0,
+   "max_soft_at": [
+    5.35,
+    2.95
+   ]
+  },
+  {
+   "to": "生活阳台",
+   "length_m": 2.47,
+   "seconds": 5.47,
+   "used_astar": false,
+   "min_hard": 0.396,
+   "min_hard_at": [
+    2.36,
+    -0.16
+   ],
+   "max_soft_depth": 0.0,
+   "max_soft_at": [
+    2.35,
+    1.85
+   ]
+  },
+  {
+   "to": "主卧",
+   "length_m": 8.61,
+   "seconds": 15.6,
+   "used_astar": true,
+   "min_hard": 0.237,
+   "min_hard_at": [
+    4.55,
+    5.4
+   ],
+   "max_soft_depth": 0.0,
+   "max_soft_at": [
+    2.4,
+    -0.62
+   ]
+  },
+  {
+   "to": "主卧 · 飘窗",
+   "length_m": 2.57,
+   "seconds": 7.33,
+   "used_astar": true,
+   "min_hard": 0.306,
+   "min_hard_at": [
+    2.77,
+    5.91
+   ],
+   "max_soft_depth": 0.016,
+   "max_soft_at": [
+    2.76,
+    6.83
+   ]
+  },
+  {
+   "to": "主卫",
+   "length_m": 4.91,
+   "seconds": 10.77,
+   "used_astar": true,
+   "min_hard": 0.28,
+   "min_hard_at": [
+    0.45,
+    4.7
+   ],
+   "max_soft_depth": 0.0,
+   "max_soft_at": [
+    2.25,
+    7.55
+   ]
+  },
+  {
+   "to": "客厅",
+   "length_m": 11.08,
+   "seconds": 23.1,
+   "used_astar": true,
+   "min_hard": 0.237,
+   "min_hard_at": [
+    4.55,
+    5.4
+   ],
+   "max_soft_depth": 0.016,
+   "max_soft_at": [
+    2.76,
+    6.83
+   ]
+  },
+  {
+   "to": "南阳台",
+   "length_m": 4.44,
+   "seconds": 8.53,
+   "used_astar": false,
+   "min_hard": 0.406,
+   "min_hard_at": [
+    6.38,
+    5.58
+   ],
+   "max_soft_depth": 0.0,
+   "max_soft_at": [
+    6.2,
+    5.05
+   ]
+  }
+ ],
+ "warnings": 0
+}
